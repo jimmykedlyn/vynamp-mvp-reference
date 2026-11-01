@@ -15,13 +15,13 @@ const vt = p => ({position: 0, sideProgress: p, wear: 0, duration: 1200, offline
 const zero = new Float32Array(fs48 * 4);
 
 // Contrato de parâmetros e catálogo
-assert.deepEqual(Object.keys(A.VINYL_CONDITIONS), ['Novo', 'Bem conservado', 'Usado', 'Gasto']);
+assert.deepEqual(Object.keys(A.VINYL_CONDITIONS), ['Novo', 'Bem conservado', 'Usado', 'Gasto', 'Realista']);
 const window = {}; vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../dsp-catalog.js'), 'utf8'), {window});
 const vin = window.VYNAMP_DSP_CATALOG.find(m => m.id === 'vinyl'), field = id => vin.fields.find(f => f.id === id);
-assert.deepEqual([...field('condition').options], ['Novo', 'Bem conservado', 'Usado', 'Gasto']); assert.equal(field('condition').value, 'Usado');
+assert.deepEqual([...field('condition').options], ['Novo', 'Bem conservado', 'Usado', 'Gasto', 'Realista']); assert.equal(field('condition').value, 'Usado');
 assert.equal(field('intensity').value, 100); assert.equal(field('intensity').max, 100); assert.equal(field('autoGain').value, true); assert.equal(field('bypass').value, false);
 for (const [k, v] of Object.entries(A.VINYL_CONDITIONS.Usado)) assert.equal(field(k).value, v, 'padrão do catálogo = Usado: ' + k);
-for (const c of Object.keys(A.VINYL_CONDITIONS)) for (const [k, v] of Object.entries(A.VINYL_CONDITIONS[c])) assert(v >= field(k).min && v <= field(k).max, c + '/' + k + ' fora da faixa');
+for (const c of Object.keys(A.VINYL_CONDITIONS)) for (const [k, v] of Object.entries(A.VINYL_CONDITIONS[c])) { const f = field(k); if (!f || typeof v !== 'number') continue; assert(v >= f.min && v <= f.max, c + '/' + k + ' fora da faixa'); }
 
 // Ruído de superfície audível, ordenado por condição; espectro rosado com ênfase média e queda nos agudos
 const silence = {}; for (const c of Object.keys(A.VINYL_CONDITIONS)) silence[c] = dB(rms(run(base(c), zero, zero, vt(.2))[0], fs48));

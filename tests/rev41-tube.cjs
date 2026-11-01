@@ -10,10 +10,10 @@ const base = p => A.applyPreset('tube', {profile: 'Warm pre-amp', warmup: 0, low
 const measure = (params, amp, f = 1000) => { const x = sine(f, 1.2, amp), [l] = run(params, x, x), s = fs48 * .6, f1 = goertzel(l, f, s); let h = 0; for (let k = 2; k <= 6; k++) if (f * k < 23000) h += goertzel(l, f * k, s) ** 2; return {gain: dB(f1 / amp), thd: Math.sqrt(h) / f1 * 100, h2: goertzel(l, 2 * f, s) / f1 * 100, h3: goertzel(l, 3 * f, s) / f1 * 100}; };
 
 // Contrato e catálogo
-assert.deepEqual(Object.keys(A.TUBE_PRESETS), ['Limpo', 'Quente', 'Saturado']);
+assert.deepEqual(Object.keys(A.TUBE_PRESETS), ['Limpo', 'Quente', 'Saturado', 'Inteligente']);
 const window = {}; vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../dsp-catalog.js'), 'utf8'), {window});
 const tube = window.VYNAMP_DSP_CATALOG.find(m => m.id === 'tube'), field = id => tube.fields.find(f => f.id === id);
-assert.deepEqual([...field('preset').options], ['Limpo', 'Quente', 'Saturado']); assert.equal(field('preset').value, 'Quente');
+assert.deepEqual([...field('preset').options], ['Limpo', 'Quente', 'Saturado', 'Inteligente']); assert.equal(field('preset').value, 'Quente');
 assert.equal(field('intensity').value, 100); assert.equal(field('autoGain').value, true); assert.equal(field('bypass').value, false);
 for (const [k, v] of Object.entries(A.TUBE_PRESETS.Quente)) assert.equal(field(k).value, v, 'padrão do catálogo = Quente: ' + k);
 
