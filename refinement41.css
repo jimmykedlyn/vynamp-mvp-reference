@@ -17,7 +17,7 @@
   background:color-mix(in srgb,var(--on-accent) 26%,var(--panel-inset,var(--background)));
 }
 :root :is(#shuffle,#repeat,#mute,#meter-off,#favorite,#layout-mini-toggle,.small-button,.icon-button)[aria-pressed="true"]:focus-visible{
-  outline:2px solid var(--text-primary);outline-offset:2px;
+  outline:2px solid var(--focus-ring,var(--cyan,var(--neon-accent-readable,var(--lime))));outline-offset:2px;
 }
 /* Repetir faixa: selo "1" (o modo "fila" fica só com a barra curta; "faixa" com barra longa + selo). */
 :root #repeat[data-repeat-mode="track"]::before{
