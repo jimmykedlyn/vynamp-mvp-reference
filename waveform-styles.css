@@ -26,7 +26,7 @@
 @media(forced-colors:active){#wave-alternatives .wave-peaks{fill:CanvasText}#wave-alternatives .wave-body{fill:Highlight}.wave-style-menu [aria-checked=true]{outline:1px solid Highlight}}
 /* Same full-track vertical geometry as Original; live level scales only its height. */
 #wave-reactive-bars{display:none;pointer-events:none;transform-origin:0 0}
-:root[data-wave-style=original] #wave-base{stroke:var(--amber);opacity:.48}:root[data-wave-style=original] #wave-played{stroke:var(--neon-wave-readable);opacity:1}
+html[data-wave-style=original] #wave-base{stroke:var(--amber)!important;opacity:.48!important}html[data-wave-style=original] #wave-played{stroke:var(--neon-wave-readable)!important;opacity:1!important}
 :root[data-wave-style=bars-pulse] #wave-reactive-bars{display:block}:root[data-wave-style=bars-pulse] #wave-base,:root[data-wave-style=bars-pulse] #wave-played{display:none}
 #wave-reactive-base{stroke:var(--text-muted)}#wave-reactive-played{stroke:var(--amber)}
 html[data-custom-wave] #wave-reactive-base{stroke:var(--neon-wave-readable);opacity:.48}html[data-custom-wave] #wave-reactive-played{stroke:var(--neon-wave-readable);opacity:1}
