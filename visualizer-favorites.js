@@ -10,5 +10,5 @@
  const star=document.createElement('button');star.className='visualizer-star';star.type='button';star.title='Marcar / desmarcar preferido';if(g.host.getAttribute('role')==='menu'){star.setAttribute('role','menuitemcheckbox');star.tabIndex=-1;}star.onclick=e=>{e.stopPropagation();const id=g.id(button),on=saved[g.key].includes(id);saved[g.key]=on?saved[g.key].filter(x=>x!==id):[...saved[g.key],id];persist();sync();star.focus({preventScroll:true});VynampReference.notify(on?'Visualizador removido dos preferidos.':'Visualizador preferido: aparece primeiro na seleção.');};row.append(star);});
   g.host.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const row=e.target.closest('.visualizer-favorite-row');if(row){e.preventDefault();e.stopImmediatePropagation();(e.key==='ArrowRight'?row.lastElementChild:row.firstElementChild).focus();}}},true);
  }
- sync();window.VynampVisualizerFavorites={snapshot:()=>JSON.parse(JSON.stringify(saved))};
+ sync();document.addEventListener('vynamp:waveform-style',sync);if(window.VynampWaveformStyles){const origSet=window.VynampWaveformStyles.setMode;window.VynampWaveformStyles.setMode=function(id,persist){origSet.call(this,id,persist);sync();};}window.VynampVisualizerFavorites={snapshot:()=>JSON.parse(JSON.stringify(saved))};
 })();
