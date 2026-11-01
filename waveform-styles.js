@@ -100,6 +100,7 @@
   menu.addEventListener('keydown',event=>{if(event.key==='Escape'||event.key==='Tab'){event.preventDefault();close(true);return;}if(['ArrowDown','ArrowUp','Home','End'].includes(event.key)){event.preventDefault();const items=[...menu.querySelectorAll('[data-wave-menu]')],index=items.indexOf(document.activeElement.closest('.visualizer-favorite-row')?.querySelector('[data-wave-menu]')||document.activeElement),next=event.key==='Home'?0:event.key==='End'?items.length-1:(index+(event.key==='ArrowDown'?1:-1)+items.length)%items.length;items[next].focus();}});
   document.addEventListener('pointerdown',event=>{if(!menu.contains(event.target))close(false);},true);window.addEventListener('resize',()=>close(true));
   document.addEventListener('vynamp:waveform-data',event=>{data=event.detail;render();});
+  document.addEventListener('vynamp:neon-change',event=>{if(selected==='original'&&(!event.detail||event.detail.part==='wave'||event.detail.part==='accent'))render();});
   $('restore-appearance').addEventListener('click',()=>choose('original'));
   window.VynampWaveformStyles={setMode:choose,openConfig,snapshot:()=>({mode:selected,source:svg.dataset.source,samples:data.peaks.length})};choose(selected,false);
 })();
