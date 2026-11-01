@@ -51,22 +51,7 @@
   $('dsp-eq').onclick=()=>{boundClose=null;dialog.close();$('eq-open').click();$('eq-advanced-open').click();};
   function navigation(){const host=$('dsp-categories');host.replaceChildren();const query=$('dsp-search').value.toLocaleLowerCase('pt-BR');for(const category of new Set(catalog.map(m=>m.category))){const items=catalog.filter(m=>m.category===category&&(`${m.name} ${category}`).toLocaleLowerCase('pt-BR').includes(query));if(!items.length)continue;const heading=document.createElement('h3');heading.textContent=category;host.append(heading);for(const m of items){const button=document.createElement('button');button.dataset.dspModule=m.id;button.textContent=m.name;button.setAttribute('aria-pressed',String(m.id===state.selected));host.append(button);}}}
   function renderFields(){const host=$('dsp-fields');host.replaceChildren();const m=selected(),values=current().values;
-    /* Rev.42: painel de configurações avançadas (engrenagem) para Vinyl e Tube */
-    const realismIds=m.id==='vinyl'?['dynamicNoise','trackingDistortion','mechanicalDrift','surfaceEvolution','resonanceBody']:m.id==='tube'?['dynamicSag','thermalDrift','signalDependentHarmonics','transformerSaturation']:[];
-    if(realismIds.length){
-      const details=document.createElement('details');details.className='dsp-realism-panel';details.id='dsp-realism-details';
-      const summary=document.createElement('summary');summary.innerHTML='<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5A3.5 3.5 0 1 0 12 8.5a3.5 3.5 0 0 0 0 7Zm7.94-2.06a1.5 1.5 0 0 0 .3-1.66l-.54-1.32a1.5 1.5 0 0 0-1.38-.94h-.16a1.5 1.5 0 0 1-1.5-1.5v-.16a1.5 1.5 0 0 0-.94-1.38l-1.32-.54a1.5 1.5 0 0 0-1.66.3l-.12.12a1.5 1.5 0 0 1-2.12 0l-.12-.12a1.5 1.5 0 0 0-1.66-.3l-1.32.54a1.5 1.5 0 0 0-.94 1.38v.16a1.5 1.5 0 0 1-1.5 1.5h-.16a1.5 1.5 0 0 0-1.38.94l-.54 1.32a1.5 1.5 0 0 0 .3 1.66l.12.12a1.5 1.5 0 0 1 0 2.12l-.12.12a1.5 1.5 0 0 0-.3 1.66l.54 1.32a1.5 1.5 0 0 0 1.38.94h.16a1.5 1.5 0 0 1 1.5 1.5v.16a1.5 1.5 0 0 0 .94 1.38l1.32.54a1.5 1.5 0 0 0 1.66-.3l.12-.12a1.5 1.5 0 0 1 2.12 0l.12.12a1.5 1.5 0 0 0 1.66.3l1.32-.54a1.5 1.5 0 0 0 .94-1.38v-.16a1.5 1.5 0 0 1 1.5-1.5h.16a1.5 1.5 0 0 0 1.38-.94l.54-1.32a1.5 1.5 0 0 0-.3-1.66l-.12-.12a1.5 1.5 0 0 1 0-2.12l.12-.12Z"/></svg><span>'+
-        (m.id==='vinyl'?'Configurações de realismo':'Configurações de inteligência')+'</span>';
-      details.append(summary);
-      const panel=document.createElement('div');panel.className='dsp-realism-fields';
-      for(const fid of realismIds){const f=m.fields.find(x=>x.id===fid);if(!f)continue;
-        const field=window.VynampAudioControl.create(f,values[f.id],{id:'dsp-'+m.id+'-'+f.id,disabled:blocked(m),title:f.label+' — comportamento dinâmico adicional.'});
-        const input=field.querySelector('[data-dsp-field]');if(blocked(m))input.disabled=true;
-        panel.append(field);}
-      details.append(panel);host.append(details);
-    }
     for(const f of m.fields){
-      if(realismIds.includes(f.id))continue;
       const field=window.VynampAudioControl.create(f,values[f.id],{id:'dsp-'+m.id+'-'+f.id,disabled:blocked(m),title:m.description+' '+(f.type==='number'?`Limites: ${f.min} a ${f.max} ${f.unit}.`:'')});
       const input=field.querySelector('[data-dsp-field]');
       if(blocked(m))input.disabled=true;
