@@ -1,0 +1,16 @@
+/* Runtime enclosure derivatives only. Essential drawing and archived SVGs stay original. */
+:root{--instrument-case-top:color-mix(in srgb,var(--chassis) 94%,var(--text-primary));--instrument-case-mid:var(--chassis);--instrument-case-bottom:color-mix(in srgb,var(--chassis) 97%,var(--background));--instrument-seam:var(--line);--instrument-case-label:var(--text-secondary);--instrument-bezel-stroke:color-mix(in srgb,var(--text-secondary) 26%,var(--chassis))}
+:is(#meter-stage,#large-meter,.finish-preview)>svg[data-trimmed=true]{overflow:hidden}
+:is(#meter-stage,#large-meter,.finish-preview)>svg[data-trimmed=true] .meter-enclosure{fill:var(--chassis);stroke:var(--instrument-seam);stroke-width:1}
+:is(#meter-stage,#large-meter,.finish-preview)>svg[data-trimmed=true] .meter-enclosure-seam{stroke:transparent}
+:is(#meter-stage,#large-meter,.finish-preview)>svg[data-trimmed=true] .meter-thin-bezel{stroke:var(--instrument-bezel-stroke);stroke-width:1}
+:is(#meter-stage,#large-meter,.finish-preview)>svg[data-trimmed=true] .meter-enclosure-label{fill:var(--instrument-case-label)}
+:is(#meter-stage,#large-meter,.finish-preview)>svg[data-finish=frameless] .meter-thin-bezel{fill:var(--chassis);stroke:transparent}
+:is(#meter-stage,#large-meter,.finish-preview)>svg[data-finish=ultrafine] .meter-thin-bezel{fill:var(--instrument-bezel-stroke);stroke-width:.5}
+:is(#meter-stage,#large-meter,.finish-preview)>svg[data-finish=adaptive] [id$="-case"] stop{stop-color:var(--instrument-case-mid)}
+:is(#meter-stage,#large-meter,.finish-preview)>svg[data-finish=adaptive] [id$="-case"] stop:first-child{stop-color:var(--instrument-case-top)}
+:is(#meter-stage,#large-meter,.finish-preview)>svg[data-finish=adaptive] [id$="-case"] stop:last-child{stop-color:var(--instrument-case-bottom)}
+:is(#meter-stage,#large-meter,.finish-preview)>svg[data-finish=recessed] .meter-thin-bezel{stroke:var(--border-dark);stroke-width:1.2}
+:is(#meter-stage,#large-meter,.finish-preview)>svg[data-trimmed=true][data-retro=true][data-model=ribbon] .meter-enclosure{fill:var(--instrument-native-fill);stroke-width:.7}
+:is(#meter-stage,#large-meter,.finish-preview)>svg[data-trimmed=true][data-retro=true][data-model=dual-arc] .meter-enclosure{fill:var(--instrument-native-fill);stroke-width:.7}
+@media(forced-colors:active){:is(#meter-stage,#large-meter,.finish-preview)>svg[data-trimmed=true] .meter-enclosure{fill:Canvas;stroke:CanvasText}:is(#meter-stage,#large-meter,.finish-preview)>svg[data-trimmed=true] .meter-enclosure-label{fill:CanvasText}}

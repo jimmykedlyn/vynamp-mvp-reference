@@ -1,0 +1,54 @@
+/* Revisão 39 — ajustes das anotações locais. */
+
+/* Nota #7: o destaque (hover, seleção, faixa atual) cobre a linha inteira dentro da grade, sem passar dela:
+   cabeçalho e linhas terminam no mesmo ponto e ambos têm o mesmo respiro interno, mantendo as colunas alinhadas. */
+:root .collection>.column-head{margin-right:calc(20 * var(--r,1px) + var(--library-scrollbar,0px));padding-inline:8px}
+:root #library>.track-row{padding-inline:8px}
+
+/* Nota #8: botões do cabeçalho (completo e miniplayer) na mesma altura e com o mesmo canto.
+   Só a partir de 901 px: no layout mobile os botões mantêm o alvo de toque maior (40 px). */
+/* :root + :is(#preferences) igualam a especificidade das regras por ID aninhadas do faithful-layout; esta folha vem depois. */
+@media(min-width:901px){
+:root .appbar :is(button,.icon-button,.text-button,#preferences):not([hidden]){box-sizing:border-box;height:34px;min-height:34px;border-radius:8px}
+:root .appbar :is(.icon-button,#preferences):not([hidden]){min-width:34px}
+}
+
+/* Logotipo: o conjunto do miniplayer vale para todos os layouts — mesmo símbolo, mesma fonte,
+   mesmo tamanho, caixa alta, espaçamento e distância entre símbolo e nome. */
+:root:root .appbar .vynamp-brand-lockup{display:inline-flex;align-items:center;gap:7px}
+:root:root .appbar .vynamp-brand-symbol,:root:root .appbar .vynamp-brand-symbol svg{width:22px;height:22px;flex:none}
+:root:root .appbar .faithful-brand-name{font-family:"Segoe UI",Arial,sans-serif;font-size:12px;font-weight:700;font-style:normal;text-transform:uppercase;letter-spacing:-.5px;line-height:16px}
+
+/* Seletor de VU com o próprio instrumento em miniatura. */
+:root #meter-menu{width:min(432px,calc(100vw - 16px))}
+:root #meter-menu [data-meter]{grid-template-columns:24px 64px 1fr 18px}
+.meter-preview-icon{display:block;width:64px;height:24px;flex:none;overflow:hidden}
+
+/* Grades (notas #1 e #2), pelas leis de UX já adotadas no projeto (UX-UI-REV20.md):
+   proximidade e Hick na barra da biblioteca; região comum, similaridade e Fitts na fila. */
+/* Biblioteca: Filtros, Playlists e Ordem numa barra só (a ordenação vem de .filterbar via refinement39.js). */
+:root #library-tools .sort-label{margin-left:auto}
+:root #library-tools{align-items:center}
+/* "#" do cabeçalho centrado sobre os números das linhas. */
+:root .collection>.column-head>span:first-child{text-align:center}
+/* Fila: linha ocupa a largura toda; número em coluna própria (como o # da biblioteca), duração em todas as linhas. */
+:root[data-faithful] #queue-list .queue-item{grid-template-columns:minmax(0,1fr) auto auto auto;align-items:center;column-gap:2px;min-height:56px;padding-block:6px;padding-bottom:6px;gap:0 2px}
+:root[data-faithful] :is(#current-queue,.queue-sub){margin-right:calc(14px + var(--queue-scrollbar,0px))}
+:root[data-faithful] #queue-list .queue-item .track-name{display:grid;grid-template-columns:18px 34px minmax(0,1fr);align-items:center;gap:10px;min-width:0;width:100%}
+:root[data-faithful] #queue-list .queue-item .track-name>.number{position:static;flex:none;width:18px;padding:0;border:0;background:none;text-align:right;font:500 11px Consolas,monospace;color:var(--text-secondary)}
+:root[data-faithful] #queue-list .queue-item .queue-copy{min-width:0}
+:root[data-faithful] #queue-list .queue-item>.time{min-width:34px;text-align:right;font:11px Consolas,monospace;color:var(--text-secondary)}
+/* Com mouse, remover e opções ficam sobrepostos à direita (sem coluna própria, sem cortar o título) e aparecem
+   no lugar da duração quando a linha está sob o cursor ou em foco. Continuam no DOM, focáveis e anunciados por
+   leitores de tela; no toque ficam sempre visíveis. */
+@media(hover:hover) and (pointer:fine){
+:root[data-faithful] #queue-list .queue-item{grid-template-columns:minmax(0,1fr) auto}
+:root[data-faithful] #queue-list .queue-item :is([data-remove],.queue-order){position:absolute;top:50%;translate:0 -50%;transition:opacity .12s}
+:root[data-faithful] #queue-list .queue-item [data-remove]{right:32px}
+:root[data-faithful] #queue-list .queue-item .queue-order{right:2px}
+:root[data-faithful] #queue-list .queue-item:not(:hover):not(:focus-within) :is([data-remove],.queue-more){opacity:0}
+:root[data-faithful] #queue-list .queue-item:is(:hover,:focus-within)>.time{visibility:hidden}
+:root[data-faithful] #queue-list .queue-item:is(:hover,:focus-within) .queue-copy{padding-right:26px}
+}
+/* Mobile: na aba Biblioteca a capa grande sai de cena para a lista aparecer na primeira tela; o título continua. */
+@media(max-width:900px){:root[data-mobile-view=library] aside.now .cover-wrap{display:none}}

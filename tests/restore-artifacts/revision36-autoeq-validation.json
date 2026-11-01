@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "JSONFiltersAppliedToInstance": true,
+  "provenancePreserved": true,
+  "invalidCorrectionAtomic": true,
+  "legacyBoundPanelSharesFilters": true,
+  "modulePresetRoundTripFilters": true,
+  "noAutoplay": true,
+  "emptyCorrectionBlocks": true,
+  "browserErrors": []
+}

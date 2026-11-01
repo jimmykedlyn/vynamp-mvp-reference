@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "totalWaves": 17,
+  "icons": 17,
+  "newModes": [
+    {
+      "mode": "aurora-weave",
+      "quiet": 0.015,
+      "loud": 0.325
+    },
+    {
+      "mode": "neon-crystal",
+      "quiet": 0.015,
+      "loud": 0.325
+    },
+    {
+      "mode": "aurora-constellation",
+      "quiet": 0.4694,
+      "loud": 0.7861
+    },
+    {
+      "mode": "aurora-layers",
+      "quiet": 0.015,
+      "loud": 0.325
+    }
+  ],
+  "realStereoWeave": true,
+  "realPeakRMSLayers": true,
+  "realFrequencyConstellation": true,
+  "silenceAndPause": true,
+  "sameAudioContext": true,
+  "smallViewportMenu": true
+}

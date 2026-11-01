@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "totalWaves": 17,
+  "iconsMenu": 17,
+  "iconsPreferences": 17,
+  "transparentDJAndOverview": true,
+  "realFFT": true,
+  "stereoFrequenciesSeparated": true,
+  "sameAudioContext": true,
+  "pauseAndSilence": true,
+  "silentEvenWithVUOff": true,
+  "independentChannelSilence": true,
+  "reducedMotion": true,
+  "keyboard": true,
+  "checks": [
+    {
+      "mode": "spectrum-aurora",
+      "quiet": 0.4646,
+      "loud": 0.7825,
+      "left": 1007.8125
+    },
+    {
+      "mode": "spectrum-ribbon",
+      "quiet": 0.4758,
+      "loud": 0.7826,
+      "left": 1007.8125
+    },
+    {
+      "mode": "spectrum-stereo",
+      "quiet": 0.476,
+      "loud": 0.7893,
+      "left": 1007.8125
+    }
+  ]
+}

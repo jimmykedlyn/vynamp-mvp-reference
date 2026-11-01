@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "fallbackDirectoryPicker": true,
+  "nestedFiles": true,
+  "refreshFindsNewFiles": true,
+  "noDuplicateMapping": true,
+  "noDuplicateTracks": true,
+  "explicitReconnect": true,
+  "metadataReadOnly": true,
+  "metadataSearch": true,
+  "escapedTags": true,
+  "playlistMissingAndReconnected": true,
+  "legacyFolderFavoritesMigrated": true,
+  "browserErrors": []
+}

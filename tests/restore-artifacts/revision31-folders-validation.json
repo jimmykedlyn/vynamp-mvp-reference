@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "fiveTabIcons": true,
+  "realDirectoryInput": true,
+  "audioFiles": 3,
+  "nonAudioIgnored": true,
+  "subfoldersAndBreadcrumbs": true,
+  "search": true,
+  "mappingDoesNotInterrupt": true,
+  "existingRealAudioAndContextPreserved": true,
+  "localPlayback": true,
+  "queue": true,
+  "reconnectAfterReload": true,
+  "responsive": [
+    320,
+    390,
+    768,
+    1120
+  ],
+  "browserErrors": []
+}

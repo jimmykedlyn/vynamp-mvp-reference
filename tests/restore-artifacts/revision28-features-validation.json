@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "embeddedID3Artwork": true,
+  "BFCacheCoverPreserved": true,
+  "radioPreviousReturnsToMusic": true,
+  "radioStopReconnect": true,
+  "thumbnailMatchesCurrentCover": true,
+  "pulseRealSignal": true,
+  "pulseSilenceAndPause": true,
+  "reducedMotion": true,
+  "radioStreamPlayback": true,
+  "sameAudioContext": true,
+  "radioPersistence": true,
+  "invalidPlaylistRejected": true,
+  "musicRadioIsolation": true,
+  "seekRestored": true,
+  "responsiveWidths": [
+    320,
+    390,
+    768,
+    1120
+  ],
+  "browserErrors": []
+}

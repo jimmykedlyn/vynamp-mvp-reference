@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "gate": {
+    "low": 0.00014516009552664524,
+    "high": 1
+  },
+  "expander": {
+    "low": 0.009353120627069356,
+    "high": 1
+  },
+  "matrixSwapError": 0,
+  "bassBypassError": 0,
+  "exciterBypassError": 0,
+  "bassBoost": 1.8125548273478747,
+  "exciterDifference": 0.09172716046465947,
+  "loudnessRatio": [
+    0.9605822732805143,
+    0.38681209069343225
+  ],
+  "autoEQGain": 0.25118867524008387,
+  "centerGain": 0.024760505711330615,
+  "voiceFinite": true,
+  "convolution": [
+    0.10000000149011612,
+    0.05000000074505806
+  ],
+  "IR": {
+    "id": "ir-85753fd2330cd8542f62fd5a7bdca295009c5399a3c60306395321fdfe47d9cb",
+    "name": "unit-ir.wav",
+    "hash": "85753fd2330cd8542f62fd5a7bdca295009c5399a3c60306395321fdfe47d9cb",
+    "sourceSampleRate": 48000,
+    "bytes": 2092,
+    "channels": 2,
+    "sampleRate": 48000,
+    "duration": 0.005333333333333333,
+    "frames": 256,
+    "persisted": true
+  },
+  "invalidRejected": true,
+  "missingRejected": true,
+  "legacyGateBypass": true,
+  "browserErrors": []
+}

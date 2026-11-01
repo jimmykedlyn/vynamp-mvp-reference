@@ -1,0 +1,20 @@
+{
+  "success": true,
+  "projectRoundtrip": true,
+  "mismatchRejected": true,
+  "processorFailureDryRecovery": true,
+  "recoveryPeak": 0.1997838169336319,
+  "noDoublePath": true,
+  "loop": true,
+  "keyboardSelection": true,
+  "staleExportCancelled": true,
+  "trackSwitchBypass": true,
+  "miniReturn": true,
+  "responsiveWidths": [
+    320,
+    390,
+    768,
+    1120
+  ],
+  "browserErrors": []
+}

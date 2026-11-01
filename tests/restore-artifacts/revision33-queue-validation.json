@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "localFavoriteIdentityPersisted": true,
+  "changedFileNotMatched": true,
+  "queueThumbnails": true,
+  "clearInUpcomingSection": true,
+  "removeKeyboardFocus": true,
+  "clearUndoPreserved": true,
+  "responsive": [
+    320,
+    390,
+    768,
+    1120,
+    1600
+  ],
+  "browserErrors": []
+}

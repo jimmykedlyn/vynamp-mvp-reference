@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict'),M=require('../media-metadata.js');
+function frame(id,value){const text=Buffer.concat([Buffer.from([3]),Buffer.from(value)]),h=Buffer.alloc(10);h.write(id);h.writeUInt32BE(text.length,4);return Buffer.concat([h,text]);}
+const body=Buffer.concat([frame('TIT2','Canção'),frame('TPE1','João'),frame('TALB','Noite'),frame('TCON','Melody'),frame('TRCK','03/12')]),head=Buffer.from([73,68,51,3,0,0,0,0,0,0]);let n=body.length;for(let i=9;i>=6;i--){head[i]=n&127;n>>=7;}
+const out=M.parse(new Uint8Array(Buffer.concat([head,body])),'test.mp3');
+assert.equal(out.title,'Canção');assert.equal(out.artist,'João');assert.equal(out.album,'Noite');assert.equal(out.trackNumber,3);assert.equal(out.genre,'Melody');
+assert.deepEqual(M.parse(new Uint8Array([73,68,51,4]),'truncated.mp3'),{});
+const bomb=Buffer.from([73,68,51,3,0,0,127,127,127,127]);assert.deepEqual(M.parse(bomb,'bad.mp3'),{});
+const be=Buffer.from([1,254,255,0,67,0,97,0,110,0,231,0,227,0,111]),fh=Buffer.alloc(10);fh.write('TIT2');fh.writeUInt32BE(be.length,4);const bh=Buffer.from([73,68,51,3,0,0,0,0,0,10+be.length]);assert.equal(M.parse(Buffer.concat([bh,fh,be]),'be.mp3').title,'Canção');
+const comments=['TITLE=FLAC title','ARTIST=FLAC artist','GENRE=Jazz','TRACKNUMBER=7'],vorbis=Buffer.concat([Buffer.alloc(4),Buffer.from([comments.length,0,0,0]),...comments.flatMap(s=>{const text=Buffer.from(s),len=Buffer.alloc(4);len.writeUInt32LE(text.length);return [len,text];})]),flac=Buffer.concat([Buffer.from('fLaC'),Buffer.from([132,(vorbis.length>>>16)&255,(vorbis.length>>>8)&255,vorbis.length&255]),vorbis]);assert.equal(M.parse(flac).title,'FLAC title');assert.equal(M.parse(flac).trackNumber,7);
+const info=Buffer.from('WAV title\0'),chunk=Buffer.alloc(8+info.length);chunk.write('INAM');chunk.writeUInt32LE(info.length,4);info.copy(chunk,8);const list=Buffer.concat([Buffer.from('INFO'),chunk,Buffer.alloc(info.length%2)]),lh=Buffer.alloc(8);lh.write('LIST');lh.writeUInt32LE(list.length,4);const wh=Buffer.alloc(12);wh.write('RIFF');wh.write('WAVE',8);assert.equal(M.parse(Buffer.concat([wh,lh,list])).title,'WAV title');
+console.log('library34 metadata passed (ID3 UTF8/UTF16BE, FLAC, WAV INFO and malformed bounds)');

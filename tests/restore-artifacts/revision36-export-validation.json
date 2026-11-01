@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "gateAndIRPreparedOffline": true,
+  "DSPAppliedOnce": true,
+  "duration": 20,
+  "channels": 2,
+  "lowRMS": 3.5355339047387424e-8,
+  "highRMS": 0.0707106781145844,
+  "browserErrors": []
+}

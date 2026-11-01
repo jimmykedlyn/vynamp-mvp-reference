@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "pendingStop": true,
+  "lateLoadCannotResume": true,
+  "radioRetryWithActualAudio": true,
+  "stereoSignal": true,
+  "pauseState": true,
+  "metadataBatch700Ms": 3087,
+  "firstRenderRows": 200,
+  "loadMoreRows": 400,
+  "browserErrors": []
+}

@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "search": true,
+  "multiSelection": true,
+  "queueReorder": true,
+  "pointerDrag": true,
+  "currentTrackPreserved": true,
+  "savedPlaylists": true,
+  "visualizerFavoritesPersist": true,
+  "deduplication": true,
+  "filters": true,
+  "playbackStatus": true,
+  "radioErrorRecovery": true,
+  "stereoMeters": 9,
+  "waveStyles": 17,
+  "widths": [
+    320,
+    390,
+    768,
+    1120,
+    1600
+  ],
+  "browserErrors": []
+}

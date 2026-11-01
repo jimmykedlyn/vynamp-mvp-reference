@@ -1,0 +1,196 @@
+{
+  "colorSource": "../collection.json",
+  "typography": {
+    "family": [
+      "Segoe UI",
+      "Arial",
+      "sans-serif"
+    ],
+    "body": 14,
+    "musicMetadata": 13,
+    "trackTitle": 23,
+    "libraryTitle": 22,
+    "section": 16
+  },
+  "spacing": [
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    28,
+    32
+  ],
+  "control": {
+    "standard": 44,
+    "play": 52,
+    "minimumDesktop": 24,
+    "iconStroke": 1.5,
+    "iconViewBox": [
+      0,
+      0,
+      24,
+      24
+    ]
+  },
+  "radius": {
+    "graphite": 2,
+    "modern": 8
+  },
+  "focus": {
+    "width": 2,
+    "offset": 2,
+    "token": "cyan"
+  },
+  "motion": {
+    "durationMs": 80,
+    "easing": [
+      0.2,
+      0.8,
+      0.2,
+      1
+    ],
+    "meterMaximumHz": 60,
+    "clockMaximumHz": 5,
+    "meterDefaultHz": 30
+  },
+  "breakpoints": {
+    "threePanesMin": 1151,
+    "singleColumnMax": 700,
+    "minTestedWidth": 320
+  },
+  "themes": [
+    "graphite-studio",
+    "arctic-library",
+    "copper-console",
+    "midnight-focus",
+    "ivory-atelier",
+    "cobalt-session",
+    "forest-room",
+    "pearl-workspace",
+    "obsidian-reference",
+    "sandstone-collection",
+    "slate-spectrum",
+    "high-contrast-wide"
+  ],
+  "density": {
+    "compactRowDIP": 24,
+    "comfortableRowDIP": 36,
+    "touchMinimumDIP": 44
+  },
+  "fontScalePercent": [
+    100,
+    125,
+    150,
+    200
+  ],
+  "sources": [
+    "player.css",
+    "instrument.css",
+    "spec-controls.css"
+  ],
+  "requirements": "../SKIN-REQUIREMENTS-CODEX.md",
+  "advancedEQ": {
+    "graphicModes": [
+      10,
+      20,
+      31,
+      64
+    ],
+    "parametricLimit": 32,
+    "graphicGainDB": [
+      -15,
+      15
+    ],
+    "parametricGainDB": [
+      -24,
+      24
+    ],
+    "q": [
+      0.1,
+      18
+    ],
+    "preampDB": [
+      -24,
+      12
+    ],
+    "maxFrequency": "min(40000, 0.45 * Fs)",
+    "curvePoints": 320,
+    "responseCache": "per mode/filter and numeric parameters",
+    "audibleModes": [
+      10
+    ],
+    "demoModes": [
+      20,
+      31,
+      64,
+      "parametric"
+    ]
+  },
+  "dspWorkspace": {
+    "moduleCount": 39,
+    "processing": "DEMO: no audible processing",
+    "desktopNavigationWidth": 224,
+    "fieldsColumns": 2,
+    "mobileBreakpoint": 700,
+    "state": "window.VynampReference.state.dsp",
+    "persistenceVersion": 1
+  },
+  "audioControls": {
+    "knobDIP": 88,
+    "knobSweepDegrees": 270,
+    "fineDragMultiplier": 0.16666666666666666,
+    "frequencyGesture": "logarithmic",
+    "exactEditor": "on readout click",
+    "numericPrecision": "preserves valid imported values",
+    "defaultRestore": "double click",
+    "categories": 8,
+    "playerShortcuts": 4
+  },
+  "lyrics": {
+    "rowDIP": 26,
+    "mobileRowDIP": 30,
+    "currentFontDIP": 14,
+    "adjacentFontDIP": 13,
+    "transitionMs": 260,
+    "source": "embedded metadata or explicit local LRC",
+    "plainText": "full text without invented timing",
+    "reducedMotion": "immediate update"
+  },
+  "modularDSP": {
+    "nodeWidthDIP": 210,
+    "nodeHeightDIP": 156,
+    "nodeCollapsedHeightDIP": 111,
+    "audioPort": "circle / continuous cable",
+    "controlPort": "square / dashed cable",
+    "snapDIP": 16,
+    "glowDefault": 0.35,
+    "wireStyles": [
+      "cool",
+      "warm",
+      "mono"
+    ],
+    "history": 60,
+    "maxNodes": 64,
+    "maxEdges": 128,
+    "realAdapterLimits": {
+      "EQBiquads": 512,
+      "syntheticIRBytes": 33554432
+    }
+  },
+  "instrumentFinish": {
+    "default": "integrated",
+    "options": [
+      "integrated",
+      "adaptive",
+      "original"
+    ],
+    "scope": "outer enclosure, seam, exterior labels",
+    "originalSVGs": "byte-preserved",
+    "nativeMaterials": [
+      "wood",
+      "champagne"
+    ]
+  }
+}

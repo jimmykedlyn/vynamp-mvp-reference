@@ -1,0 +1,39 @@
+{
+  "success": true,
+  "totalWaves": 9,
+  "newModes": [
+    {
+      "mode": "columns-pulse",
+      "quiet": 0.015,
+      "loud": 0.3248
+    },
+    {
+      "mode": "ribbon-pulse",
+      "quiet": 0.015,
+      "loud": 0.3248
+    },
+    {
+      "mode": "prisma-neon",
+      "quiet": 0.015,
+      "loud": 0.3248
+    },
+    {
+      "mode": "aurora-neon",
+      "quiet": 0.015,
+      "loud": 0.3248
+    }
+  ],
+  "originalGeometryPreserved": true,
+  "sameAudioAndContext": true,
+  "silenceAndPause": true,
+  "reducedMotion": true,
+  "keyboardFocus": true,
+  "persisted": true,
+  "responsive": [
+    320,
+    390,
+    768,
+    1120
+  ],
+  "browserErrors": []
+}

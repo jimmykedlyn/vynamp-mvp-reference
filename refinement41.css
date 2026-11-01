@@ -1,0 +1,57 @@
+/* Revisão 41 — botões: estado ligado sem depender só da cor (R41-11), escala/raio (R41-13), fontes (R41-15). */
+
+/* R41-11: estado ligado = fundo tingido + borda do accent + barra indicadora + cor do ícone. */
+:root{--on-accent:var(--neon-buttons-readable,var(--lime))}
+:root #mute{--on-accent:var(--neon-volume-readable,var(--neon-buttons-readable,var(--lime)))}
+:root :is(#shuffle,#repeat,#mute,#meter-off,#favorite,#layout-mini-toggle,#eq-enabled,.small-button,.icon-button,.text-button)[aria-pressed="true"]:not(.row-select){
+  position:relative;
+  color:var(--on-accent);
+  background:color-mix(in srgb,var(--on-accent) 16%,var(--panel-inset,var(--background)));
+  border:1px solid var(--on-accent);
+}
+:root :is(#shuffle,#repeat,#mute,#meter-off,#favorite,#layout-mini-toggle,.small-button,.icon-button)[aria-pressed="true"]:not(.row-select)::after{
+  content:"";position:absolute;left:50%;bottom:2px;width:10px;height:3px;margin-left:-5px;
+  border-radius:2px;background:var(--on-accent);pointer-events:none;
+}
+:root :is(#shuffle,#repeat,#mute,#meter-off,#favorite,#layout-mini-toggle,.small-button,.icon-button)[aria-pressed="true"]:not(.row-select):hover:not(:disabled){
+  background:color-mix(in srgb,var(--on-accent) 26%,var(--panel-inset,var(--background)));
+}
+:root :is(#shuffle,#repeat,#mute,#meter-off,#favorite,#layout-mini-toggle,.small-button,.icon-button)[aria-pressed="true"]:focus-visible{
+  outline:2px solid var(--text-primary);outline-offset:2px;
+}
+/* Repetir faixa: selo "1" (o modo "fila" fica só com a barra curta; "faixa" com barra longa + selo). */
+:root #repeat[data-repeat-mode="track"]::before{
+  content:"1";position:absolute;top:1px;right:1px;min-width:14px;height:14px;border-radius:7px;
+  display:grid;place-items:center;font:700 11px/1 system-ui,sans-serif;
+  background:var(--on-accent);color:var(--background);pointer-events:none;
+}
+:root #repeat[data-repeat-mode="track"]::after{width:16px;margin-left:-8px}
+@media(forced-colors:active){
+  :root :is(#shuffle,#repeat,#mute,#meter-off,#favorite,#layout-mini-toggle)[aria-pressed="true"]{border:2px solid Highlight}
+  :root :is(#shuffle,#repeat,#mute,#meter-off,#favorite,#layout-mini-toggle)[aria-pressed="true"]::after{background:Highlight}
+}
+
+/* R41-13 (desktop): escala 28 / 32 / 36 / 48 e raio 6 (exceto Play e favorito). Cabeçalho (34px/8) e mini não mudam. */
+@media(min-width:901px){
+  :root:not([data-layout="mini"]) :is(
+    .track-row .icon-button,.track-row .row-select,.queue-item .icon-button,.queue-item .queue-more,
+    #meter-options,#meter-off,#enlarge,.enlarge
+  ){height:28px;min-height:28px;border-radius:6px}
+  :root:not([data-layout="mini"]) :is(.track-row .icon-button,.track-row .row-select,.queue-item .icon-button,.queue-item .queue-more,#meter-options,#meter-off){width:28px;min-width:28px}
+  :root:not([data-layout="mini"]) :is(
+    #shuffle,#repeat,#eq-open,#dsp-open,#mute,#lyrics-menu-button,#lyrics-full,.lyrics-full,#play-all,.play-all,
+    #library-filter-toggle,.library-filter-toggle,#playlists-open,.playlists-open,#clear-queue,.clear-queue,
+    .audio-shortcuts button
+  ){height:32px;min-height:32px;border-radius:6px}
+  :root:not([data-layout="mini"]) :is(#shuffle,#repeat,#dsp-open,#mute,#lyrics-menu-button){width:32px;min-width:32px}
+  :root:not([data-layout="mini"]) .transport :is(#previous,#next,#stop){width:36px;min-width:36px;height:36px;min-height:36px;border-radius:6px}
+  :root:not([data-layout="mini"]) .transport #play{width:48px;min-width:48px;height:48px;min-height:48px}
+}
+
+/* R41-15: fontes de botão inteiras — 12px secundário, 13px primário. */
+:root:root[data-faithful] :is(#skin-picker,#restore-open,.text-button,.small-button,#enlarge,.enlarge,#clear-queue,.clear-queue,#lyrics-full,.lyrics-full,.audio-shortcuts button,#library-filter-toggle,.library-filter-toggle,#playlists-open,.playlists-open,.row-select){font-size:12px}
+:root:root[data-faithful] :is(#audio-effects-open,.audio-effects-open,#open,.open,#play-all,.play-all){font-size:13px}
+
+/* Nota #6 do mantenedor: o rótulo "Repetição desligada" parecia um botão e não fazia nada.
+   O ícone de repetir já mostra o modo (barra de estado e selo "1"); o texto fica só para leitor de tela e dica. */
+:root:root #repeat-label{position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}

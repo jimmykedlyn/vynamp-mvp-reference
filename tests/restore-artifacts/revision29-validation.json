@@ -1,0 +1,22 @@
+{
+  "success": true,
+  "bundledExamples": 3,
+  "realReferenceServerGET": true,
+  "CORS": true,
+  "ETag304": true,
+  "method405": true,
+  "remoteCatalog": true,
+  "personalPreserved": true,
+  "invalidAtomicReject": true,
+  "HTTPFailureFallback": true,
+  "cacheAfterReload": true,
+  "staleResponseIgnored": true,
+  "oversizeRejected": true,
+  "responsive": [
+    320,
+    390,
+    768,
+    1120
+  ],
+  "browserErrors": []
+}

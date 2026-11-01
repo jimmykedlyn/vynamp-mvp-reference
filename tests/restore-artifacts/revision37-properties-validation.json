@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "width0": 320,
+  "width1": 424,
+  "width2": 408,
+  "persisted": {
+    "width": 408,
+    "floating": false,
+    "x": 529,
+    "y": 160,
+    "height": 620
+  },
+  "drag": true,
+  "keyboardResize": true,
+  "panoramaModes": true,
+  "resolutions": [
+    1120,
+    800,
+    640,
+    390
+  ],
+  "browserErrors": []
+}

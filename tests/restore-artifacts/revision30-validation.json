@@ -1,0 +1,22 @@
+{
+  "success": true,
+  "allFiveOptions": true,
+  "standardGeometryPreserved": true,
+  "quietLevel": 0.231,
+  "loudLevel": 1,
+  "realSignalReactivity": true,
+  "radioLiveBars": true,
+  "silenceAndPause": true,
+  "reducedMotion": true,
+  "playedClipPreserved": true,
+  "oldPulsePreserved": true,
+  "sameAudioContext": true,
+  "persisted": true,
+  "responsive": [
+    320,
+    390,
+    768,
+    1120
+  ],
+  "browserErrors": []
+}

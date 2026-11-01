@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "realFileSystemHandlesInOriginPrivateFixture": true,
+  "indexedDBStructuredClone": true,
+  "reloadReconnect": true,
+  "permissionQuery": true,
+  "refreshNewFile": true,
+  "externalNativePicker": "manual browser permission required; not automated",
+  "browserErrors": []
+}

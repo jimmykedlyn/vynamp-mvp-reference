@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "verticeApplied": true,
+  "threeFamilies": true,
+  "accentFollowing": true,
+  "independentColor": true,
+  "persistence": true,
+  "resetToAccent": true,
+  "currentFormatIcon": true,
+  "libraryFileIcons": true,
+  "artworkPreserved": true,
+  "responsive": [
+    320,
+    390,
+    768,
+    900,
+    901,
+    1120,
+    1600
+  ],
+  "mobileAndMini": true,
+  "browserErrors": []
+}

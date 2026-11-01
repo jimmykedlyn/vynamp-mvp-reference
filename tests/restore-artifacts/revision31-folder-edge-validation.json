@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "cancelledScanAtomic": true,
+  "pagedRows": [
+    200,
+    400,
+    450
+  ],
+  "lazyFileRegistration": true,
+  "emptyPreflightCancelsOldScan": true,
+  "audioLimit20000": true,
+  "removeMapping": true
+}

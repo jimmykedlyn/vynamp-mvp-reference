@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "tags": {
+    "replaygain": {
+      "trackGain": -7.3,
+      "albumPeak": 1.25
+    }
+  },
+  "off": 1.2942984064445074e-7,
+  "track": 6.000000172578215,
+  "album": -6.000000232429289,
+  "guarded": -6.020599783849784,
+  "untagged": -3.0000004321255664,
+  "normal": 6.9999998599678035,
+  "maxGain": 3.0000000021090916,
+  "peakGuard": 9.000000145386835,
+  "otherFile": 1.2942984064445074e-7,
+  "browserErrors": []
+}

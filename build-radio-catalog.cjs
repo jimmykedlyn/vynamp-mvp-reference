@@ -1,0 +1,2 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path');const root=__dirname,catalog=JSON.parse(fs.readFileSync(path.join(root,'radio-catalog.json'),'utf8'));if(catalog.version!==1||!Array.isArray(catalog.stations))throw Error('Invalid catalog');fs.writeFileSync(path.join(root,'radio-catalog.js'),'// Generated from radio-catalog.json for file:// preview.\nwindow.VYNAMP_RADIO_EXAMPLES='+JSON.stringify(catalog)+';\nwindow.VYNAMP_RADIO_CONFIG=window.VYNAMP_RADIO_CONFIG||{catalogUrl:"./radio-catalog.json"};\n');console.log('Generated radio-catalog.js');

@@ -1,0 +1,33 @@
+{
+  "format": "vynamp-restore",
+  "version": 1,
+  "source": {
+    "name": "edge.wav",
+    "fingerprint": "edge.wav|2822444|1793468753471"
+  },
+  "state": {
+    "version": 1,
+    "duration": 8,
+    "enabled": true,
+    "monitor": "treated",
+    "scope": "all",
+    "tools": {
+      "dc": false,
+      "hum": 0,
+      "gate": false,
+      "threshold": -45,
+      "click": false,
+      "clickThreshold": 0.2
+    },
+    "regions": [
+      {
+        "id": "region-mvwoznu6-1",
+        "start": 1,
+        "end": 2,
+        "gainDB": -90,
+        "fade": 0.02,
+        "kind": "between"
+      }
+    ]
+  }
+}

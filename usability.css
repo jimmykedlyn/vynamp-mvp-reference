@@ -1,0 +1,26 @@
+/* Refinement of the approved reference, without changing playback or instruments. */
+:root[data-faithful]{--control-min:28px;--feedback-duration:120ms;
+ .appbar .icon-button,.instrument .icon-button,.now-summary #favorite{min-width:var(--control-min);min-height:var(--control-min)}
+ .track-row .row-select,.track-row>[data-add],.queue-item>[data-remove]{min-width:28px;min-height:32px;justify-self:center}
+ .track-row,.column-head{grid-template-columns:calc(32 * var(--r)) minmax(0,1.1fr) minmax(0,1fr) calc(64 * var(--r)) 28px}
+ .track-row:hover,.track-row:focus-within{background:color-mix(in srgb,var(--text-primary) 6%,var(--background))}
+ .track-row.current{box-shadow:inset 2px 0 var(--lime)}
+ .track-row.selected{outline:1px solid var(--border-light);outline-offset:-1px}
+ .track-row .track-name:hover,.queue-item .track-name:hover{background:transparent}
+ .search:focus-within{outline:2px solid var(--cyan);outline-offset:2px;border-color:var(--cyan)}
+ :is(button,a,input,select):focus-visible{outline:2px solid var(--cyan);outline-offset:2px;box-shadow:0 0 0 2px var(--background),0 0 0 4px var(--cyan)}
+ .meter-menu button:focus-visible{outline:2px solid var(--cyan);outline-offset:-2px;box-shadow:none}
+ input[type=range]{min-height:32px}
+ .audio-shortcuts button{min-height:32px}
+ #clear-queue{min-height:28px}
+ #track-file-info{grid-column:2;grid-row:4;display:flex;align-items:center;flex-wrap:wrap;gap:5px 7px;margin-top:5px;min-width:0;max-width:100%;font:calc(10px * var(--font-scale,1) * var(--r))/1.5 Consolas,monospace}
+ .format-badge{flex:none;display:inline-flex;align-items:center;min-height:20px;padding:1px 6px;border-radius:4px;font-weight:750;letter-spacing:.4px;color:#101218;background:var(--format-color);border:1px solid color-mix(in srgb,var(--format-color) 75%,#000)}
+ .track-file-details{color:var(--text-secondary);overflow-wrap:anywhere;min-width:0}
+ &[data-file-summary] .now-summary #source{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);margin:0;padding:0;border:0}
+}
+@media(min-width:901px) and (max-width:1150px){:root[data-faithful]{.track-row,.column-head{grid-template-columns:28px minmax(0,1fr) 44px 28px}}}
+@media(max-width:900px){:root[data-faithful]{.track-row,.column-head{grid-template-columns:28px minmax(0,1fr) 44px 28px}.now-summary #track-file-info{order:5;align-self:center;grid-column:auto;grid-row:auto;justify-content:center;font-size:11px;margin-top:9px;max-width:100%}.track-file-details{text-align:center}}}
+:root[data-faithful][data-layout=mini] .now-summary #track-file-info{grid-column:2;grid-row:3;order:initial;justify-content:start;font-size:calc(10px * var(--r))}
+@media(pointer:coarse){:root[data-faithful]{.appbar .icon-button,.instrument .icon-button,.now-summary #favorite,.track-row .row-select,.track-row>[data-add],.queue-item>[data-remove],#clear-queue{min-width:44px;min-height:44px}.audio-shortcuts button{min-height:44px}.track-row,.column-head{grid-template-columns:44px minmax(0,1fr) 44px 44px;gap:6px}.track-row .album-cell,.column-head span:nth-child(3){display:none}}}
+:root[data-faithful][data-touch=true]{.appbar .icon-button,.instrument .icon-button,.now-summary #favorite,.track-row .row-select,.track-row>[data-add],.queue-item>[data-remove],#clear-queue{min-width:44px;min-height:44px}.audio-shortcuts button{min-height:44px}.track-row,.column-head{grid-template-columns:44px minmax(0,1fr) 44px 44px;gap:6px}.track-row .album-cell,.column-head span:nth-child(3){display:none}}
+@media(prefers-reduced-motion:reduce){:root[data-faithful] *, :root[data-faithful] *::before, :root[data-faithful] *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

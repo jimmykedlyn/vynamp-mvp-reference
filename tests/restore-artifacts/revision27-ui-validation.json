@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "realAudioWorklet": true,
+  "realSpectrum": true,
+  "DCMean": -0.004001093633178243,
+  "mutedRegionPeak": 0,
+  "ABOriginalPeak": 0.3211206793785095,
+  "undoRedo": true,
+  "exportFloatWAV": true,
+  "sameAudioAndContext": true,
+  "originalPlayerRestored": true,
+  "browserErrors": []
+}

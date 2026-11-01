@@ -1,0 +1,54 @@
+{
+  "success": true,
+  "limiter": {
+    "rmsDifference": 0.40070419548524083,
+    "max": 0.5919028520584106,
+    "truePeak": -1.499444092316338,
+    "latency": 248
+  },
+  "tube": {
+    "rmsDifference": 0.049485009972554124,
+    "max": 0.2021668255329132,
+    "truePeak": -13.873554532298815,
+    "latency": 3
+  },
+  "vinyl": {
+    "rmsDifference": 0.20575749307766913,
+    "max": 0.21533749997615814,
+    "truePeak": -13.32580941779971,
+    "latency": 576
+  },
+  "loudness-meter": {
+    "rmsDifference": 0,
+    "max": 0.20000000298023224,
+    "truePeak": -13.970551337405501,
+    "latency": 0
+  },
+  "clip": {
+    "rmsDifference": 0,
+    "max": 0.20000000298023224,
+    "truePeak": -13.970551337405501,
+    "latency": 0
+  },
+  "chorus": {
+    "rmsDifference": 0.038869434312012514,
+    "max": 0.19998511672019958,
+    "truePeak": -13.971297388980012,
+    "latency": 0
+  },
+  "flanger": {
+    "rmsDifference": 0.02810048888772203,
+    "max": 0.19990274310112,
+    "truePeak": -13.973614063506929,
+    "latency": 0
+  },
+  "pdc": {
+    "first": 576,
+    "latency": 576,
+    "estimate": 576
+  },
+  "afterLimiterRejected": true,
+  "real": true,
+  "prepared": true,
+  "browserErrors": []
+}

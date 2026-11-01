@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "live": {
+    "meter": {
+      "type": "loudness-meter",
+      "active": true,
+      "momentary": -20.11339174761264,
+      "short": -20.123386741706238,
+      "integrated": -20.130711967220325,
+      "truePeak": -14.31754400769625,
+      "samplePeak": -14.338159233762758,
+      "seconds": 3.1,
+      "liveProcessors": 4
+    },
+    "tube": {
+      "type": "tube",
+      "active": true,
+      "warmRemaining": 0,
+      "warmAge": 3.0986666666666665,
+      "sag": 0.09178687082292986,
+      "compressionDB": 0.3513562593182901,
+      "autoGainDB": 0.30721502575444615,
+      "bypass": false,
+      "preset": "Quente",
+      "oversampling": 2,
+      "latencyMs": 0.0625,
+      "liveProcessors": 4
+    },
+    "vinyl": {
+      "type": "vinyl",
+      "active": true,
+      "radius": 0.002475735,
+      "wear": 0,
+      "rpm": 33.333,
+      "phase": "playing",
+      "preRollDone": false,
+      "tailDone": false,
+      "tailSeconds": 0,
+      "latencyMs": 12,
+      "condition": "Usado",
+      "intensity": 100,
+      "autoGainDB": -0.003957919744430542,
+      "maskDB": -3.8798674782503144,
+      "bypass": false,
+      "liveProcessors": 4
+    },
+    "limiter": {
+      "type": "limiter",
+      "active": true,
+      "reduction": 0,
+      "inputTruePeak": -14.31754400769625,
+      "truePeak": -14.31754400769625,
+      "latencyMs": 5.020833333333334,
+      "ceiling": -1,
+      "marginDB": 0.5,
+      "liveProcessors": 4
+    }
+  },
+  "pausedPeak": 0,
+  "analysis": {
+    "target": -16,
+    "maxGain": 12,
+    "standard": "EBU R128",
+    "album": false,
+    "analyzed": true,
+    "measuredLUFS": -20.03223922055895,
+    "measuredPeak": -19.98630127641241,
+    "analyzedKey": "[\"file\",\"DSP37.wav\",11520044,1793554220740]"
+  },
+  "browserErrors": []
+}

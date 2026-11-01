@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "liveGate": true,
+  "processorErrorRecovery": true,
+  "reductionReadout": true,
+  "liveConvolution": true,
+  "sameAudioContext": true,
+  "invalidIRPreservesCurrent": true,
+  "lateLegacyImportCannotOverwriteNewChoice": true,
+  "modulePresetRoundTripIR": true,
+  "IRPersistsAfterReload": true,
+  "missingIRBlocksActivation": true,
+  "namedPresetsChecksum": true,
+  "presetLoadBypass": true,
+  "noAutoplay": true,
+  "capabilityInventory": true,
+  "nativeModulesClearlyMarked": true,
+  "responsive": [
+    320,
+    390,
+    768,
+    1120,
+    1600
+  ],
+  "browserErrors": []
+}
