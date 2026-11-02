@@ -3,7 +3,7 @@
   "projectRoundtrip": true,
   "mismatchRejected": true,
   "processorFailureDryRecovery": true,
-  "recoveryPeak": 0.1997838169336319,
+  "recoveryPeak": 0.19995719194412231,
   "noDoublePath": true,
   "loop": true,
   "keyboardSelection": true,

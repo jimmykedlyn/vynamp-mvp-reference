@@ -19,3 +19,84 @@
 :root[data-restore-processing=true] #restore-open{color:var(--lime);border-color:var(--line);background:var(--panel-raised)}:root[data-restore-processing=true] #main-menu-button{position:relative}:root[data-restore-processing=true] #main-menu-button::after{content:"";position:absolute;right:3px;top:3px;width:5px;height:5px;border-radius:50%;background:var(--lime)}
 @media(max-width:900px){html[data-layout=full][data-restore-active=true] .faithful-body{padding-bottom:200px}html[data-layout=full][data-restore-active=true] .transport{position:fixed!important;left:0;right:0;bottom:calc(68px + env(safe-area-inset-bottom));z-index:15;width:100%;max-width:none;height:auto;min-height:0;margin:0;padding:8px 16px;display:grid!important;grid-template-columns:1fr;grid-template-rows:auto auto;gap:6px;border-top:1px solid var(--line);background:var(--background)}html[data-layout=full][data-restore-active=true] .timeline{grid-column:1;grid-row:1;grid-template-rows:28px 16px;gap:2px}html[data-layout=full][data-restore-active=true] .buttons{grid-column:1;grid-row:2;justify-content:space-between}html[data-layout=full][data-restore-active=true] .buttons .play-button{width:44px;min-width:44px;height:44px;border-radius:12px}html[data-layout=full][data-restore-active=true] .buttons #previous,html[data-layout=full][data-restore-active=true] .buttons #next{width:44px;height:44px}html[data-layout=full][data-restore-active=true] .transport .secondary-controls,html[data-layout=full][data-restore-active=true] .transport-copy{display:none}}
 @media(max-width:900px){html[data-faithful][data-layout=full][data-restore-active=true] .transport{top:auto!important;bottom:calc(68px + env(safe-area-inset-bottom))!important}}
+
+/* #16 — Feedback visual de processamento ativo */
+:root[data-restore-processing=true] #restore-workspace{border-left:2px solid var(--lime);box-shadow:inset 2px 0 8px -2px var(--lime);transition:border-color .3s,box-shadow .3s}
+
+/* #17 — Tooltip educativo / modo guia */
+.restore-guide-btn{margin-left:6px;font-size:14px!important;line-height:1!important;padding:4px 8px!important;border-radius:50%!important;min-width:32px!important;width:32px!important;height:32px!important}
+.restore-guide-tooltip{display:none;position:absolute;left:0;right:0;top:100%;margin-top:4px;padding:6px 10px;background:var(--panel-raised);color:var(--text-primary);border:1px solid var(--line);border-radius:5px;font-size:11px;line-height:1.5;z-index:20;pointer-events:none;white-space:normal;max-width:320px;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+:root[data-restore-guide=true] .restore-tool:hover .restore-guide-tooltip,:root[data-restore-guide=true] .restore-tool:focus-within .restore-guide-tooltip,:root[data-restore-guide=true] .restore-region-properties:hover .restore-guide-tooltip,:root[data-restore-guide=true] .restore-region-properties:focus-within .restore-guide-tooltip{display:block}
+.restore-tool,.restore-region-properties{position:relative}
+
+/* #20a — Painel de Diagnóstico / Relatório de Saúde do Áudio */
+.restore-diagnostics-panel{padding:16px 20px;border-bottom:1px solid var(--line);background:var(--chassis);overflow:auto;max-height:420px}
+.diag-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}.diag-header h3{font:600 13px/1.4 'Segoe UI',sans-serif;margin:0;color:var(--text-primary)}
+.diag-summary{font-size:12px;line-height:1.5;color:var(--text-secondary);margin:0 0 12px}
+.diag-chain{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px;padding:8px 12px;background:var(--panel-inset);border:1px solid var(--line);border-radius:6px;margin-bottom:14px}.diag-chain strong{color:var(--text-primary);white-space:nowrap}.diag-chain span{color:var(--lime);font-family:Consolas,monospace;font-size:11px}.diag-chain button{margin-left:auto;font-size:11px!important;padding:4px 10px!important}
+.diag-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.diag-card{padding:12px 14px;border:1px solid var(--line);border-radius:6px;background:var(--panel-inset);transition:border-color .2s,box-shadow .2s}
+.diag-card:hover{border-color:var(--text-secondary)}
+.diag-severe{border-left:3px solid #e74c3c}.diag-moderate{border-left:3px solid #f39c12}.diag-mild{border-left:3px solid #27ae60}
+.diag-card-head{display:flex;align-items:center;gap:8px;margin-bottom:6px}.diag-icon{font-size:16px;line-height:1}.diag-label{font-weight:600;font-size:12px;color:var(--text-primary);flex:1}.diag-sev{font:10px/1.4 Consolas,monospace;text-transform:uppercase;color:var(--text-secondary)}
+.diag-detail{font-size:11px;line-height:1.5;color:var(--text-secondary);margin:2px 0}
+.diag-examples{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin:6px 0;font-size:11px;color:var(--text-secondary)}.diag-ts{font:10px/1.4 Consolas,monospace;padding:2px 6px;border:1px solid var(--line);border-radius:3px;background:var(--panel-raised);color:var(--lime);cursor:pointer;min-height:auto!important;transition:background .15s}
+.diag-ts:hover{background:var(--text-secondary);color:var(--background)}
+.diag-suggestion{font-size:11px;line-height:1.5;color:var(--text-primary);margin-top:6px;padding-top:6px;border-top:1px dashed var(--line)}
+.diag-nyquist{font:10px/1.4 Consolas,monospace;color:var(--text-secondary);margin-top:12px}
+@media(prefers-reduced-motion:reduce){.diag-card,.diag-ts{transition:none!important}}
+@media(max-width:900px){.restore-diagnostics-panel{padding:12px 14px;max-height:360px}.diag-cards{grid-template-columns:1fr}}
+
+/* #20b — Dropdown de Presets */
+.restore-preset-label{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-secondary);margin-left:auto}
+.restore-preset-label span{white-space:nowrap}
+#restore-preset-select{height:32px;min-width:140px;max-width:220px;border:1px solid var(--line);border-radius:5px;background:var(--panel-inset);color:var(--text-primary);font:inherit;font-size:11px;padding:0 8px;cursor:pointer}
+#restore-preset-select:hover:not(:disabled){border-color:var(--text-secondary)}
+#restore-preset-select:focus-visible{outline:2px solid var(--text-primary);outline-offset:2px}
+@media(max-width:900px){.restore-preset-label{margin-left:0;width:100%}#restore-preset-select{flex:1;max-width:none}}
+
+/* #5 — Batch Processing com relatório */
+.restore-batch{margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.restore-batch h3{margin:0 0 10px}
+.restore-batch button{font-size:11px!important;width:100%;margin-bottom:6px}
+.restore-batch-pick{display:block}
+.restore-batch-list{display:grid;gap:4px;margin:10px 0;max-height:220px;overflow:auto}
+.restore-batch-row{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"name status" "bar bar";gap:4px 8px;padding:6px 8px;border:1px solid var(--line);border-radius:5px;background:var(--panel-inset);font-size:11px}
+.restore-batch-row[data-status=done]{border-left:3px solid #27ae60}
+.restore-batch-row[data-status=failed]{border-left:3px solid #e74c3c}
+.restore-batch-row[data-status=processing]{border-left:3px solid var(--lime)}
+.restore-batch-row[data-status=cancelled]{opacity:.55}
+.restore-batch-name{grid-area:name;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--text-primary)}
+.restore-batch-status{grid-area:status;font:10px/1.4 Consolas,monospace;color:var(--text-secondary)}
+.restore-batch-bar{grid-area:bar;display:block;height:3px;border-radius:2px;background:var(--panel-raised);overflow:hidden}
+.restore-batch-bar i{display:block;height:100%;background:var(--lime);transition:width .2s}
+.restore-batch-error{grid-area:name;color:#e74c3c;font-size:10px}
+#restore-batch-report{margin-top:10px;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--panel-inset)}
+#restore-batch-report h4{margin:0 0 6px;font:600 10px/1.5 Consolas,monospace;letter-spacing:1px;color:var(--text-secondary)}
+.restore-batch-summary{font-size:11px;line-height:1.5;color:var(--text-primary);margin:0 0 8px}
+.restore-batch-defects{list-style:none;margin:0;padding:0;display:grid;gap:3px}
+.restore-batch-defects li{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-secondary)}
+.restore-batch-sev{width:7px;height:7px;border-radius:50%;flex:none}
+.restore-batch-sev[data-sev=severe]{background:#e74c3c}
+.restore-batch-sev[data-sev=moderate]{background:#f39c12}
+.restore-batch-sev[data-sev=mild]{background:#27ae60}
+.restore-batch-chain{font-size:11px;color:var(--text-secondary);margin:8px 0 0}
+.restore-batch-chain strong{color:var(--lime);font-family:Consolas,monospace}
+@media(prefers-reduced-motion:reduce){.restore-batch-bar i{transition:none!important}}
+
+/* #18 — Drag-and-drop de áudio */
+.restore-drop-active{border:2px dashed var(--lime)!important;background:rgba(185,237,74,.06)!important}
+.restore-drop-overlay{display:none;position:absolute;inset:0;z-index:30;align-items:center;justify-content:center;font:600 16px/1 'Segoe UI',sans-serif;color:var(--lime);pointer-events:none;background:rgba(0,0,0,.4);border-radius:4px}
+.restore-drop-active .restore-drop-overlay{display:flex}
+#restore-workspace{position:relative}
+
+/* #19 — Split-view Original × Tratado */
+.restore-compare-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:-4px 0 8px}
+.restore-compare{display:flex;gap:3px;padding:3px;border:1px solid var(--line);border-radius:6px}
+.restore-compare button{border:0!important;background:transparent!important;font-size:11px!important;padding:4px 8px!important}
+.restore-compare [aria-pressed=true]{background:var(--panel-raised)!important}
+.restore-compare-split{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-secondary)}
+.restore-compare-split[hidden]{display:none}
+.restore-compare-split input{width:120px}
+#restore-compare-stats{font:10px/1.4 Consolas,monospace;color:var(--text-secondary);min-width:0;overflow-wrap:anywhere}
+@media(max-width:900px){.restore-compare{width:100%}.restore-compare button{flex:1}.restore-compare-split{width:100%}.restore-compare-split input{flex:1;width:auto}}

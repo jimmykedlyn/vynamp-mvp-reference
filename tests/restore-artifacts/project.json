@@ -3,7 +3,7 @@
   "version": 1,
   "source": {
     "name": "edge.wav",
-    "fingerprint": "edge.wav|2822444|1793468753471"
+    "fingerprint": "edge.wav|2822444|1793629073024"
   },
   "state": {
     "version": 1,
@@ -14,20 +14,24 @@
     "tools": {
       "dc": false,
       "hum": 0,
+      "humAdaptive": false,
       "gate": false,
       "threshold": -45,
       "click": false,
-      "clickThreshold": 0.2
+      "clickThreshold": 0.2,
+      "rumble": 0,
+      "decrackle": 0
     },
     "regions": [
       {
-        "id": "region-mvwoznu6-1",
+        "id": "region-mvzcfvv9-1",
         "start": 1,
         "end": 2,
         "gainDB": -90,
         "fade": 0.02,
         "kind": "between"
       }
-    ]
+    ],
+    "diagnostics": null
   }
 }
