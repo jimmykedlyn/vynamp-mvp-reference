@@ -33,5 +33,6 @@
   document.getElementById('neon-reset').onclick=()=>{delete preferences.themes[currentTheme().id];save();apply();feedback('Cores originais de '+currentTheme().name+' restauradas.');};
   document.getElementById('restore-appearance').addEventListener('click',()=>{preferences={version:1,themes:{}};save();apply();feedback('Todas as cores personalizadas foram restauradas.');});
   document.addEventListener('vynamp:theme-change',()=>{apply();feedback('Cores de '+currentTheme().name+'.');});
-  window.VynampNeon={snapshot,apply,palette:palette.map(([id,name,hex])=>({id,name,hex})),contrast};apply();
+  function setPart(part,id){const values=snapshot();values[part]=id==='inherit'?null:id;preferences.themes[currentTheme().id]=values;save();apply();document.dispatchEvent(new CustomEvent('vynamp:neon-change',{detail:{part,id}}));}
+  window.VynampNeon={snapshot,apply,setPart,palette:palette.map(([id,name,hex])=>({id,name,hex})),contrast};apply();
 })();
