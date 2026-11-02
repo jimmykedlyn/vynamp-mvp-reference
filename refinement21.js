@@ -1,11 +1,11 @@
 'use strict';
 (() => {
   const $=id=>document.getElementById(id),registry=window.VynampEQRegistry,controller=window.VynampEQController;
-  const menuEQ=document.querySelector('[data-command="eq"]'),classicEQ=menuEQ.cloneNode(true);classicEQ.dataset.classicEq='true';classicEQ.textContent='Editor clássico · 10 bandas';menuEQ.after(classicEQ);
+  const menuEQ=document.querySelector('[data-command="eq"]'),classicEQ=menuEQ.cloneNode(true);classicEQ.dataset.classicEq='true';VynampIcons.lead(classicEQ,'eq','Editor clássico · 10 bandas');menuEQ.after(classicEQ);
   // Presentation follows the shared primary instance, including undo/import/restore.
   const modeLabel=document.createElement('span');modeLabel.className='eq-mode-label';$('eq-open').append(modeLabel);
   function syncEQ(){const mode=registry.get().mode,name=mode==='parametric'?'paramétrico':mode+' bandas';modeLabel.textContent=mode==='parametric'?'PEQ':mode;$('eq-open').dataset.eqMode=mode;
-    for(const id of ['eq-open','preferences-eq']){const el=$(id);el.setAttribute('aria-label','Abrir equalizador '+name);el.title='Equalizador '+name+' · mesma configuração do DSP';if(id==='preferences-eq')el.textContent='Abrir equalizador '+name;}menuEQ.textContent='Equalizador '+name;
+    for(const id of ['eq-open','preferences-eq']){const el=$(id);el.setAttribute('aria-label','Abrir equalizador '+name);el.title='Equalizador '+name+' · mesma configuração do DSP';if(id==='preferences-eq')el.textContent='Abrir equalizador '+name;}VynampIcons.lead(menuEQ,'eq','Equalizador '+name);
   }
   window.VynampGraph.store.on(syncEQ);syncEQ();
   function openCurrent(invoker){controller.open();$('advanced-eq-dialog').addEventListener('close',()=>{const target=invoker.offsetWidth?invoker:$('preferences').offsetWidth?$('preferences'):$('main-menu-button');target.focus({preventScroll:true});},{once:true});}

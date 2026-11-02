@@ -63,7 +63,7 @@
         handle.setAttribute('draggable', 'true');
         handle.setAttribute('aria-hidden', 'true');
         handle.title = 'Arraste para reordenar (ou Alt + ↑ / ↓)';
-        handle.textContent = '⋮⋮';
+        handle.innerHTML = VynampIcons.svg('grip');
         row.prepend(handle);
       }
       handle.dataset.dragIndex = String(idxAttr);

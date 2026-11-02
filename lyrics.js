@@ -21,8 +21,8 @@
   function save(){try{localStorage.setItem(storage,JSON.stringify({version:1,enabled:state.enabled,instrumental:[...state.instrumental]}));}catch{announce('Preferência mantida apenas nesta sessão.');}}
   function announce(message){$('lyrics-message').textContent=message;}
   function stopAnimation(){generation++;if(animation){animation.cancel();animation=null;} $('lyrics-strip').style.transform='';}
-  function makeLine(text,position){const line=document.createElement('div');line.className='lyrics-line '+position;line.textContent=text||'\u00a0';line.title=text||'';if(position==='current'){line.id='lyrics-current';line.setAttribute('aria-current','true');}else{line.id=position==='previous'?'lyrics-previous':'lyrics-next';line.setAttribute('aria-hidden','true');}return line;}
-  function drawLines(entry,index){const strip=$('lyrics-strip');strip.replaceChildren(makeLine(entry.lines[index-1]?.text,'previous'),makeLine(index<0?'Aguardando a primeira linha':entry.lines[index]?.text||'♪','current'),makeLine(entry.lines[index+1]?.text,'next'));}
+  function makeLine(text,position,note=false){const line=document.createElement('div');line.className='lyrics-line '+position;if(!text&&note)line.innerHTML=VynampIcons.svg('note',{label:'Trecho instrumental'});else line.textContent=text||'\u00a0';line.title=text||'';if(position==='current'){line.id='lyrics-current';line.setAttribute('aria-current','true');}else{line.id=position==='previous'?'lyrics-previous':'lyrics-next';line.setAttribute('aria-hidden','true');}return line;}
+  function drawLines(entry,index){const strip=$('lyrics-strip');strip.replaceChildren(makeLine(entry.lines[index-1]?.text,'previous'),makeLine(index<0?'Aguardando a primeira linha':entry.lines[index]?.text||'','current',true),makeLine(entry.lines[index+1]?.text,'next'));}
   function setIndex(entry,index,playing){
     if(index===activeIndex){if((!playing||reduced())&&animation){stopAnimation();drawLines(entry,index);}return;}
     const previous=activeIndex;activeIndex=index;

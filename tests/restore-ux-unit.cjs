@@ -49,8 +49,8 @@ test('JS define chave localStorage vynamp-restore-guide-v1', () => {
 	assert.match(js, /vynamp-restore-guide-v1/, 'Chave do guia ausente no JS');
 });
 
-test('JS cria botão guia com texto ❓', () => {
-	assert.match(js, /guideBtn\.textContent\s*=\s*'❓'/, 'Botão guia não criado');
+test('JS cria botão guia com ícone SVG de ajuda', () => {
+	assert.match(js, /guideBtn\.innerHTML\s*=\s*VynampIcons\.svg\('help'\)/, 'Botão guia não criado');
 });
 
 test('JS implementa loadGuide lendo do localStorage', () => {

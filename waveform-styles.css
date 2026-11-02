@@ -20,7 +20,7 @@
 .wave-style-menu{position:fixed;z-index:80;max-width:calc(100vw - 16px);width:240px;padding:5px;background:var(--chassis);border:1px solid var(--border-light);color:var(--text-primary);border-radius:7px;box-shadow:0 8px 24px #0006}
 .wave-style-menu button{display:block;width:100%;min-height:40px;padding:9px 12px;text-align:left;font-size:13px}
 .wave-style-menu [aria-checked=true]{background:var(--panel-raised)}
-.wave-style-menu [aria-checked=true]::after{content:'✓';float:right;margin-left:12px;color:var(--lime)}
+.wave-style-menu [aria-checked=true]::after{content:'';display:inline-block;width:14px;height:14px;vertical-align:-.125em;background:currentColor;-webkit-mask:var(--icon-check) center/contain no-repeat;mask:var(--icon-check) center/contain no-repeat;float:right;margin-left:12px;color:var(--lime)}
 .wave-style-menu button:focus-visible{outline:2px solid var(--text-primary);outline-offset:-2px}
 @media(pointer:coarse){.wave-style-menu button,.wave-style-choices button{min-height:44px}}
 @media(forced-colors:active){#wave-alternatives .wave-peaks{fill:CanvasText}#wave-alternatives .wave-body{fill:Highlight}.wave-style-menu [aria-checked=true]{outline:1px solid Highlight}}

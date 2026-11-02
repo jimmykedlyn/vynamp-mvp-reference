@@ -1,0 +1,44 @@
+/* Ícones SVG (icons.js): grade 24, traço herdado de .icon, tamanho óptico por contexto. */
+.icon{flex:none;vertical-align:-.15em}
+.has-icon{display:inline-flex;align-items:center;gap:.5em}
+.has-icon>.icon{width:1.15em;height:1.15em}
+.icon-label{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.icon-trailing{width:12px;height:12px;margin-left:6px;opacity:.7}
+#main-menu [role=menuitem].has-icon{display:flex;align-items:center;justify-content:flex-start;gap:10px}
+#main-menu [role=menuitem].has-icon>kbd{margin-left:auto}
+#main-menu [role=menuitem].has-icon>.icon{width:16px;height:16px;color:var(--text-secondary)}
+#main-menu [role=menuitem]:hover>.icon,#main-menu [role=menuitem]:focus-visible>.icon{color:var(--text-primary)}
+
+/* Indicador de estado: ponto + forma, nunca só cor. */
+.has-badge{position:relative}
+.has-badge::after{content:'';position:absolute;top:4px;right:4px;width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 2px var(--chassis)}
+.status-led{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:7px;vertical-align:1px;background:var(--lime);box-shadow:0 0 6px var(--lime)}
+
+/* Grafo modular */
+.graph-node-icon{display:inline-grid;place-items:center}
+.graph-node-icon .icon{width:18px;height:18px}
+.node-toggle .icon{width:14px;height:14px}
+.graph-power .icon{width:15px;height:15px}
+
+/* Biblioteca, fila e favoritos */
+.visualizer-star .icon{width:18px;height:18px}
+.visualizer-star[aria-pressed=true] .icon{filter:drop-shadow(0 0 4px color-mix(in srgb,var(--lime) 50%,transparent))}
+.visualizer-gear .icon{width:17px;height:17px}
+.queue-drag .icon,.queue-drag-handle .icon{width:16px;height:16px;opacity:.65}
+.queue-drag:hover .icon,.queue-drag-handle:hover .icon{opacity:1}
+.brand-family-selected .icon,.neon-inherit .icon{width:12px;height:12px}
+
+/* Letras: trecho instrumental */
+.lyrics-line .icon{width:16px;height:16px;opacity:.8}
+
+/* Restore: severidade com forma própria (octógono, triângulo, círculo) e cor de apoio. */
+.diag-severity-severe{color:var(--danger)}
+.diag-severity-moderate{color:var(--amber)}
+.diag-severity-mild{color:var(--lime)}
+.diag-severity-none{color:var(--text-muted)}
+[class*=diag-severity-].icon{width:16px;height:16px;margin-right:6px}
+.diag-suggestion{display:flex;gap:7px;align-items:flex-start}
+.diag-suggestion .icon{width:14px;height:14px;margin-top:2px;color:var(--amber)}
+#restore-feedback[data-tone=warning]{color:var(--text-primary)}
+#restore-feedback[data-tone=warning]>.icon{width:14px;height:14px;margin-right:6px;color:var(--amber)}
+.restore-diag-card strong .icon,.restore-diag strong .icon{width:15px;height:15px;margin-right:6px;vertical-align:-.2em}
