@@ -29,6 +29,8 @@ select:not([multiple]):not([size]){appearance:none;background-image:var(--icon-s
 .graph-palette-icon .icon{width:14px;height:14px;color:var(--text-secondary)}
 
 /* Biblioteca, fila e favoritos */
+/* Estrela centrada no alvo: o padding genérico dos itens de menu empurrava o ícone para fora do hover. */
+.visualizer-favorite-row .visualizer-star{display:flex;align-items:center;justify-content:center;padding:0}
 .visualizer-star .icon{width:18px;height:18px}
 .visualizer-star[aria-pressed=true] .icon{filter:drop-shadow(0 0 4px color-mix(in srgb,var(--lime) 50%,transparent))}
 .visualizer-gear .icon{width:17px;height:17px}
