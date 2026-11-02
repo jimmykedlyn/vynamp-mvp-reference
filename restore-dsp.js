@@ -5,14 +5,15 @@
 	// que a música não explica; o buraco é refeito por interpolação AR de mínimos quadrados (LSAR) com os vizinhos.
 	// Atraso fixo de `latency` amostras por estágio; o Kernel encadeia duas passadas.
 	static Repair=class{
-		constructor(threshold){
-			const P=48,maxGap=480;
-			this.P=P;this.maxGap=maxGap;this.pad=3;this.latency=2*P+maxGap+40;this.threshold=threshold;
+		// soft: só o excesso do resíduo é cortado (o agudo da música fica); interpolação só para estalo forte e curto.
+		constructor(threshold,soft=false){
+			const P=48,maxGap=soft?96:480;
+			this.soft=soft;this.P=P;this.maxGap=maxGap;this.pad=3;this.latency=2*P+maxGap+40;this.threshold=threshold;
 			this.mask=4095;this.raw=new Float32Array(4096);this.fix=new Float32Array(4096);this.n=-1;
 			this.a=new Float64Array(P+1);this.a[0]=1;this.r=new Float64Array(P+1);this.tmp=new Float64Array(P+1);this.c=new Float64Array(P+1);
 			this.window=Float64Array.from({length:1024},(_,i)=>.5-.5*Math.cos(2*Math.PI*(i+.5)/1024));this.frame=new Float64Array(1024);
 			this.A=new Float64Array((maxGap+1)*(maxGap+1));this.b=new Float64Array(maxGap+1);this.keep=new Float32Array(maxGap+1);
-			this.env=0;this.d2env=0;this.open=false;this.waiting=false;this.quiet=0;this.gapStart=0;this.gapEnd=0;this.repairs=0;
+			this.env=0;this.d2env=0;this.open=false;this.waiting=false;this.quiet=0;this.gapStart=0;this.gapEnd=0;this.repairs=0;this.clips=0;this.tail=new Float64Array(4096);
 		}
 		fit(){
 			const P=this.P,N=1024,x=this.frame,r=this.r,a=this.a,t=this.tmp,m=this.mask,base=this.n-this.latency-N+1;
@@ -27,6 +28,7 @@
 			raw[n&m]=x;this.fix[n&m]=x;
 			if(n>=1024+this.latency&&(n&255)===0)this.fit();
 			const s=n-P;
+			let excess=0;
 			if(s>=1024+this.latency){
 				let forward=raw[s&m],backward=forward;
 				for(let j=1;j<=P;j++){forward+=a[j]*raw[(s-j)&m];backward+=a[j]*raw[(s+j)&m];}
@@ -39,7 +41,11 @@
 				else{
 					// Mediana móvel (~5 ms) do resíduo: a crepitação densa não infla o limiar como uma média inflaria.
 					this.env=Math.max(1e-5,this.env*(e>this.env?1.004:.996));
-					if(burst||e>this.threshold*this.env&&e>1e-3){
+					const hit=burst||e>this.threshold*this.env&&e>1e-3;
+					if(hit&&this.soft&&!this.open&&!burst&&e<=1.5*this.threshold*this.env){
+						// Corte do excesso: só o que o resíduo para frente passa do limiar vira correção (filtrada abaixo).
+						excess=Math.sign(forward)*Math.max(0,Math.abs(forward)-this.threshold*this.env);this.clips++;
+					}else if(hit){
 						// Margem de `pad` amostras: a borda do estalo fica abaixo do limiar, mas também é dano.
 						if(!this.open){
 							if(this.waiting&&s-this.pad-this.gapEnd<=P)this.waiting=false;
@@ -52,6 +58,9 @@
 					}else if(this.open&&++this.quiet>=4){this.open=false;this.waiting=true;}
 				}
 			}
+			// Excesso de excitação passa pelo filtro de síntese 1/A: tira o estalo junto com a cauda que ele deixa na música.
+			// O resíduo vem do sinal original, não do reparado: é um filtro linear sobre o excesso, sem realimentação do corte.
+			if(this.soft&&s>=0){let z=excess;for(let j=1;j<=P;j++)z-=a[j]*this.tail[(s-j)&m];this.tail[s&m]=z;this.fix[s&m]-=z;}
 			if(this.waiting&&n>=this.gapEnd+P)this.finish();
 			return n<this.latency?0:this.fix[(n-this.latency)&m];
 		}
@@ -102,7 +111,7 @@
 			this.hum=0;
 			this.humAdaptive=false;
 			this.rumbleFreq=0;
-			this.decrackleSens=0;
+			this.decrackleSens=0;this.decrackleSoft=false;
 			this.state={enabled:false,monitor:'treated',scope:'all',tools:{},regions:[]};
 			this.fadeTable=Float32Array.from({length:257},(_,i)=>.5-.5*Math.cos(Math.PI*i/256));
 			this.noiseEnv=[0,0];
@@ -156,12 +165,12 @@
 					return{b0:b0/a0,b1:b1/a0,b2:b2/a0,a1:a1/a0,a2:a2/a0,z1:0,z2:0};
 				}):[null,null];
 			}
-			const decrackle=state.tools?.decrackle||0;
-			if(decrackle!==this.decrackleSens){
-				this.decrackleSens=decrackle;
+			const decrackle=state.tools?.decrackle||0,soft=state.tools?.decrackleMode==='soft';
+			if(decrackle!==this.decrackleSens||soft!==this.decrackleSoft){
+				this.decrackleSens=decrackle;this.decrackleSoft=soft;
 				// Intensidade 0,05–0,5 → limiar de 5,5 a 3× a mediana do resíduo (mais alto = mais agressivo; 0,15 → 4,5).
 				const limit=Math.max(3,6-10*decrackle);
-				this.repair=decrackle>0?[0,1].map(()=>[new Kernel.Repair(limit),new Kernel.Repair(limit)]):null;
+				this.repair=decrackle>0?[0,1].map(()=>[new Kernel.Repair(limit,soft),new Kernel.Repair(limit,soft)]):null;
 				// Passa-baixa de fase linear (~18 kHz): a interpolação deixa resíduo acima da banda do MP3, que soa como chiado fino.
 				this.repairLP=this.repair?[0,1].map(()=>({line:new Float32Array(this.lpTaps.length),index:0})):null;
 				const delay=this.repair?this.repair[0][0].latency*2+(this.lpTaps.length-1)/2:0;

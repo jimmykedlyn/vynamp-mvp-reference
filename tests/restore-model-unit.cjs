@@ -25,7 +25,7 @@ test('Store cria estado inicial válido com duração', () => {
 	assert.equal(s.state.enabled, false);
 	assert.equal(s.state.monitor, 'treated');
 	assert.equal(s.state.scope, 'all');
-	assert.deepEqual(s.state.tools, { dc: false, hum: 0, humAdaptive: false, gate: false, threshold: -45, click: false, clickThreshold: 0.2, rumble: 0, decrackle: 0, declip: 0 });
+	assert.deepEqual(s.state.tools, { dc: false, hum: 0, humAdaptive: false, gate: false, threshold: -45, click: false, clickThreshold: 0.2, rumble: 0, decrackle: 0, decrackleMode: 'strong', declip: 0 });
 	assert.deepEqual(s.state.regions, []);
 	assert.equal(s.past.length, 0);
 	assert.equal(s.future.length, 0);
@@ -300,6 +300,14 @@ test('unsubscribe remove listener', () => {
 	unsub();
 	s.change(st => { st.enabled = false; });
 	assert.equal(count, 1);
+});
+
+test('Modelo aceita decrackleMode soft/strong, rejeita outro e usa strong quando falta', () => {
+	const base = M.initial(10);
+	assert.equal(M.validate({ ...base, tools: { ...base.tools, decrackleMode: 'soft' } }, 10).tools.decrackleMode, 'soft');
+	const { decrackleMode, ...old } = base.tools;
+	assert.equal(M.validate({ ...base, tools: old }, 10).tools.decrackleMode, 'strong');
+	assert.throws(() => M.validate({ ...base, tools: { ...base.tools, decrackleMode: 'max' } }, 10));
 });
 
 console.log('\n' + passed + ' testes passaram.');

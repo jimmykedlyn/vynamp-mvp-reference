@@ -279,16 +279,35 @@ test('Crepitação desligada não toca na rajada', () => {
 	const out = runKernel({ tools: { ...DECLIP_TOOLS, decrackle: 0 } }, burstSignal());
 	assert(maxResidual(out[0], 23990, 24050) > 2);
 });
-test('Crepitação não altera música limpa com agudos fortes, só atrasa', () => {
+test('Crepitação suave também repara rajada de agudos em fundo de escala', () => {
+	const out = runKernel({ tools: { ...DECLIP_TOOLS, decrackle: 0.15, decrackleMode: 'soft' } }, burstSignal());
+	const residual = maxResidual(out[0], 23000, out[0].length);
+	assert(residual < 0.1, 'resíduo na rajada ' + residual.toFixed(3));
+});
+
+for (const mode of ['strong', 'soft']) test('Crepitação (' + mode + ') não altera música limpa com agudos fortes, só atrasa', () => {
 	// Agudos densos até 12 kHz: um sinal previsível sai igual mesmo se algum trecho for refeito; o passa-baixa de ~18 kHz só atrasa (ondulação < 0,3%).
 	const x = makeSine(200, 1, 0.3).map((v, i) => v + 0.15 * Math.sin(2 * Math.PI * 3100 * i / FS) + 0.1 * Math.sin(2 * Math.PI * 7300 * i / FS) + 0.08 * Math.sin(2 * Math.PI * 12100 * i / FS));
 	const k = new Kernel(FS), out = [new Float32Array(x.length), new Float32Array(x.length)];
-	k.setState({ ...M.initial(1), enabled: true, tools: { ...M.initial(1).tools, ...DECLIP_TOOLS, decrackle: 0.15 } });
+	k.setState({ ...M.initial(1), enabled: true, tools: { ...M.initial(1).tools, ...DECLIP_TOOLS, decrackle: 0.15, decrackleMode: mode } });
 	k.processInto([x, x], out, 0);
 	assert(k.latency > 1 && k.latency < FS * 0.03, 'latência ' + k.latency);
 	let worst = 0;
 	for (let i = 4800; i < x.length; i++) worst = Math.max(worst, Math.abs(out[0][i] - x[i - k.latency]));
-	assert(worst < 2e-3, 'desvio ' + worst);
+	// Suave: num sinal quase perfeitamente previsível o limiar fica minúsculo e o corte mexe um pouco (< -40 dB).
+	assert(worst < (mode === 'soft' ? 1e-2 : 2e-3), 'desvio ' + worst);
+});
+
+test('Crepitação suave tira estalos isolados e tem menos atraso que a forte', () => {
+	let seed = 5;
+	const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647) * 2 - 1;
+	const x = makeSine(330, 1, 0.3).map(v => v + 0.02 * rand());
+	for (let i = 6000; i < x.length; i += 997) x[i] += 0.4;
+	const run = mode => { const k = new Kernel(FS), out = [new Float32Array(x.length), new Float32Array(x.length)]; k.setState({ ...M.initial(1), enabled: true, tools: { ...M.initial(1).tools, ...DECLIP_TOOLS, decrackle: 0.15, decrackleMode: mode } }); k.processInto([x, x], out, 0); return { k, out: out[0] }; };
+	const soft = run('soft'), strong = run('strong');
+	assert(soft.k.latency < strong.k.latency, 'atraso suave ' + soft.k.latency + ' ≥ forte ' + strong.k.latency);
+	const before = maxResidual(x, 6000, x.length), after = maxResidual(soft.out, 6000 + soft.k.latency, x.length);
+	assert(after < before * 0.25, 'resíduo ' + after.toFixed(3) + ' de ' + before.toFixed(3));
 });
 
 test('Anti-saturação não altera música limpa com agudos fortes', () => {
