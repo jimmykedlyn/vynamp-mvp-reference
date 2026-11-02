@@ -1,6 +1,7 @@
 /* Ícones SVG (icons.js): grade 24, traço herdado de .icon, tamanho óptico por contexto. */
 .icon{flex:none;vertical-align:-.15em}
-.has-icon{display:inline-flex;align-items:center;gap:.5em}
+/* :where() zera a especificidade: o display:none de cada componente (ex.: controles só do mobile) vence. */
+:where(.has-icon){display:inline-flex;align-items:center;gap:.5em}
 .has-icon>.icon{width:1.15em;height:1.15em}
 .icon-label{min-width:0;overflow:hidden;text-overflow:ellipsis}
 .icon-trailing{width:12px;height:12px;margin-left:6px;opacity:.7}
