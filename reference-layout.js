@@ -6,8 +6,8 @@
   // Keep independent presentation regions as siblings, preserving the original live nodes.
   const instrument=document.querySelector('.instrument');instrument.after($('lyrics-panel'));$('lyrics-panel').after(document.querySelector('.audio-shortcuts'));
   const copy=document.createElement('div');copy.className='transport-copy';const titleRow=document.createElement('div');titleRow.className='transport-title-row';titleRow.append($('timeline-label'),$('eq-badge'));copy.append(titleRow,$('feedback'));transport.append(copy);
-  const symbols={mini:'M4 4h16v16H4ZM12 12h8v8h-8Z',library:'M4 3h4v18H4ZM11 3h4v18h-4ZM18 5l3 15',player:'M8 4l12 8-12 8Z',queue:'M4 6h16M4 12h12M4 18h8M19 15l4 3-4 3Z',effects:'M5 3v18M12 3v18M19 3v18M2 8h6M9 15h6M16 10h6',preferences:'M4 6h16M4 12h16M4 18h16M8 3v6M16 9v6M10 15v6',lyrics:'M5 3h14v18H5ZM8 8h8M8 12h8M8 16h5'};
-  function icon(name){return '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="'+symbols[name]+'"/></svg>';}
+  const symbols={mini:'miniplayer',library:'library',player:'play',queue:'playlist',effects:'eq',preferences:'settings',lyrics:'lyrics'};
+  function icon(name){return VynampIcons.svg(symbols[name]);}
   function button(label,name){const b=document.createElement('button');b.type='button';b.innerHTML=icon(name)+'<span>'+label+'</span>';return b;}
   const toggle=button('Miniplayer','mini');toggle.id='layout-mini-toggle';toggle.className='icon-button';header.insertBefore(toggle,$('preferences'));
   const menuButton=document.createElement('button');menuButton.type='button';menuButton.setAttribute('role','menuitem');VynampIcons.lead(menuButton,'external','Miniplayer · Ctrl+Shift+M');menuButton.onclick=()=>{$('main-menu').hidePopover();setLayout(root.dataset.layout==='mini'?'full':'mini');};$('main-menu').append(menuButton);

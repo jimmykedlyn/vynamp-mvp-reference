@@ -11,7 +11,7 @@
   function openCurrent(invoker){controller.open();$('advanced-eq-dialog').addEventListener('close',()=>{const target=invoker.offsetWidth?invoker:$('preferences').offsetWidth?$('preferences'):$('main-menu-button');target.focus({preventScroll:true});},{once:true});}
   for(const id of ['eq-open','preferences-eq'])$(id).addEventListener('click',event=>{event.preventDefault();event.stopImmediatePropagation();if(id==='preferences-eq')$('preferences-dialog').close();openCurrent($(id));},true);
   $('main-menu').addEventListener('click',event=>{if(event.target.closest('button')!==menuEQ)return;event.preventDefault();event.stopImmediatePropagation();$('main-menu').hidePopover();openCurrent($('main-menu-button'));},true);
-  $('lyrics-full').textContent='Letra completa';$('lyrics-full').insertAdjacentHTML('beforeend','<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>');
+  $('lyrics-full').textContent='Letra completa';$('lyrics-full').insertAdjacentHTML('beforeend',VynampIcons.svg('arrow-right'));
   document.querySelector('.instrument h2').textContent='VU estéreo';
   const originals=new WeakMap(),analogs=new Set(['analog-vintage','analog-dark','twin']);let pending=false;
   function embedTypography(svg){

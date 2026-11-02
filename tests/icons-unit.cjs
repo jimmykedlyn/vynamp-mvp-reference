@@ -51,6 +51,13 @@ test('ícones usados pelo app existem (sem cair no fallback)', () => {
 	assert.deepEqual(missing, []);
 });
 
+test('nenhum módulo desenha ícone 24×24 próprio fora de icons.js', () => {
+	const dir = path.resolve(__dirname, '..');
+	const files = fs.readdirSync(dir).filter(f => (f.endsWith('.js') && f !== 'icons.js') || f === 'index.html');
+	const offenders = files.filter(f => /viewBox=\\?["']?0 0 24 24/.test(fs.readFileSync(path.join(dir, f), 'utf8')));
+	assert.deepEqual(offenders, []);
+});
+
 test('aliases de severidade apontam para formas distintas', () => {
 	assert.equal(Icons.svg('warning'), Icons.svg('alert'));
 	assert.equal(Icons.svg('error'), Icons.svg('severe'));
