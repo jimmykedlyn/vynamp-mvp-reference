@@ -10,6 +10,11 @@
 #main-menu [role=menuitem].has-icon>.icon{width:16px;height:16px;color:var(--text-secondary)}
 #main-menu [role=menuitem]:hover>.icon,#main-menu [role=menuitem]:focus-visible>.icon{color:var(--text-primary)}
 
+/* Seta dos <select>: chevron-down do conjunto (--icon-select, gerado por icons.js na cor da skin). !important só nas
+   propriedades da seta, porque vários componentes usam o atalho background:, que zeraria a imagem. */
+select:not([multiple]):not([size]){appearance:none;background-image:var(--icon-select)!important;background-repeat:no-repeat!important;background-position:right 9px center!important;background-size:14px!important;padding-right:30px!important}
+@media(forced-colors:active){select:not([multiple]):not([size]){appearance:auto;background-image:none!important;padding-right:revert!important}}
+
 /* Indicador de estado: ponto + forma, nunca só cor. */
 .has-badge{position:relative}
 .has-badge::after{content:'';position:absolute;top:4px;right:4px;width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 2px var(--chassis)}
@@ -20,6 +25,8 @@
 .graph-node-icon .icon{width:18px;height:18px}
 .node-toggle .icon{width:14px;height:14px}
 .graph-power .icon{width:15px;height:15px}
+.graph-palette-icon{display:grid;place-items:center;height:1.35em}
+.graph-palette-icon .icon{width:14px;height:14px;color:var(--text-secondary)}
 
 /* Biblioteca, fila e favoritos */
 .visualizer-star .icon{width:18px;height:18px}

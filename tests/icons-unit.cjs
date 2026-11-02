@@ -58,6 +58,12 @@ test('nenhum módulo desenha ícone 24×24 próprio fora de icons.js', () => {
 	assert.deepEqual(offenders, []);
 });
 
+test('campo icon de registros vira SVG, nunca texto (nome do ícone na tela)', () => {
+	const dir = path.resolve(__dirname, '..');
+	const offenders = fs.readdirSync(dir).filter(f => f.endsWith('.js') && /esc\([\w.]+\.icon\)|textContent\s*=\s*[\w.]+\.icon\b/.test(fs.readFileSync(path.join(dir, f), 'utf8')));
+	assert.deepEqual(offenders, []);
+});
+
 test('aliases de severidade apontam para formas distintas', () => {
 	assert.equal(Icons.svg('warning'), Icons.svg('alert'));
 	assert.equal(Icons.svg('error'), Icons.svg('severe'));
@@ -86,6 +92,13 @@ test('dataURI serve para mask CSS: preto, sem currentColor, aspas escapadas', ()
 		assert(markup.includes('stroke="#000"'));
 		assert(!uri.slice(5, -2).includes('"') && !uri.includes("'"));
 	}
+});
+
+test('dataURI com cor gera imagem pronta para <select>, com # escapado', () => {
+	const uri = Icons.dataURI('chevron-down', 2, '#A3A3A3');
+	const markup = decodeURIComponent(uri.slice(29, -2));
+	assert(markup.includes('stroke="#A3A3A3"') && markup.includes('stroke-width="2"'));
+	assert(!uri.slice(5, -2).includes('#'), '# cru quebra a URL');
 });
 
 test('módulo expõe __factory não-enumerável', () => {

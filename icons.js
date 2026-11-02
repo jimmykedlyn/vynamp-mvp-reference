@@ -128,10 +128,11 @@
 	}
 
 	// Versão para CSS (mask-image): traço/preenchimento preto sobre transparente, pinta com background:currentColor.
-	function dataURI(name, strokeWidth = 1.75) {
+	// Com color, vira imagem pronta (background-image) para onde não há pseudo-elemento, como <select>.
+	function dataURI(name, strokeWidth = 1.75, color = '#000') {
 		const key = aliases[name] || name;
-		const body = (shapes[key] || shapes.module).replace(/currentColor/g, '#000');
-		const markup = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round">${body}</svg>`;
+		const body = (shapes[key] || shapes.module).replace(/currentColor/g, color);
+		const markup = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round">${body}</svg>`;
 		return 'url("data:image/svg+xml,' + encodeURIComponent(markup).replace(/'/g, '%27') + '")';
 	}
 
@@ -171,8 +172,22 @@
 		for (const name of CSS_ICONS) style.setProperty('--icon-' + name, dataURI(name));
 	}
 
+	// <select> não aceita ::after nem currentColor em background-image: a seta é gerada na cor secundária da skin
+	// e refeita quando a skin troca as variáveis no :root. Comparar antes de gravar evita laço no observer.
+	function installSelectChevron(doc = document) {
+		const root = doc.documentElement;
+		const update = () => {
+			const color = getComputedStyle(root).getPropertyValue('--text-secondary').trim() || '#8b939c';
+			const uri = dataURI('chevron-down', 2, color);
+			if (root.style.getPropertyValue('--icon-select') !== uri) root.style.setProperty('--icon-select', uri);
+		};
+		update();
+		new MutationObserver(update).observe(root, { attributes: true, attributeFilter: ['style', 'data-skin', 'class'] });
+	}
+
 	if (typeof document !== 'undefined') {
 		installCSSVariables();
+		installSelectChevron();
 		const run = () => decorate();
 		if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run, { once: true });
 		else run();
