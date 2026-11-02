@@ -92,6 +92,98 @@
 			this.repairs++;
 		}
 	};
+	// Biquad RBJ (passa-alta/passa-baixa) com estado próprio.
+	static biquad(type,freq,rate,q=.7071){
+		const w=2*Math.PI*freq/rate,alpha=Math.sin(w)/(2*q),cosW=Math.cos(w),a0=1+alpha,hp=type==='hp';
+		const b0=(hp?1+cosW:1-cosW)/2,b1=hp?-(1+cosW):1-cosW;
+		return{b0:b0/a0,b1:b1/a0,b2:b0/a0,a1:-2*cosW/a0,a2:(1-alpha)/a0,z1:0,z2:0};
+	}
+	static run(section,x){const y=section.b0*x+section.z1;section.z1=section.b1*x-section.a1*y+section.z2;section.z2=section.b2*x-section.a2*y;return y;}
+	// Artefatos de MP3 por STFT (512 pontos, salto 128, janela raiz de Hann): "birdies" = componentes agudos que acendem
+	// num quadro e somem nos quadros a ±4 saltos (janelas sem sobreposição); pré-eco = chiado agudo logo antes de um ataque
+	// forte. Olha 4 quadros (~11 ms) à frente.
+	static Spectral=class{
+		constructor(rate,amount){
+			const N=512,H=128,L=4,R=2*L+2;
+			this.N=N;this.H=H;this.L=L;this.R=R;this.amount=amount;this.latency=N+L*H;
+			this.win=Float64Array.from({length:N},(_,i)=>Math.sqrt(.5-.5*Math.cos(2*Math.PI*i/N)));
+			this.cos=Float64Array.from({length:N/2},(_,i)=>Math.cos(2*Math.PI*i/N));this.sin=Float64Array.from({length:N/2},(_,i)=>Math.sin(2*Math.PI*i/N));
+			this.rev=new Uint16Array(N);for(let i=1,j=0;i<N;i++){let bit=N>>1;for(;j&bit;bit>>=1)j^=bit;j^=bit;this.rev[i]=j;}
+			this.input=new Float64Array(N);this.inIndex=0;this.count=0;this.k=0;
+			this.frames=Array.from({length:R},()=>({re:new Float64Array(N),im:new Float64Array(N),mag:new Float64Array(N/2+1),energy:0}));
+			this.prevOut=new Float64Array(N/2+1);this.ola=new Float64Array(N);this.out=new Float64Array(H);this.outIndex=0;
+			this.birdBin=Math.round(5000/rate*N);this.preBin=Math.round(1500/rate*N);
+			this.birdies=0;this.preEchoes=0;
+		}
+		fft(re,im,inverse){
+			const N=this.N,rev=this.rev,sign=inverse?1:-1;
+			for(let i=1;i<N;i++){const j=rev[i];if(i<j){let t=re[i];re[i]=re[j];re[j]=t;t=im[i];im[i]=im[j];im[j]=t;}}
+			for(let len=2;len<=N;len<<=1){const half=len>>1,step=N/len;for(let i=0;i<N;i+=len)for(let k=0;k<half;k++){
+				const c=this.cos[k*step],s=sign*this.sin[k*step],a=i+k,b=a+half,tr=re[b]*c-im[b]*s,ti=re[b]*s+im[b]*c;
+				re[b]=re[a]-tr;im[b]=im[a]-ti;re[a]+=tr;im[a]+=ti;}}
+		}
+		analyze(){
+			const N=this.N,f=this.frames[this.k%this.R];
+			for(let i=0;i<N;i++){f.re[i]=this.input[(this.inIndex+i)%N]*this.win[i];f.im[i]=0;}
+			this.fft(f.re,f.im,false);
+			let energy=0;for(let b=0;b<=N/2;b++){const v=Math.hypot(f.re[b],f.im[b]);f.mag[b]=v;if(b>=this.preBin)energy+=v*v;}
+			f.energy=energy;this.k++;
+		}
+		synth(){
+			const N=this.N,H=this.H,R=this.R,p=this.k-1-this.L,f=this.frames[p%R],amount=this.amount,prevOut=this.prevOut;
+			if(p>=this.L){
+				const back=this.frames[(p-this.L)%R],ahead=this.frames[(p+this.L)%R];
+				let future=0;for(let j=1;j<=this.L;j++)future=Math.max(future,this.frames[(p+j)%R].energy);
+				const past=Math.max(back.energy,ahead.energy);
+				// Pré-eco: ataque ≥ 8 dB logo à frente e quadro atual baixo → agudo limitado ao nível do quadro anterior já tratado.
+				const preEcho=future>6*f.energy&&f.energy>1e-12;
+				// Transiente de banda larga (prato, chimbal) sobe tudo junto: não é birdie.
+				const transient=f.energy>2*past;
+				if(preEcho)this.preEchoes++;
+				for(let b=this.preBin;b<=N/2;b++){
+					const m=f.mag[b];if(m<1e-6)continue;
+					let target=m;
+					if(preEcho)target=Math.min(target,Math.max(1.4*prevOut[b],m*.1));
+					if(!transient&&b>=this.birdBin){const around=Math.max(back.mag[b],ahead.mag[b]);if(m>2*around){target=Math.min(target,Math.max(1.4*around,m*.1));this.birdies++;}}
+					if(target<m){const g=(target/m)**amount;f.re[b]*=g;f.im[b]*=g;if(b>0&&b<N/2){f.re[N-b]*=g;f.im[N-b]*=g;}prevOut[b]=m*g;}else prevOut[b]=m;
+				}
+				for(let b=0;b<this.preBin;b++)prevOut[b]=f.mag[b];
+			}
+			this.fft(f.re,f.im,true);
+			const scale=.5/N,ola=this.ola;
+			for(let i=0;i<N;i++)ola[i]+=f.re[i]*this.win[i]*scale;
+			for(let i=0;i<H;i++)this.out[i]=ola[i];
+			ola.copyWithin(0,H);ola.fill(0,N-H);
+		}
+		push(x){
+			this.input[this.inIndex]=x;this.inIndex=(this.inIndex+1)%this.N;
+			const y=this.out[this.outIndex++];
+			if(++this.count%this.H===0){this.analyze();if(this.k>this.L)this.synth();this.outIndex=0;}
+			return y;
+		}
+	};
+	// Extensão de banda: o MP3 corta acima de ~16 kHz. A oitava abaixo do corte (corte/2 até fs/4) é elevada ao quadrado
+	// (só 2º harmônico, sem aliasing), normalizada pelo envelope e filtrada acima do corte; o nível acompanha a banda fonte.
+	static Extend=class{
+		constructor(rate,amount,cutoff){
+			this.amount=amount;
+			const top=Math.min(cutoff,.95*rate/4);
+			this.source=[Kernel.biquad('hp',cutoff/2,rate),Kernel.biquad('hp',cutoff/2,rate),Kernel.biquad('lp',top,rate),Kernel.biquad('lp',top,rate)];
+			this.shape=[Kernel.biquad('hp',cutoff,rate),Kernel.biquad('hp',cutoff,rate),Kernel.biquad('hp',cutoff,rate),Kernel.biquad('lp',Math.min(1.25*cutoff,.45*rate),rate,.5)];
+			this.env=0;this.envAlpha=Math.exp(-1/(.005*rate));this.ps=0;this.ph=0;this.powerAlpha=Math.exp(-1/(.05*rate));this.gain=0;
+		}
+		push(x){
+			let s=x;for(const section of this.source)s=Kernel.run(section,s);
+			const magnitude=Math.abs(s);this.env=magnitude+(this.env-magnitude)*this.envAlpha;
+			// Teto em 3× o envelope: um resto de estalo na banda fonte não vira rajada de agudo.
+			let h=Math.min(s*s/(this.env+1e-9),3*this.env);for(const section of this.shape)h=Kernel.run(section,h);
+			this.ps=s*s+(this.ps-s*s)*this.powerAlpha;this.ph=h*h+(this.ph-h*h)*this.powerAlpha;
+			// Nível alvo: o da oitava fonte com intensidade 1 (o passa-baixa suave de `shape` inclina o topo, como música real).
+			const target=Math.min(8,this.amount*Math.sqrt(this.ps/(this.ph+1e-12)));
+			this.gain=target+(this.gain-target)*this.powerAlpha;
+			return x+this.gain*h;
+		}
+	};
 		constructor(rate){
 			this.rate=rate;
 			this.pending=[0,0];
@@ -112,6 +204,8 @@
 			this.humAdaptive=false;
 			this.rumbleFreq=0;
 			this.decrackleSens=0;this.decrackleSoft=false;
+			// Extensão de banda e artefatos de MP3 (STFT); `pre` = algum estágio antes da cadeia por amostra.
+			this.spectral=null;this.extend=null;this.bweAmount=0;this.bweCutoff=0;this.pre=false;
 			this.state={enabled:false,monitor:'treated',scope:'all',tools:{},regions:[]};
 			this.fadeTable=Float32Array.from({length:257},(_,i)=>.5-.5*Math.cos(Math.PI*i/256));
 			this.noiseEnv=[0,0];
@@ -165,6 +259,7 @@
 					return{b0:b0/a0,b1:b1/a0,b2:b2/a0,a1:a1/a0,a2:a2/a0,z1:0,z2:0};
 				}):[null,null];
 			}
+			let rebuild=false;
 			const decrackle=state.tools?.decrackle||0,soft=state.tools?.decrackleMode==='soft';
 			if(decrackle!==this.decrackleSens||soft!==this.decrackleSoft){
 				this.decrackleSens=decrackle;this.decrackleSoft=soft;
@@ -173,8 +268,22 @@
 				this.repair=decrackle>0?[0,1].map(()=>[new Kernel.Repair(limit,soft),new Kernel.Repair(limit,soft)]):null;
 				// Passa-baixa de fase linear (~18 kHz): a interpolação deixa resíduo acima da banda do MP3, que soa como chiado fino.
 				this.repairLP=this.repair?[0,1].map(()=>({line:new Float32Array(this.lpTaps.length),index:0})):null;
-				const delay=this.repair?this.repair[0][0].latency*2+(this.lpTaps.length-1)/2:0;
-				this.originalDelay=this.repair?[0,1].map(()=>({buffer:new Float32Array(delay),index:0})):null;
+				rebuild=true;
+			}
+			const deartifact=state.tools?.deartifact||0;
+			if(!!deartifact!==!!this.spectral){this.spectral=deartifact>0?[0,1].map(()=>new Kernel.Spectral(this.rate,deartifact)):null;rebuild=true;}
+			else if(this.spectral)for(const stage of this.spectral)stage.amount=deartifact;
+			const bwe=state.tools?.bwe||0,bweCutoff=state.tools?.bweCutoff||16000;
+			if(bwe!==this.bweAmount||bweCutoff!==this.bweCutoff){
+				this.bweAmount=bwe;this.bweCutoff=bweCutoff;
+				// Sem oitava fonte abaixo de fs/4 (corte já perto de Nyquist) não há o que estender.
+				this.extend=bwe>0&&bweCutoff/2<.95*this.rate/4?[0,1].map(()=>new Kernel.Extend(this.rate,bwe,bweCutoff)):null;
+				rebuild=true;
+			}
+			if(rebuild){
+				this.pre=!!(this.repair||this.spectral||this.extend);
+				const delay=(this.repair?this.repair[0][0].latency*2+(this.lpTaps.length-1)/2:0)+(this.spectral?this.spectral[0].latency:0);
+				this.originalDelay=delay?[0,1].map(()=>({buffer:new Float32Array(delay),index:0})):null;
 				this.latency=1+delay;
 			}
 		}
@@ -187,20 +296,28 @@
 			let targetOriginal=state.enabled&&state.monitor!=='original'?state.monitor==='removed'?1:0:1;
 			let targetTreated=state.enabled&&state.monitor!=='original'?state.monitor==='removed'?-1:1:0;
 			let originalInput=input;
-			if(this.repair){
+			if(this.pre){
 				if(!this.blocks||this.blocks.length<n*4)this.blocks=new Float32Array(n*4);
 				const repaired=[0,1].map(ch=>this.blocks.subarray(ch*n,(ch+1)*n)),delayed=[0,1].map(ch=>this.blocks.subarray((2+ch)*n,(3+ch)*n));
 				for(let ch=0;ch<chCount;ch++){
-					const [first,second]=this.repair[ch],line=this.originalDelay[ch],buffer=line.buffer,lp=this.repairLP[ch],taps=this.lpTaps,len=taps.length;
+					const line=this.originalDelay?.[ch],buffer=line?.buffer,spectral=this.spectral?.[ch],extend=this.extend?.[ch];
+					const [first,second]=this.repair?.[ch]||[],lp=this.repairLP?.[ch],taps=this.lpTaps,len=taps.length;
 					for(let i=0;i<n;i++){
 						const x=input[ch]?.[i]||0;
-						lp.line[lp.index]=second.push(first.push(x));
-						let y=0;for(let k=0,j=lp.index;k<len;k++,j=j?j-1:len-1)y+=taps[k]*lp.line[j];
-						lp.index=(lp.index+1)%len;repaired[ch][i]=y;
-						delayed[ch][i]=buffer[line.index];buffer[line.index]=x;line.index=(line.index+1)%buffer.length;
+						let y=x;
+						if(lp){
+							lp.line[lp.index]=second.push(first.push(x));
+							y=0;for(let k=0,j=lp.index;k<len;k++,j=j?j-1:len-1)y+=taps[k]*lp.line[j];
+							lp.index=(lp.index+1)%len;
+						}
+						if(spectral)y=spectral.push(y);
+						if(extend)y=extend.push(y);
+						repaired[ch][i]=y;
+						if(line){delayed[ch][i]=buffer[line.index];buffer[line.index]=x;line.index=(line.index+1)%buffer.length;}
 					}
 				}
-				input=repaired;originalInput=delayed;
+				if(this.originalDelay)originalInput=delayed;
+				input=repaired;
 			}
 			for(let i=0;i<n;i++){
 				const time=start+(i-1)/fs;
@@ -223,7 +340,7 @@
 				this.treatedWeight=targetTreated+(this.treatedWeight-targetTreated)*smooth;
 				for(let ch=0;ch<chCount;ch++){
 					const incoming=input[ch]?.[i]||0,raw=this.pending[ch]||0,previous=this.previous[ch]||0;
-					const original=this.repair?this.pendingOriginal[ch]:raw;
+					const original=this.pre?this.pendingOriginal[ch]:raw;
 					let value=raw;
 					// Clique = resíduo acima do limiar E 8× acima do resíduo típico recente. Vizinhos perto de 0 dBFS = saturação, fica para o anti-saturação.
 					const clickResidual=Math.abs(raw-(previous+incoming)*.5),clickLimit=t.clickThreshold??.2;

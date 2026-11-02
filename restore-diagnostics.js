@@ -540,6 +540,39 @@
 		return Math.min(effectiveFreq, rate / 2);
 	}
 
+	/**
+	 * Banda cortada por compressão com perda (MP3/AAC): degrau ≥ 15 dB no espectro médio entre 10 kHz e 0,45·fs.
+	 * O limite efetivo (-60 dB) não serve: o MP3 deixa resíduo acima do corte.
+	 */
+	function detectBandLimit(channels, rate, fftSize = 4096) {
+		const data = channels[0];
+		if (data.length < fftSize || rate * 0.45 < 11000) return null;
+		const windowFn = Float64Array.from({ length: fftSize }, (_, i) => 0.5 - 0.5 * Math.cos(2 * Math.PI * i / fftSize));
+		const power = new Float64Array(fftSize / 2 + 1);
+		const step = Math.max(fftSize, Math.floor((data.length - fftSize) / 64));
+		let count = 0;
+		for (let offset = 0; offset + fftSize <= data.length; offset += step) {
+			const real = new Float64Array(fftSize);
+			const imag = new Float64Array(fftSize);
+			for (let i = 0; i < fftSize; i++) real[i] = data[offset + i] * windowFn[i];
+			fft(real, imag);
+			for (let k = 0; k <= fftSize / 2; k++) power[k] += real[k] * real[k] + imag[k] * imag[k];
+			count++;
+		}
+		const bin = f => Math.round(f / rate * fftSize);
+		const level = (from, to) => {
+			let sum = 0;
+			for (let k = bin(from); k < bin(to); k++) sum += power[k];
+			return 10 * Math.log10(sum / (bin(to) - bin(from)) / count + 1e-30);
+		};
+		let dropDB = 0, cutoff = 0;
+		for (let f = 10000; f <= rate * 0.45 - 750; f += 100) {
+			const drop = level(f - 750, f - 250) - level(f + 250, f + 750);
+			if (drop > dropDB) { dropDB = drop; cutoff = f; }
+		}
+		return dropDB >= 15 ? { cutoff, dropDB: Math.round(dropDB * 10) / 10 } : null;
+	}
+
 	// ─── Orquestrador principal ─────────────────────────────────────────────
 
 	/**
@@ -712,7 +745,22 @@
 			});
 		}
 
-		// 11. Limite efetivo de frequência
+		// 11. Banda cortada (MP3/AAC): extensão de agudos recria o topo; o mesmo codec deixa birdies e pré-eco.
+		const bandLimit = detectBandLimit(channels, rate);
+		if (bandLimit) {
+			const kHz = (bandLimit.cutoff / 1000).toFixed(1).replace('.', ',');
+			defects.push({
+				type: 'band_limit',
+				severity: bandLimit.cutoff < 17000 ? 'moderate' : 'mild',
+				cutoff: bandLimit.cutoff,
+				dropDB: bandLimit.dropDB,
+				examples: [],
+				suggestion: `Agudos cortados em ${kHz} kHz (compressão com perda). Extensão de agudos recria a banda acima do corte; Artefatos MP3 tira o chiado borbulhante e o pré-eco.`,
+				fix: { bwe: 0.5, bweCutoff: bandLimit.cutoff, deartifact: 0.5 }
+			});
+		}
+
+		// 12. Limite efetivo de frequência
 		const effectiveNyquist = estimateEffectiveNyquist(channels, rate);
 
 		const rank = { severe: 0, moderate: 1, mild: 2 };
@@ -780,7 +828,7 @@
 			hum60: 'zumbido de 60 Hz', hiss: 'chiado', rumble: 'ronco grave',
 			clipping: 'saturação', true_peak: 'picos acima de 0 dBFS',
 			discontinuity: 'saltos na onda', skip: 'pulos/repetições',
-			dc_offset: 'DC offset'
+			dc_offset: 'DC offset', band_limit: 'agudos cortados'
 		};
 		const sevPt = { severe: 'grave', moderate: 'moderado', mild: 'leve' };
 		const parts = defects.map(d => `${labelMap[d.type] || d.type} (${sevPt[d.severity] || 'leve'})`);
@@ -804,6 +852,7 @@
 		detectSkips,
 		detectDCOffset,
 		estimateEffectiveNyquist,
+		detectBandLimit,
 		buildChain,
 		buildSummary
 	};

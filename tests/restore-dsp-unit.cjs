@@ -332,5 +332,74 @@ test('workletSource gera string JavaScript válida contendo registerProcessor', 
 	assert(src.includes('RestoreKernel'));
 });
 
+function runTools(tools, x) {
+	const k = new Kernel(FS), out = [new Float32Array(x.length), new Float32Array(x.length)];
+	k.setState({ ...M.initial(x.length / FS), enabled: true, tools: { ...M.initial(1).tools, ...tools } });
+	k.processInto([x, x], out, 0);
+	return { k, y: out[0].subarray(k.latency) };
+}
+function highpassed(x, freq) {
+	const sections = [Kernel.biquad('hp', freq, FS), Kernel.biquad('hp', freq, FS)];
+	return x.map(v => Kernel.run(sections[1], Kernel.run(sections[0], v)));
+}
+function levelDB(x, from, to) {
+	let e = 0;
+	for (let i = from; i < to; i++) e += x[i] * x[i];
+	return 10 * Math.log10(e / (to - from) + 1e-20);
+}
+function noise(seed) { return () => ((seed = (seed * 16807) % 2147483647) / 2147483647) * 2 - 1; }
+
+test('Artefatos MP3 não altera música estável, só atrasa (STFT reconstrói exato)', () => {
+	const x = makeSine(200, 1, 0.3).map((v, i) => v + 0.1 * Math.sin(2 * Math.PI * 3100 * i / FS) + 0.05 * Math.sin(2 * Math.PI * 9000 * i / FS) + 0.03 * Math.sin(2 * Math.PI * 12500 * i / FS));
+	const { k, y } = runTools({ deartifact: 1 }, x);
+	assert.equal(k.latency, 1 + 1024);
+	let worst = 0;
+	for (let i = 4800; i < y.length; i++) worst = Math.max(worst, Math.abs(y[i] - x[i]));
+	assert(worst < 1e-4, 'desvio ' + worst);
+});
+
+test('Artefatos MP3 soma o atraso ao do De-crackle', () => {
+	const strong = runTools({ decrackle: 0.15 }, makeSine(200, 0.1)).k.latency;
+	assert.equal(runTools({ decrackle: 0.15, deartifact: 0.5 }, makeSine(200, 0.1)).k.latency, strong + 1024);
+});
+
+test('Artefatos MP3 reduz pré-eco antes do ataque e preserva o ataque', () => {
+	const rand = noise(7), at = 24000, x = new Float32Array(FS);
+	for (let i = 0; i < FS; i++) {
+		x[i] = 0.1 * Math.sin(2 * Math.PI * 150 * i / FS);
+		if (i >= at - 720 && i < at) x[i] += 0.03 * rand();
+		if (i >= at && i < at + 4800) x[i] += 0.5 * rand() * Math.exp(-(i - at) / 2000);
+	}
+	const { y } = runTools({ deartifact: 1 }, x), hx = highpassed(x, 3000), hy = highpassed(y, 3000);
+	const pre = levelDB(hx, at - 720, at - 100) - levelDB(hy, at - 720, at - 100);
+	const attack = levelDB(hx, at, at + 2400) - levelDB(hy, at, at + 2400);
+	assert(pre > 6, 'pré-eco caiu só ' + pre.toFixed(1) + ' dB');
+	assert(attack < 2, 'ataque perdeu ' + attack.toFixed(1) + ' dB');
+});
+
+test('Artefatos MP3 atenua birdies (agudo isolado no tempo) e deixa o grave', () => {
+	const x = Float32Array.from({ length: FS }, (_, i) => {
+		const p = i % 4800, bird = p >= 2000 && p < 2384 ? 0.03 * Math.sin(2 * Math.PI * 10000 * i / FS) * Math.sin(Math.PI * (p - 2000) / 384) : 0;
+		return 0.2 * Math.sin(2 * Math.PI * 300 * i / FS) + 0.05 * Math.sin(2 * Math.PI * 2500 * i / FS) + bird;
+	});
+	const { y } = runTools({ deartifact: 1 }, x);
+	const drop = levelDB(highpassed(x, 7000), 4800, FS - 4800) - levelDB(highpassed(y, 7000), 4800, FS - 4800);
+	assert(drop > 8, 'birdies caíram só ' + drop.toFixed(1) + ' dB');
+	assert(Math.abs(levelDB(x, 4800, FS - 4800) - levelDB(y, 4800, FS - 4800)) < 0.2);
+});
+
+test('Extensão de agudos recria banda acima do corte sem mexer abaixo', () => {
+	const rand = noise(11), lp = Array.from({ length: 8 }, () => Kernel.biquad('lp', 15000, FS));
+	const x = Float32Array.from({ length: FS }, () => 0.2 * lp.reduce((v, section) => Kernel.run(section, v), rand()));
+	const { k, y } = runTools({ bwe: 0.5, bweCutoff: 16000 }, x);
+	assert.equal(k.latency, 1);
+	const top = levelDB(highpassed(y, 17500), 9600, FS - 100) - levelDB(highpassed(x, 17500), 9600, FS - 100);
+	assert(top > 12, 'agudo subiu só ' + top.toFixed(1) + ' dB');
+	const hx = highpassed(x, 14000), hy = highpassed(y, 14000);
+	const lowX = x.map((v, i) => v - hx[i]), lowY = y.map((v, i) => v - hy[i]);
+	assert(Math.abs(levelDB(lowX, 9600, FS - 100) - levelDB(lowY, 9600, FS - 100)) < 0.3);
+	assert.equal(runTools({ bwe: 0, bweCutoff: 16000 }, x).k.extend, null);
+});
+
 console.log('\n' + passed + ' testes DSP passaram.');
 if (process.exitCode) process.exit(1);

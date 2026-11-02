@@ -236,5 +236,20 @@ test('analyze(): relatório completo tem estrutura válida', () => {
 	assert(report.effectiveNyquist > 0 && report.effectiveNyquist <= FS / 2);
 });
 
+test('Banda cortada: espectro com parede em 16 kHz vira band_limit com correção de agudos', () => {
+	// Corte de parede como o do MP3: parciais de fase aleatória até 16 kHz e ruído de fundo 60 dB abaixo.
+	let seed = 3;
+	const rand = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
+	const partials = Array.from({ length: 400 }, (_, i) => ({ w: 2 * Math.PI * (100 + i * 39.75) / FS, phase: 2 * Math.PI * rand() }));
+	const floor = makeNoise(2, 0.0001);
+	const x = Float32Array.from(floor, (v, i) => v + partials.reduce((sum, p) => sum + 0.005 * Math.sin(p.w * i + p.phase), 0));
+	const band = D.detectBandLimit([x], FS);
+	assert(band && Math.abs(band.cutoff - 16000) <= 1200, 'corte ' + JSON.stringify(band));
+	const defect = D.analyze([x, x], FS).defects.find(d => d.type === 'band_limit');
+	assert.equal(defect.severity, 'moderate');
+	assert.deepEqual(defect.fix, { bwe: 0.5, bweCutoff: band.cutoff, deartifact: 0.5 });
+	assert.equal(D.detectBandLimit([makeNoise(4)], FS), null);
+});
+
 console.log(`\n${passed} testes passaram.`);
 if (process.exitCode) process.exit(1);

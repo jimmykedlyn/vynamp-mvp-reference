@@ -25,7 +25,7 @@ test('Store cria estado inicial válido com duração', () => {
 	assert.equal(s.state.enabled, false);
 	assert.equal(s.state.monitor, 'treated');
 	assert.equal(s.state.scope, 'all');
-	assert.deepEqual(s.state.tools, { dc: false, hum: 0, humAdaptive: false, gate: false, threshold: -45, click: false, clickThreshold: 0.2, rumble: 0, decrackle: 0, decrackleMode: 'strong', declip: 0 });
+	assert.deepEqual(s.state.tools, { dc: false, hum: 0, humAdaptive: false, gate: false, threshold: -45, click: false, clickThreshold: 0.2, rumble: 0, decrackle: 0, decrackleMode: 'strong', declip: 0, deartifact: 0, bwe: 0, bweCutoff: 16000 });
 	assert.deepEqual(s.state.regions, []);
 	assert.equal(s.past.length, 0);
 	assert.equal(s.future.length, 0);
@@ -308,6 +308,16 @@ test('Modelo aceita decrackleMode soft/strong, rejeita outro e usa strong quando
 	const { decrackleMode, ...old } = base.tools;
 	assert.equal(M.validate({ ...base, tools: old }, 10).tools.decrackleMode, 'strong');
 	assert.throws(() => M.validate({ ...base, tools: { ...base.tools, decrackleMode: 'max' } }, 10));
+});
+
+test('Modelo valida Artefatos MP3 e Extensão de agudos e completa projetos antigos', () => {
+	const base = M.initial(10);
+	const ok = M.validate({ ...base, tools: { ...base.tools, deartifact: 0.6, bwe: 0.5, bweCutoff: 15800 } }, 10).tools;
+	assert.deepEqual([ok.deartifact, ok.bwe, ok.bweCutoff], [0.6, 0.5, 15800]);
+	const { deartifact, bwe, bweCutoff, ...old } = base.tools;
+	const filled = M.validate({ ...base, tools: old }, 10).tools;
+	assert.deepEqual([filled.deartifact, filled.bwe, filled.bweCutoff], [0, 0, 16000]);
+	for (const bad of [{ deartifact: 2 }, { bwe: -0.1 }, { bweCutoff: 5000 }, { bweCutoff: 30000 }]) assert.throws(() => M.validate({ ...base, tools: { ...base.tools, ...bad } }, 10));
 });
 
 console.log('\n' + passed + ' testes passaram.');
