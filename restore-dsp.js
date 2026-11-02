@@ -29,6 +29,9 @@
 			this.noiseAlpha=Math.exp(-1/(.5*rate));
 			this.denoiseSmooth=Math.exp(-1/(.01*rate));
 			this.denoiseGain=[1,1];
+			// De-click adaptativo: envelope do resíduo de 2ª diferença (5 ms) por canal.
+			this.clickEnv=[0,0];
+			this.clickAlpha=Math.exp(-1/(.005*rate));
 		}
 		setState(state){
 			this.state=state;
@@ -71,6 +74,8 @@
 			const state=this.state,t=state.tools||{},n=output[0]?.length||0,chCount=output.length,fs=this.rate;
 			const attack=Math.exp(-1/(.003*fs)),release=Math.exp(-1/(.12*fs)),smooth=Math.exp(-1/(.006*fs));
 			const threshold=10**((t.threshold??-45)/20),denoiseAmount=t.denoise||0,decrackleSens=this.decrackleSens;
+			// Anti-saturação: headroom (dB) + joelho suave acima de -1 dBFS. Recupera masters/MP3 que passam de 0 dBFS.
+			const declip=t.declip||0,declipGain=10**(declip/20),knee=.89;
 			let targetOriginal=state.enabled&&state.monitor!=='original'?state.monitor==='removed'?1:0:1;
 			let targetTreated=state.enabled&&state.monitor!=='original'?state.monitor==='removed'?-1:1:0;
 			for(let i=0;i<n;i++){
@@ -105,7 +110,9 @@
 					this.sideEnv=sideAbs+(this.sideEnv-sideAbs)*this.sideAlpha;
 					const envFloor=Math.max(1e-8,this.sideEnv);
 					const residual=Math.abs(sidePrev-sidePred);
-					if(residual>decrackleSens*envFloor&&residual>decrackleSens*0.5){
+					// Com os vizinhos perto do fundo de escala o "estalo" é saturação: repará-lo aqui só espalharia distorção.
+					const nearClip=Math.max(Math.abs(this.previous[0]),Math.abs(this.previous[1]),Math.abs(lCur),Math.abs(rCur))>=.9;
+					if(!nearClip&&residual>decrackleSens*envFloor&&residual>decrackleSens*0.5){
 						crackleL=midPrev+sidePred;
 						crackleR=midPrev-sidePred;
 					}
@@ -113,7 +120,10 @@
 				for(let ch=0;ch<chCount;ch++){
 					const incoming=input[ch]?.[i]||0,raw=this.pending[ch]||0,previous=this.previous[ch]||0;
 					let value=raw;
-					if(t.click&&Math.abs(raw-(previous+incoming)*.5)>(t.clickThreshold??.2)&&Math.abs(previous-incoming)<(t.clickThreshold??.2)*.75)value=(previous+incoming)*.5;
+					// Clique = resíduo acima do limiar E 8× acima do resíduo típico recente. Vizinhos perto de 0 dBFS = saturação, fica para o anti-saturação.
+					const clickResidual=Math.abs(raw-(previous+incoming)*.5),clickLimit=t.clickThreshold??.2;
+					if(t.click&&clickResidual>clickLimit&&clickResidual>8*this.clickEnv[ch]&&Math.abs(previous-incoming)<clickLimit*.75&&Math.max(Math.abs(previous),Math.abs(incoming))<.9)value=(previous+incoming)*.5;
+					this.clickEnv[ch]=clickResidual+(this.clickEnv[ch]-clickResidual)*this.clickAlpha;
 					const dc=value-this.dcX[ch]+this.dcR*this.dcY[ch];
 					this.dcX[ch]=value;
 					this.dcY[ch]=dc;
@@ -143,6 +153,11 @@
 						value*=this.denoiseGain[ch];
 					}
 					if(crackleL!==null)value=ch===0?crackleL:crackleR;
+					if(declip){
+						value*=declipGain;
+						const magnitude=Math.abs(value);
+						if(magnitude>knee)value=Math.sign(value)*(knee+(1-knee)*Math.tanh((magnitude-knee)/(1-knee)));
+					}
 					const treated=(raw+(value-raw)*scope)*gain;
 					output[ch][i]=raw*this.originalWeight+treated*this.treatedWeight;
 					this.previous[ch]=raw;

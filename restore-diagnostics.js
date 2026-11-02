@@ -57,56 +57,126 @@
 
 	// ─── Detectores individuais ─────────────────────────────────────────────
 
-	/**
-	 * Detecta cliques isolados por diferença entre amostra e média dos vizinhos.
-	 * Retorna { count, examples[] } por canal.
-	 */
-	function detectClicks(channels, rate, threshold = 0.15, maxExamples = 10) {
-		const results = channels.map(() => ({ count: 0, examples: [] }));
-		for (let ch = 0; ch < channels.length; ch++) {
-			const data = channels[ch];
-			for (let i = 1; i < data.length - 1; i++) {
-				const expected = (data[i - 1] + data[i + 1]) * 0.5;
-				const diff = Math.abs(data[i] - expected);
-				const neighborDiff = Math.abs(data[i - 1] - data[i + 1]);
-				if (diff > threshold && neighborDiff < threshold * 0.75) {
-					results[ch].count++;
-					if (results[ch].examples.length < maxExamples) {
-						results[ch].examples.push(i / rate);
-					}
-				}
+	const CLIP_LEVEL = 0.9;
+	const MAX_EVENTS = 20000;
+
+	function nearFullScale(channels, i, radius = 3) {
+		for (const data of channels) {
+			for (let j = Math.max(0, i - radius); j <= Math.min(data.length - 1, i + radius); j++) {
+				if (Math.abs(data[j]) >= CLIP_LEVEL) return true;
 			}
 		}
-		return results;
+		return false;
 	}
 
 	/**
-	 * Detecta crepitação densa no canal lateral (L-R)/2.
-	 * Se taxa lateral > 2x taxa mid, marca como predominante.
+	 * Impulsos adaptativos: resíduo da 2ª diferença acima de um piso absoluto E `ratio`× acima da média
+	 * dos últimos 10 ms. Eventos a menos de 2 ms se fundem; os encostados no fundo de escala (±3 amostras
+	 * ≥ 0.9) vão para `nearClip`, porque nesse caso o estalo é saturação, não clique.
+	 * Retorna { count, nearClip, events: [[tempo, intensidade]] }.
 	 */
-	function detectCrackle(channels, rate, threshold = 0.08, maxExamples = 10) {
-		if (channels.length < 2) return null;
-		const left = channels[0], right = channels[1];
-		let sideCount = 0, midCount = 0;
-		const sideExamples = [];
-		for (let i = 1; i < left.length - 1; i++) {
-			const side = (left[i] - right[i]) * 0.5;
-			const mid = (left[i] + right[i]) * 0.5;
-			const sideExpected = ((left[i - 1] - right[i - 1]) + (left[i + 1] - right[i + 1])) * 0.25;
-			const midExpected = ((left[i - 1] + right[i - 1]) + (left[i + 1] + right[i + 1])) * 0.25;
-			if (Math.abs(side - sideExpected) > threshold) {
-				sideCount++;
-				if (sideExamples.length < maxExamples) sideExamples.push(i / rate);
+	function findImpulses(data, rate, floor, clipChannels, ratio = 20) {
+		const n = data.length, mergeGap = Math.round(rate * 0.002), residuals = new Float32Array(n);
+		for (let i = 1; i < n - 1; i++) residuals[i] = Math.abs(data[i] - (data[i - 1] + data[i + 1]) * 0.5);
+		const mean = centredMean(residuals, Math.max(4, Math.round(rate * 0.005)));
+		const events = [];
+		let count = 0, nearClip = 0, last = -Infinity, lastEvent = null;
+		for (let i = 1; i < n - 1; i++) {
+			const residual = residuals[i];
+			if (residual > floor && residual > ratio * mean(i) && Math.abs(data[i - 1] - data[i + 1]) < residual * 0.75) {
+				if (i - last <= mergeGap) {
+					if (lastEvent && residual > lastEvent[1]) lastEvent[1] = residual;
+				} else if (nearFullScale(clipChannels, i)) {
+					nearClip++;
+					lastEvent = null;
+				} else {
+					count++;
+					lastEvent = [i / rate, residual];
+					if (events.length < MAX_EVENTS) events.push(lastEvent);
+				}
+				last = i;
 			}
-			if (Math.abs(mid - midExpected) > threshold) midCount++;
 		}
-		const dominant = sideCount > midCount * 2;
-		if (sideCount === 0 && midCount === 0) return null;
+		return { count, nearClip, events };
+	}
+
+	/**
+	 * Média móvel centrada (janela 2·half+1) consultada em ordem crescente de índice.
+	 * Centrada para não confundir o ataque de uma nota depois de um trecho calmo com um clique.
+	 */
+	function centredMean(values, half) {
+		let sum = 0, lo = 0, hi = -1;
+		return i => {
+			const from = Math.max(0, i - half), to = Math.min(values.length - 1, i + half);
+			while (hi < to) sum += values[++hi];
+			while (lo < from) sum -= values[lo++];
+			return sum / (to - from + 1);
+		};
+	}
+
+	/**
+	 * Escolhe até `max` instantes espalhados pela faixa: o evento mais forte de cada fatia de tempo.
+	 * Evita a lista de "0:00, 0:00, 0:00" dos primeiros N eventos.
+	 */
+	function spreadCollector(duration, max = 6) {
+		const best = new Array(max).fill(null);
 		return {
-			count: sideCount,
-			midCount,
-			lateralDominant: dominant,
-			examples: sideExamples
+			add(time, strength) {
+				const slot = Math.min(max - 1, Math.max(0, Math.floor(time / Math.max(1e-9, duration) * max)));
+				if (!best[slot] || strength > best[slot][1]) best[slot] = [time, strength];
+			},
+			times: () => best.filter(Boolean).map(e => e[0]).sort((a, b) => a - b)
+		};
+	}
+
+	function spreadExamples(events, duration, max = 6) {
+		if (events.length <= max) return events.map(e => e[0]).sort((a, b) => a - b);
+		const spread = spreadCollector(duration, max);
+		for (const e of events) spread.add(e[0], e[1]);
+		return spread.times();
+	}
+
+	function mergeEvents(lists, gap) {
+		const all = lists.flat().sort((a, b) => a[0] - b[0]), merged = [];
+		for (const e of all) {
+			const prev = merged[merged.length - 1];
+			if (prev && e[0] - prev[0] <= gap) { if (e[1] > prev[1]) prev[1] = e[1]; }
+			else merged.push([e[0], e[1]]);
+		}
+		return merged;
+	}
+
+	/**
+	 * Detecta cliques isolados (impulsos adaptativos, ver findImpulses).
+	 * Retorna por canal { count, nearClip, examples[], events[] }.
+	 */
+	function detectClicks(channels, rate, threshold = 0.02, maxExamples = 6) {
+		const duration = (channels[0]?.length || 0) / rate;
+		return channels.map(data => {
+			const found = findImpulses(data, rate, threshold, channels);
+			return { ...found, examples: spreadExamples(found.events, duration, maxExamples) };
+		});
+	}
+
+	/**
+	 * Detecta crepitação no canal lateral (L-R)/2 com o mesmo detector adaptativo.
+	 * Se a taxa lateral > 2× a do mid, marca como predominante (típico de vinil gasto).
+	 */
+	function detectCrackle(channels, rate, threshold = 0.02, maxExamples = 6) {
+		if (channels.length < 2) return null;
+		const left = channels[0], right = channels[1], n = left.length;
+		const side = new Float32Array(n), mid = new Float32Array(n);
+		for (let i = 0; i < n; i++) { side[i] = (left[i] - right[i]) * 0.5; mid[i] = (left[i] + right[i]) * 0.5; }
+		const sideFound = findImpulses(side, rate, threshold, channels);
+		const midFound = findImpulses(mid, rate, threshold, channels);
+		if (sideFound.count === 0 && midFound.count === 0) return null;
+		return {
+			count: sideFound.count,
+			midCount: midFound.count,
+			nearClip: sideFound.nearClip,
+			lateralDominant: sideFound.count > midFound.count * 2,
+			events: sideFound.events,
+			examples: spreadExamples(sideFound.events, n / rate, maxExamples)
 		};
 	}
 
@@ -282,23 +352,25 @@
 	/**
 	 * Detecta saturação/clipping: amostras com |x| > 0.999.
 	 */
-	function detectClipping(channels, rate, maxExamples = 10) {
-		let totalSaturated = 0;
-		let contiguousBlocks = 0;
-		const examples = [];
+	function detectClipping(channels, rate, maxExamples = 6) {
+		let totalSaturated = 0, contiguousBlocks = 0, overs = 0, peak = 0;
+		const spread = spreadCollector((channels[0]?.length || 0) / rate, maxExamples);
 		let inBlock = false;
 
 		for (let ch = 0; ch < channels.length; ch++) {
 			const data = channels[ch];
 			inBlock = false;
 			for (let i = 0; i < data.length; i++) {
-				if (Math.abs(data[i]) > 0.999) {
+				const magnitude = Math.abs(data[i]);
+				if (magnitude > peak) peak = magnitude;
+				if (magnitude > 1) overs++;
+				if (magnitude > 0.999) {
 					totalSaturated++;
 					if (!inBlock) {
 						contiguousBlocks++;
 						inBlock = true;
-						if (examples.length < maxExamples) examples.push(i / rate);
 					}
+					spread.add(i / rate, magnitude);
 				} else {
 					inBlock = false;
 				}
@@ -306,10 +378,16 @@
 		}
 
 		if (totalSaturated === 0) return null;
+		const peakDB = dbFromLinear(peak);
 		return {
 			saturatedSamples: totalSaturated,
 			contiguousBlocks,
-			examples
+			overs,
+			peak,
+			peakDB,
+			// Ganho de folga do anti-saturação: leva o pico para ~-1 dBFS (mínimo -1 dB, máximo -12 dB).
+			headroomDB: -Math.min(12, Math.max(1, Math.ceil(peakDB + 1))),
+			examples: spread.times()
 		};
 	}
 
@@ -335,35 +413,40 @@
 	/**
 	 * Detecta cortes/discontinuidades: saltos > 0.3 entre amostras adjacentes.
 	 */
-	function detectDiscontinuities(channels, rate, threshold = 0.3, maxExamples = 10) {
-		const examples = [];
-		let count = 0;
+	function detectDiscontinuities(channels, rate, threshold = 0.3, maxExamples = 6) {
+		const events = [], mergeGap = Math.round(rate * 0.002), half = Math.max(4, Math.round(rate * 0.005));
+		let count = 0, last = -Infinity;
 		for (let ch = 0; ch < channels.length; ch++) {
-			const data = channels[ch];
+			const data = channels[ch], jumps = new Float32Array(data.length);
+			for (let i = 1; i < data.length; i++) jumps[i] = Math.abs(data[i] - data[i - 1]);
+			const mean = centredMean(jumps, half);
+			last = -Infinity;
 			for (let i = 1; i < data.length; i++) {
-				const jump = Math.abs(data[i] - data[i - 1]);
-				if (jump > threshold) {
-					// Excluir cliques isolados (já detectados separadamente)
+				const jump = jumps[i];
+				// Música com agudos fortes salta muito entre amostras: só conta o salto fora do padrão do entorno.
+				if (jump > threshold && jump > 12 * mean(i)) {
+					// Excluir cliques isolados (já detectados separadamente) e saltos em picos saturados
 					const prevJump = i > 1 ? Math.abs(data[i - 1] - data[i - 2]) : 0;
 					const nextJump = i < data.length - 1 ? Math.abs(data[i + 1] - data[i]) : 0;
-					if (prevJump > threshold * 0.3 || nextJump > threshold * 0.3) {
+					if ((prevJump > threshold * 0.3 || nextJump > threshold * 0.3) && i - last > mergeGap && !nearFullScale(channels, i)) {
 						count++;
-						if (examples.length < maxExamples) examples.push(i / rate);
+						if (events.length < MAX_EVENTS) events.push([i / rate, jump]);
 					}
+					last = i;
 				}
 			}
 		}
 		if (count === 0) return null;
-		return { count, examples };
+		return { count, examples: spreadExamples(events.sort((a, b) => a[0] - b[0]), (channels[0]?.length || 0) / rate, maxExamples) };
 	}
 
 	/**
 	 * Detecta pulos/repetições: correlação cruzada entre blocos consecutivos de 588 amostras.
 	 */
-	function detectSkips(channels, rate, blockSize = 588, threshold = 0.95, maxExamples = 10) {
+	function detectSkips(channels, rate, blockSize = 588, threshold = 0.995, maxExamples = 6) {
 		const data = channels[0];
-		const examples = [];
-		let count = 0;
+		const events = [];
+		let count = 0, previous = -Infinity;
 
 		for (let offset = 0; offset + blockSize * 2 <= data.length; offset += blockSize) {
 			let dotProduct = 0, normA = 0, normB = 0;
@@ -377,15 +460,19 @@
 			const denom = Math.sqrt(normA * normB);
 			if (denom > 1e-10) {
 				const correlation = dotProduct / denom;
+				// Blocos seguidos com a mesma repetição contam como um pulo só.
 				if (correlation > threshold) {
-					count++;
-					if (examples.length < maxExamples) examples.push(offset / rate);
+					if (offset - previous > blockSize) {
+						count++;
+						if (events.length < MAX_EVENTS) events.push([offset / rate, correlation]);
+					}
+					previous = offset;
 				}
 			}
 		}
 
 		if (count === 0) return null;
-		return { count, blockSize, examples };
+		return { count, blockSize, examples: spreadExamples(events, data.length / rate, maxExamples) };
 	}
 
 	/**
@@ -463,38 +550,85 @@
 	 */
 	function analyze(channels, rate) {
 		const duration = channels[0].length / rate;
+		const minutes = Math.max(duration / 60, 1 / 60);
+		const perMinute = count => Math.round(count / minutes * 10) / 10;
+		const byRate = (count, severe, moderate) => {
+			const value = count / minutes;
+			return value > severe ? 'severe' : value > moderate ? 'moderate' : 'mild';
+		};
 		const defects = [];
 
-		// 1. Cliques
-		const clicks = detectClicks(channels, rate);
-		const totalClicks = clicks.reduce((sum, c) => sum + c.count, 0);
-		if (totalClicks > 0) {
-			const allExamples = clicks.flatMap(c => c.examples).sort((a, b) => a - b).slice(0, 10);
+		// 1. Saturação primeiro: decide se estalos encostados em 0 dBFS são cliques ou distorção.
+		const clipping = detectClipping(channels, rate);
+		if (clipping) {
 			defects.push({
-				type: 'click',
-				severity: totalClicks > 100 ? 'severe' : totalClicks > 20 ? 'moderate' : 'mild',
-				count: totalClicks,
-				examples: allExamples,
-				suggestion: `Ativar de-click com sensibilidade ${totalClicks > 100 ? '0.25' : totalClicks > 20 ? '0.15' : '0.10'}`
+				type: 'clipping',
+				severity: clipping.overs > 0 || clipping.contiguousBlocks / minutes > 60 ? 'severe' : clipping.contiguousBlocks / minutes > 10 ? 'moderate' : 'mild',
+				count: clipping.contiguousBlocks,
+				perMinute: perMinute(clipping.contiguousBlocks),
+				saturatedSamples: clipping.saturatedSamples,
+				contiguousBlocks: clipping.contiguousBlocks,
+				overs: clipping.overs,
+				peakDB: clipping.peakDB,
+				examples: clipping.examples,
+				suggestion: clipping.overs > 0
+					? `Picos chegam a ${clipping.peakDB >= 0 ? '+' : ''}${clipping.peakDB.toFixed(1)} dBFS: é daí que vêm os estalos. Anti-saturação com ${clipping.headroomDB} dB de folga.`
+					: `Ondas achatadas em 0 dBFS. Anti-saturação com ${clipping.headroomDB} dB de folga suaviza os picos.`,
+				fix: { declip: clipping.headroomDB }
 			});
 		}
 
-		// 2. Crepitação
+		// 2. True peak (só quando não há saturação, que já leva a mesma correção)
+		const truePeak = detectTruePeak(channels);
+		if (truePeak && !clipping) {
+			defects.push({
+				type: 'true_peak',
+				severity: truePeak.truePeak > 1.1 ? 'severe' : 'moderate',
+				truePeak: truePeak.truePeak,
+				truePeakDB: truePeak.truePeakDB,
+				examples: [],
+				suggestion: 'Picos entre amostras passam de 0 dBFS. Anti-saturação com 2 dB de folga.',
+				fix: { declip: -2 }
+			});
+		}
+
+		// 3. Cliques (eventos dos dois canais fundidos: um clique estéreo conta uma vez)
+		const clicks = detectClicks(channels, rate);
+		const clickEvents = mergeEvents(clicks.map(c => c.events), 0.002);
+		const clipClicks = clicks.reduce((sum, c) => sum + c.nearClip, 0);
+		if (clickEvents.length > 0) {
+			const strengths = clickEvents.map(e => e[1]).sort((a, b) => a - b);
+			const typical = strengths[Math.floor(strengths.length * 0.2)];
+			defects.push({
+				type: 'click',
+				severity: byRate(clickEvents.length, 30, 5),
+				count: clickEvents.length,
+				perMinute: perMinute(clickEvents.length),
+				nearClip: clipClicks,
+				examples: spreadExamples(clickEvents, duration),
+				suggestion: 'De-click repara cada impulso com a média dos vizinhos.',
+				fix: { click: true, clickThreshold: Math.round(Math.min(0.3, Math.max(0.03, typical * 0.6)) * 100) / 100 }
+			});
+		}
+
+		// 4. Crepitação
 		const crackle = detectCrackle(channels, rate);
 		if (crackle && crackle.count > 0) {
 			defects.push({
 				type: 'crackle',
-				severity: crackle.lateralDominant ? 'moderate' : 'mild',
+				severity: byRate(crackle.count, 120, 20),
 				count: crackle.count,
+				perMinute: perMinute(crackle.count),
 				lateralDominant: crackle.lateralDominant,
-				examples: crackle.examples.slice(0, 10),
+				examples: crackle.examples,
 				suggestion: crackle.lateralDominant
-					? 'Crepitação predominante no canal lateral — verificar fonte estéreo'
-					: 'Ativar de-crackle adaptativo'
+					? 'Estalos concentrados no lado estéreo (típico de vinil). De-crackle repara sem tocar no centro.'
+					: 'De-crackle repara os estalos mais curtos.',
+				fix: { decrackle: crackle.lateralDominant ? 0.2 : 0.15 }
 			});
 		}
 
-		// 3. Zumbido
+		// 5. Zumbido (defeito contínuo: sem instantes)
 		const hums = detectHum(channels, rate);
 		for (const hum of hums) {
 			defects.push({
@@ -502,70 +636,49 @@
 				severity: hum.prominence > 20 ? 'severe' : 'moderate',
 				frequency: hum.frequency,
 				harmonics: hum.harmonics.filter(h => h !== hum.frequency),
-				examples: [0, duration / 2].filter(t => t < duration),
-				suggestion: `Ativar hum notch em ${hum.frequency} Hz`
+				examples: [],
+				suggestion: `Filtro de zumbido em ${hum.frequency} Hz e harmônicos.`,
+				fix: { hum: hum.frequency }
 			});
 		}
 
-		// 4. Chiado
+		// 6. Chiado
 		const hiss = detectHiss(channels, rate);
 		if (hiss) {
 			defects.push({
 				type: 'hiss',
 				severity: hiss.energyRatio > 0.5 ? 'severe' : hiss.energyRatio > 0.35 ? 'moderate' : 'mild',
 				energyRatio: hiss.energyRatio,
-				examples: [duration * 0.25, duration * 0.75].filter(t => t < duration),
-				suggestion: 'Ativar denoise espectral — ajustar intensidade conforme perfil de ruído'
+				examples: [],
+				suggestion: 'Chiado de fundo. Use o portão de ruído nas pausas.',
+				fix: null
 			});
 		}
 
-		// 5. Ronco
+		// 7. Ronco
 		const rumble = detectRumble(channels, rate);
 		if (rumble) {
 			defects.push({
 				type: 'rumble',
 				severity: rumble.rmsDB > -20 ? 'severe' : 'moderate',
 				rmsDB: rumble.rmsDB,
-				examples: [0],
-				suggestion: 'Ativar filtro passa-altas em 30 Hz (de-rumble)'
-			});
-		}
-
-		// 6. Saturação
-		const clipping = detectClipping(channels, rate);
-		if (clipping) {
-			defects.push({
-				type: 'clipping',
-				severity: clipping.saturatedSamples > 1000 ? 'severe' : clipping.saturatedSamples > 100 ? 'moderate' : 'mild',
-				saturatedSamples: clipping.saturatedSamples,
-				contiguousBlocks: clipping.contiguousBlocks,
-				examples: clipping.examples,
-				suggestion: 'Aplicar limiter true-peak antes da exportação'
-			});
-		}
-
-		// 7. True peak
-		const truePeak = detectTruePeak(channels);
-		if (truePeak) {
-			defects.push({
-				type: 'true_peak',
-				severity: truePeak.truePeak > 1.1 ? 'severe' : 'moderate',
-				truePeak: truePeak.truePeak,
-				truePeakDB: truePeak.truePeakDB,
 				examples: [],
-				suggestion: 'Aplicar true-peak limiter com teto -1 dBTP'
+				suggestion: 'Passa-altas em 30 Hz remove o ronco grave.',
+				fix: { rumble: 30 }
 			});
 		}
 
-		// 8. Discontinuidades
+		// 8. Descontinuidades
 		const discontinuities = detectDiscontinuities(channels, rate);
 		if (discontinuities) {
 			defects.push({
 				type: 'discontinuity',
-				severity: discontinuities.count > 50 ? 'severe' : 'moderate',
+				severity: byRate(discontinuities.count, 20, 3),
 				count: discontinuities.count,
+				perMinute: perMinute(discontinuities.count),
 				examples: discontinuities.examples,
-				suggestion: 'Verificar integridade do arquivo — possíveis erros de leitura/gravação'
+				suggestion: 'Saltos bruscos na onda. Ouça os trechos: podem ser cortes de edição ou erro de leitura.',
+				fix: null
 			});
 		}
 
@@ -578,7 +691,8 @@
 				count: skips.count,
 				blockSize: skips.blockSize,
 				examples: skips.examples,
-				suggestion: 'Arquivo possivelmente corrompido — verificar origem'
+				suggestion: 'Trechos repetidos. Arquivo possivelmente corrompido: verifique a origem.',
+				fix: null
 			});
 		}
 
@@ -589,19 +703,23 @@
 				type: 'dc_offset',
 				severity: dcOffsets.some(d => Math.abs(d.offset) > 0.02) ? 'severe' : 'moderate',
 				channels: dcOffsets,
-				examples: [0],
-				suggestion: 'Ativar correção DC offset'
+				examples: [],
+				suggestion: 'Linha de base deslocada. Correção de DC recentraliza a onda.',
+				fix: { dc: true }
 			});
 		}
 
 		// 11. Limite efetivo de frequência
 		const effectiveNyquist = estimateEffectiveNyquist(channels, rate);
 
+		const rank = { severe: 0, moderate: 1, mild: 2 };
+		defects.sort((a, b) => (rank[a.severity] ?? 3) - (rank[b.severity] ?? 3));
+
 		// Montar cadeia sugerida
 		const chain = buildChain(defects);
 
 		// Resumo textual
-		const summary = buildSummary(defects, duration);
+		const summary = buildSummary(defects, duration, clipClicks);
 
 		return {
 			duration,
@@ -649,37 +767,25 @@
 	/**
 	 * Gera resumo textual do diagnóstico.
 	 */
-	function buildSummary(defects, duration) {
+	function buildSummary(defects, duration, clipClicks = 0) {
 		if (defects.length === 0) {
 			return `Áudio limpo — ${duration.toFixed(1)}s sem defeitos detectados.`;
 		}
 
-		const parts = [];
-		const severe = defects.filter(d => d.severity === 'severe');
-		const moderate = defects.filter(d => d.severity === 'moderate');
-		const mild = defects.filter(d => d.severity === 'mild');
-
 		const labelMap = {
-			click: 'cliques', crackle: 'crepitação', hum50: 'zumbido de 50Hz',
-			hum60: 'zumbido de 60Hz', hiss: 'chiado', rumble: 'ronco grave',
-			clipping: 'saturação', true_peak: 'true peak excedido',
-			discontinuity: 'descontinuidades', skip: 'pulos/repetições',
+			click: 'cliques', crackle: 'crepitação', hum50: 'zumbido de 50 Hz',
+			hum60: 'zumbido de 60 Hz', hiss: 'chiado', rumble: 'ronco grave',
+			clipping: 'saturação', true_peak: 'picos acima de 0 dBFS',
+			discontinuity: 'saltos na onda', skip: 'pulos/repetições',
 			dc_offset: 'DC offset'
 		};
-
-		for (const group of [severe, moderate, mild]) {
-			for (const d of group) {
-				const label = labelMap[d.type] || d.type;
-				const sevPt = d.severity === 'severe' ? 'severo' : d.severity === 'moderate' ? 'moderado' : 'leve';
-				if (d.count !== undefined) {
-					parts.push(`${d.count} ${label} (${sevPt})`);
-				} else {
-					parts.push(`${label} ${sevPt}`);
-				}
-			}
-		}
-
-		return `Faixa com ${parts.join(', ')}.`;
+		const sevPt = { severe: 'grave', moderate: 'moderado', mild: 'leve' };
+		const parts = defects.map(d => `${labelMap[d.type] || d.type} (${sevPt[d.severity] || 'leve'})`);
+		const clipping = defects.find(d => d.type === 'clipping');
+		const cause = clipping && clipClicks > 0
+			? ` Os estalos audíveis vêm da saturação: ${clipClicks} impulsos encostam no fundo de escala.`
+			: '';
+		return `Encontrado: ${parts.join(', ')}.${cause}`;
 	}
 
 	return {
