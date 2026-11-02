@@ -255,6 +255,54 @@ test('Kernel processa ambos os canais independentemente', () => {
 	assert(diff > 1, 'Stereo channels should differ for different frequencies');
 });
 
+// ─── Crepitação: reparo AR de rajadas de agudos em fundo de escala (artefato de MP3 saturado) ───
+// Rajada de ~0,7 ms alternando ±1,2 por amostra, nos dois canais, como na Track07.
+function burstSignal() {
+	const x = makeSine(200, 1, 0.8);
+	for (let i = 0; i < 36; i++) x[24000 + i] = (i % 2 ? -1.2 : 1.2);
+	return x;
+}
+function maxResidual(arr, from, to) {
+	let max = 0;
+	for (let i = Math.max(1, from); i < Math.min(arr.length - 1, to); i++) max = Math.max(max, Math.abs(arr[i] - (arr[i - 1] + arr[i + 1]) * 0.5));
+	return max;
+}
+const DECLIP_TOOLS = { dc: false, hum: 0, gate: false, threshold: -45, click: false, clickThreshold: 0.2 };
+
+test('Crepitação repara rajada de agudos em fundo de escala', () => {
+	const out = runKernel({ tools: { ...DECLIP_TOOLS, decrackle: 0.15 } }, burstSignal());
+	const residual = maxResidual(out[0], 23000, out[0].length);
+	assert(residual < 0.1, 'resíduo na rajada ' + residual.toFixed(3));
+});
+
+test('Crepitação desligada não toca na rajada', () => {
+	const out = runKernel({ tools: { ...DECLIP_TOOLS, decrackle: 0 } }, burstSignal());
+	assert(maxResidual(out[0], 23990, 24050) > 2);
+});
+test('Crepitação não altera música limpa com agudos fortes, só atrasa', () => {
+	// Agudos densos até 12 kHz: um sinal previsível sai igual mesmo se algum trecho for refeito; o passa-baixa de ~18 kHz só atrasa (ondulação < 0,3%).
+	const x = makeSine(200, 1, 0.3).map((v, i) => v + 0.15 * Math.sin(2 * Math.PI * 3100 * i / FS) + 0.1 * Math.sin(2 * Math.PI * 7300 * i / FS) + 0.08 * Math.sin(2 * Math.PI * 12100 * i / FS));
+	const k = new Kernel(FS), out = [new Float32Array(x.length), new Float32Array(x.length)];
+	k.setState({ ...M.initial(1), enabled: true, tools: { ...M.initial(1).tools, ...DECLIP_TOOLS, decrackle: 0.15 } });
+	k.processInto([x, x], out, 0);
+	assert(k.latency > 1 && k.latency < FS * 0.03, 'latência ' + k.latency);
+	let worst = 0;
+	for (let i = 4800; i < x.length; i++) worst = Math.max(worst, Math.abs(out[0][i] - x[i - k.latency]));
+	assert(worst < 2e-3, 'desvio ' + worst);
+});
+
+test('Anti-saturação não altera música limpa com agudos fortes', () => {
+	// Seno + ruído branco forte (pratos/chimbal): só ganho, nenhuma troca pelo passa-baixa.
+	let seed = 7;
+	const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647) * 2 - 1;
+	const x = makeSine(200, 1, 0.5).map(v => v + 0.15 * rand());
+	const out = runKernel({ tools: { ...DECLIP_TOOLS, declip: -5 } }, x);
+	const gain = 10 ** (-5 / 20);
+	let worst = 0;
+	for (let i = 4800; i < x.length; i++) worst = Math.max(worst, Math.abs(out[0][i] - x[i - 1] * gain));
+	assert(worst < 1e-6, 'desvio ' + worst);
+});
+
 // ─── Worklet source generation ───────────────────────────────────────
 test('workletSource gera string JavaScript válida contendo registerProcessor', () => {
 	const { workletSource } = require(path.resolve(__dirname, '..', 'restore-dsp.js'));

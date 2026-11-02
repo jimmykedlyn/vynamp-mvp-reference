@@ -561,9 +561,10 @@
 		// 1. Saturação primeiro: decide se estalos encostados em 0 dBFS são cliques ou distorção.
 		const clipping = detectClipping(channels, rate);
 		if (clipping) {
+			const severity = clipping.overs > 0 || clipping.contiguousBlocks / minutes > 60 ? 'severe' : clipping.contiguousBlocks / minutes > 10 ? 'moderate' : 'mild';
 			defects.push({
 				type: 'clipping',
-				severity: clipping.overs > 0 || clipping.contiguousBlocks / minutes > 60 ? 'severe' : clipping.contiguousBlocks / minutes > 10 ? 'moderate' : 'mild',
+				severity,
 				count: clipping.contiguousBlocks,
 				perMinute: perMinute(clipping.contiguousBlocks),
 				saturatedSamples: clipping.saturatedSamples,
@@ -572,9 +573,10 @@
 				peakDB: clipping.peakDB,
 				examples: clipping.examples,
 				suggestion: clipping.overs > 0
-					? `Picos chegam a ${clipping.peakDB >= 0 ? '+' : ''}${clipping.peakDB.toFixed(1)} dBFS: é daí que vêm os estalos. Anti-saturação com ${clipping.headroomDB} dB de folga.`
-					: `Ondas achatadas em 0 dBFS. Anti-saturação com ${clipping.headroomDB} dB de folga suaviza os picos.`,
-				fix: { declip: clipping.headroomDB }
+					? `Picos chegam a ${clipping.peakDB >= 0 ? '+' : ''}${clipping.peakDB.toFixed(1)} dBFS: é daí que vêm os estalos. Anti-saturação com ${clipping.headroomDB} dB de folga${severity === 'mild' ? '' : ' e De-crackle para refazer os estalos'}.`
+					: `Ondas achatadas em 0 dBFS. Anti-saturação com ${clipping.headroomDB} dB de folga suaviza os picos${severity === 'mild' ? '' : '; De-crackle refaz os estalos'}.`,
+				// Master saturado chia em rajadas curtas que só ganho não tira: o reparo AR do De-crackle refaz essas amostras.
+				fix: severity === 'mild' ? { declip: clipping.headroomDB } : { declip: clipping.headroomDB, decrackle: 0.15 }
 			});
 		}
 
@@ -622,9 +624,10 @@
 				lateralDominant: crackle.lateralDominant,
 				examples: crackle.examples,
 				suggestion: crackle.lateralDominant
-					? 'Estalos concentrados no lado estéreo (típico de vinil). De-crackle repara sem tocar no centro.'
-					: 'De-crackle repara os estalos mais curtos.',
-				fix: { decrackle: crackle.lateralDominant ? 0.2 : 0.15 }
+					? 'Estalos concentrados no lado estéreo (típico de vinil). De-crackle refaz só as amostras estouradas.'
+					: 'De-crackle refaz só as amostras estouradas.',
+				// Mesmo valor da saturação: com os dois defeitos, "Corrigir recomendados" não fica disputando a ferramenta.
+				fix: { decrackle: 0.15 }
 			});
 		}
 
