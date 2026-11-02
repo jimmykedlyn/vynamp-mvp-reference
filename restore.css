@@ -116,7 +116,7 @@
 .assist-times{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin-top:5px;font-size:10px;color:var(--text-secondary)}
 .assist-fix small{font-size:10px;color:var(--text-muted)}.assist-fix-btn{min-width:88px}.assist-fix-btn[aria-pressed=true]{color:var(--lime)}
 .assist-foot{margin:8px 0 0;font-size:11px;color:var(--text-secondary)}
-.restore-tool-key{border-left:2px solid var(--lime);padding-left:8px}
+.restore-tool.restore-tool-key{border-left:2px solid var(--lime);padding-left:10px}
 .restore-inspector .restore-preset-label{margin:0 0 12px}
 .restore-more>summary{cursor:pointer;font:600 10px/1.5 Consolas,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--text-secondary);margin-top:14px}
 @media(max-width:900px){.restore-assistant{padding:10px 14px}.assist-row{grid-template-columns:1fr}.assist-head{flex-wrap:wrap}}
