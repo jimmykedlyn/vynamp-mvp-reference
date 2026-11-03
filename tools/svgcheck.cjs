@@ -6,7 +6,8 @@
 //  noText  - shift metric with every <text> removed from both renders (geometry only; text is TASK-E02-12)
 //  blob    - largest 8-connected group of shift pixels; the verdict is blob <= BLOB (default 0, i.e. no shift pixel) outside text
 //  normalized - for files using a feature in GAPS: resvg on the file after the fix the native loader must apply (pathLength: rescale dashes;
-//               blurFn: CSS filter:blur() becomes an feGaussianBlur whose region is the painted box plus 3 sigma, as Chrome paints it)
+//               blurFn: CSS filter:blur() becomes an feGaussianBlur whose region is the painted box plus 3 sigma + 1, as Chrome paints it;
+//               a form it cannot rewrite is listed in unhandledGaps and fails)
 //               against Chrome on the original file, geometry only
 //  empty   - no ink in either render over white nor over black: nothing was compared, so the file does not pass and needs an explanation
 const fs=require('fs'),path=require('path'),os=require('os'),{execFileSync}=require('child_process');
@@ -18,7 +19,7 @@ fs.mkdirSync(path.join(WORK,'resvg'),{recursive:true});fs.mkdirSync(path.join(WO
 const id=f=>path.relative(DIR,f).replace(/[\\/]/g,'__').replace(/\.svg$/,'');
 // SVG features resvg does not implement; the native renderer must handle them itself
 const BLOB=+(process.env.BLOB||0);
-const GAPS={pathLength:/\spathLength=/,blurFn:/filter:\s*blur\(/};
+const GAPS={pathLength:/\spathLength=/,blurFn:/(?:^|[\s;"'{])filter:[^;"']*blur\(/};
 
 function resvg(svg,out){const tmp=out.replace(/\.png$/,'.svg');fs.writeFileSync(tmp,svg);
   try{execFileSync(RESVG,['--zoom',String(S),tmp,out],{stdio:['ignore','ignore','pipe']});return null;}catch(e){return String(e.stderr||e.message).slice(0,300);}finally{fs.rmSync(tmp,{force:true});}}
@@ -53,17 +54,20 @@ async function crop(svg){return page.evaluate(([svg,S,MAXPX])=>{const h=document
 // (resvg derives the region from the bounding box, which has zero height on a straight wire, and clips the glow's ends)
 async function normalizeGaps(svg){return page.evaluate(svg=>{const h=document.createElement('div');h.innerHTML=svg;document.body.appendChild(h);
   const root=h.querySelector('svg'),NS='http://www.w3.org/2000/svg';let n=0;
-  for(const e of h.querySelectorAll('[style*="blur("]')){const m=/filter:\s*blur\(([\d.]+)px\)/.exec(e.getAttribute('style'));if(!m)continue;const sd=+m[1],b=e.getBBox({stroke:true}),pad=3*sd+1;
+  for(const e of h.querySelectorAll('[style*="blur("]')){const m=/(^|;)\s*filter:\s*blur\(\s*([\d.]+)px\s*\)\s*(?=;|$)/i.exec(e.getAttribute('style'));if(!m)continue;const sd=+m[2],b=e.getBBox({stroke:true}),pad=3*sd+1;
     const f=document.createElementNS(NS,'filter'),g=document.createElementNS(NS,'feGaussianBlur'),id='normalized-blur-'+(n++);
     f.setAttribute('id',id);f.setAttribute('filterUnits','userSpaceOnUse');[['x',b.x-pad],['y',b.y-pad],['width',b.width+2*pad],['height',b.height+2*pad]].forEach(([k,v])=>f.setAttribute(k,Math.round(v*100)/100));
     g.setAttribute('stdDeviation',sd);f.append(g);(root.querySelector('defs')||root.insertBefore(document.createElementNS(NS,'defs'),root.firstChild)).append(f);
-    e.setAttribute('style',e.getAttribute('style').replace(m[0],'filter:url(#'+id+')'));}
+    e.setAttribute('style',e.getAttribute('style').replace(m[0],m[1]+'filter:url(#'+id+')'));}
   for(const e of h.querySelectorAll('[pathLength]')){const k=e.getTotalLength()/+e.getAttribute('pathLength');
     for(const a of ['stroke-dasharray','stroke-dashoffset']){const v=e.getAttribute(a);if(v&&v!=='none')e.setAttribute(a,v.split(/[\s,]+/).filter(Boolean).map(x=>Math.round(parseFloat(x)*k*1000)/1000).join(' '));}
     e.removeAttribute('pathLength');}
   const out=h.innerHTML;h.remove();return out;},svg);}
+// a gap the normalization does not handle (blur in a <style> rule, other units, several filter functions) leaves the file failing
+const unhandled=n=>Object.keys(GAPS).filter(g=>GAPS[g].test(n));
 // compared over white and over black: white strokes and fills are invisible over white; the backdrop with the larger difference blob is kept
 let page;async function compareRetry(b,svg,png){const w=await compareRetry1(b,svg,png,255);if(w.error||w.missing||w.size)return w;const k=await compareRetry1(b,svg,png,0);
+  if(k.error||k.missing||k.size)return {...k,bg:'black'};
   return (k.blob>w.blob||(!w.ink&&k.ink))?{...k,bg:'black'}:w;}
 async function compareRetry1(b,svg,png,BG){for(let k=0;;k++){try{return await compare(page,svg,png,BG);}catch(e){if(k)return {error:e.message.split(String.fromCharCode(10))[0]};await page.close();page=await b.newPage();}}}
 
@@ -78,7 +82,8 @@ async function compareRetry1(b,svg,png,BG){for(let k=0;;k++){try{return await co
     const t=await compareRetry(b,bare,e2?null:fs.readFileSync(o2).toString('base64'));row.noTextShiftPx=t.shift;row.noTextBlobPx=t.blob;row.noTextShiftPct=pct(t.shift,t.ink);
     if(t.diff)fs.writeFileSync(path.join(WORK,'diff',name+'.notext.png'),Buffer.from(t.diff,'base64'));}
   if(gaps.length){const strip=s=>s.replace(/<text[\s\S]*?<\/text>/g,''),n=strip(await normalizeGaps(svg)),o3=path.join(WORK,'resvg',name+'.normalized.png'),e3=resvg(n,o3);
-    const t=await compareRetry(b,strip(svg),e3?null:fs.readFileSync(o3).toString('base64'));row.normalizedBlobPx=t.blob;row.normalizedPass=!e3&&t.blob<=BLOB;}
+    const t=await compareRetry(b,strip(svg),e3?null:fs.readFileSync(o3).toString('base64'));row.normalizedBlobPx=t.blob;row.unhandledGaps=unhandled(n);
+    row.normalizedPass=!e3&&!row.unhandledGaps.length&&t.ink>0&&t.blob<=BLOB;}
   row.empty=!err&&!row.note&&r.ink===0;
   // geometry verdict: something was compared and, outside text, no blob is larger than BLOB pixels
   const geo=text?row.noTextBlobPx:row.blobPx;row.pass=!err&&!row.note&&!row.empty&&geo<=BLOB;

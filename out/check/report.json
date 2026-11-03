@@ -1847,6 +1847,7 @@
   "noTextBlobPx": 3880,
   "noTextShiftPct": 1.431,
   "normalizedBlobPx": 0,
+  "unhandledGaps": [],
   "normalizedPass": true,
   "empty": false,
   "pass": false
@@ -2070,6 +2071,7 @@
   "bg": "black",
   "note": "",
   "normalizedBlobPx": 0,
+  "unhandledGaps": [],
   "normalizedPass": true,
   "empty": false,
   "pass": false
@@ -3610,6 +3612,7 @@
   "bg": "black",
   "note": "",
   "normalizedBlobPx": 0,
+  "unhandledGaps": [],
   "normalizedPass": true,
   "empty": false,
   "pass": false
@@ -6500,6 +6503,7 @@
   "bg": "black",
   "note": "",
   "normalizedBlobPx": 0,
+  "unhandledGaps": [],
   "normalizedPass": true,
   "empty": false,
   "pass": false
@@ -7221,6 +7225,7 @@
   "bg": "black",
   "note": "",
   "normalizedBlobPx": 0,
+  "unhandledGaps": [],
   "normalizedPass": true,
   "empty": false,
   "pass": false
