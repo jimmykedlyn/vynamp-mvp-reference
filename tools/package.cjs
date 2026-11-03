@@ -1,5 +1,5 @@
 // Copy out/ into the main repository's reference package and write SOURCE.json.
-// node tools/package.cjs <target-dir>   (e.g. ../repo/assets/reference/mvp)
+// node tools/package.cjs <target-dir>   (e.g. ../vynamp-media-player/repo/assets/reference/mvp)
 // Keeps README.md in the target; everything else listed below is replaced.
 const fs=require('fs'),path=require('path'),crypto=require('crypto'),{execFileSync}=require('child_process');
 const ROOT=path.resolve(__dirname,'..'),OUT=path.join(ROOT,'out'),[TARGET]=process.argv.slice(2);

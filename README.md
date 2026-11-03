@@ -29,7 +29,7 @@ In a second shell:
 npm run extract
 npm run check-svg
 npm run verify
-node tools/package.cjs ../repo/assets/reference/mvp
+node tools/package.cjs ../vynamp-media-player/repo/assets/reference/mvp
 ```
 
 Commit the tool repository before packaging so `SOURCE.json` records a clean commit.
