@@ -1,0 +1,405 @@
+{
+ "file": "16-matriz-led-classica.svg",
+ "prefix": "16-matriz-led-classica",
+ "title": "Matriz LED clássica · estéreo",
+ "description": "Referência visual fornecida pelo usuário, redesenhada como instrumento SVG estéreo editável.",
+ "kind": "reference-matrix",
+ "channels": [
+  "L",
+  "R"
+ ],
+ "viewBox": [
+  0,
+  0,
+  900,
+  382
+ ],
+ "segments": 32,
+ "selectable": true,
+ "dynamic": [
+  {
+   "element": "#16-matriz-led-classica-L-0",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-1",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-10",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-11",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-12",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-13",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-14",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-15",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-16",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-17",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-18",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-19",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-2",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-20",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-21",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-22",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-23",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-24",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-25",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-26",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-27",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-28",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-29",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-3",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-30",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-31",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-4",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-5",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-6",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-7",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-8",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-L-9",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-0",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-1",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-10",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-11",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-12",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-13",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-14",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-15",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-16",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-17",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-18",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-19",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-2",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-20",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-21",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-22",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-23",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-24",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-25",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-26",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-27",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-28",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-29",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-3",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-30",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-31",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-4",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-5",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-6",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-7",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-8",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#16-matriz-led-classica-R-9",
+   "attributes": [
+    "opacity"
+   ]
+  }
+ ]
+}

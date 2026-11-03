@@ -1,0 +1,301 @@
+{
+ "arrow-down": [
+  "div.queue-item > div.queue-order > div.queue-order-menu > button"
+ ],
+ "arrow-right": [
+  "#lyrics-full"
+ ],
+ "arrow-up": [
+  "div.queue-item > div.queue-order > div.queue-order-menu > button"
+ ],
+ "cabinet": [
+  "#preferences-nav > button.has-icon"
+ ],
+ "check": [
+  "#brand-families > button > span.brand-family-selected",
+  "#library > div.track-row > button.row-select",
+  "#meter-menu > div.visualizer-favorite-row > button > span.menu-check",
+  "#skin-picker-menu > div.skin-options > button > span.skin-option-check"
+ ],
+ "chevron-down": [
+  "#dsp-mobile-navigation",
+  "#faithful-mobile-back",
+  "#skin-picker"
+ ],
+ "clock": [
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon"
+ ],
+ "close": [
+  "#advanced-eq-close",
+  "#close-eq",
+  "#close-meter",
+  "#close-preferences",
+  "#dsp-close",
+  "#dsp-tools-close",
+  "#graph-close",
+  "#help-dialog > form > div.dialog-head > button.icon-button",
+  "#lyrics-full-close",
+  "#playlists-close",
+  "#restore-close",
+  "#selection-clear",
+  "#wave-config-panel > div.wave-config-head > button.wave-config-close",
+  "div.faithful-notice > button",
+  "header.appbar > button.faithful-mini-close"
+ ],
+ "cloud": [
+  "#preferences-nav > button.has-icon"
+ ],
+ "compressor": [
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon"
+ ],
+ "curve": [
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon"
+ ],
+ "diagnose": [
+  "#restore-diagnose",
+  "#restore-diagnostics > div.assist-intro"
+ ],
+ "dock": [
+  "#main-menu > button.has-icon"
+ ],
+ "dsp": [
+  "#preferences-nav > button.has-icon"
+ ],
+ "eq": [
+  "#audio-effects-open",
+  "#eq-open",
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon",
+  "#graph-node-main-eq > div.graph-node-header > span.graph-node-icon",
+  "#main-menu > button.has-icon",
+  "div.faithful-body > div.player-context-actions > button",
+  "nav.mobile-navigation > button"
+ ],
+ "expander": [
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon"
+ ],
+ "external": [
+  "#main-menu > button.has-icon",
+  "#properties-float"
+ ],
+ "file-audio": [
+  "#main-menu > button.has-icon"
+ ],
+ "filter": [
+  "#library-filter-toggle"
+ ],
+ "flow": [
+  "#graph-open"
+ ],
+ "folder": [
+  "#folder-map",
+  "#open",
+  "#restore-open-audio",
+  "main.workspace > section.collection > nav.tabs > button"
+ ],
+ "gain": [
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon"
+ ],
+ "gate": [
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon"
+ ],
+ "gear": [
+  "#preferences-nav > button.has-icon",
+  "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-gear"
+ ],
+ "grid": [
+  "header.appbar > a.icon-button"
+ ],
+ "grip": [
+  "#queue-list > div.queue-item > span.queue-drag-handle",
+  "div.queue-item > div.queue-order > div.queue-order-menu > button.queue-drag"
+ ],
+ "heart": [
+  "#favorite",
+  "main.workspace > section.collection > nav.tabs > button"
+ ],
+ "help": [
+  "#help",
+  "#main-menu > button.has-icon",
+  "#restore-workspace > div.restore-toolbar > button.restore-guide-btn"
+ ],
+ "input": [
+  "#graph-node-source > div.graph-node-header > span.graph-node-icon"
+ ],
+ "keyboard": [
+  "#preferences-nav > button.has-icon"
+ ],
+ "levels": [
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon"
+ ],
+ "lfo": [
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon"
+ ],
+ "library": [
+  "#preferences-nav > button.has-icon",
+  "nav.mobile-navigation > button"
+ ],
+ "limiter": [
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon"
+ ],
+ "link": [
+  "#brand-color-options > button > span",
+  "fieldset > div.neon-swatches > button.neon-swatch > span.neon-dot"
+ ],
+ "lyrics": [
+  "div.faithful-body > div.player-context-actions > button"
+ ],
+ "menu": [
+  "#main-menu-button"
+ ],
+ "meter": [
+  "#main-menu > button.has-icon",
+  "#meter-options"
+ ],
+ "miniplayer": [
+  "#layout-mini-toggle"
+ ],
+ "minus": [
+  "#graph-zoom-out",
+  "#restore-zoom-out"
+ ],
+ "mixer": [
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon"
+ ],
+ "more": [
+  "#lyrics-menu-button",
+  "#queue-list > div.queue-item > div.queue-order > button.queue-more"
+ ],
+ "mute": [
+  "#mute"
+ ],
+ "next": [
+  "#next"
+ ],
+ "note": [
+  "main.workspace > section.collection > nav.tabs > button"
+ ],
+ "output": [
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon",
+  "#graph-node-sink > div.graph-node-header > span.graph-node-icon"
+ ],
+ "palette": [
+  "#preferences-nav > button.has-icon"
+ ],
+ "pause": [
+  "#play"
+ ],
+ "play": [
+  "#main-menu > button.has-icon",
+  "#play",
+  "#play-all",
+  "div.track-row > button.track-name > strong > span.playing-indicator",
+  "nav.mobile-navigation > button"
+ ],
+ "play-circle": [
+  "#preferences-nav > button.has-icon"
+ ],
+ "playlist": [
+  "#selection-save",
+  "div.faithful-body > div.player-context-actions > button",
+  "nav.mobile-navigation > button"
+ ],
+ "plus": [
+  "#graph-catalog > div.processor-row > button.graph-add-instance",
+  "#graph-processors",
+  "#graph-zoom-in",
+  "#library > div.track-row > button.icon-button",
+  "#restore-add-region",
+  "#restore-zoom-in"
+ ],
+ "power": [
+  "#graph-enabled",
+  "#graph-node-main-eq > div.graph-node-header > button.node-toggle",
+  "#main-menu > button.has-icon",
+  "#meter-off",
+  "#restore-enable"
+ ],
+ "previous": [
+  "#previous"
+ ],
+ "puzzle": [
+  "#preferences-nav > button.has-icon"
+ ],
+ "queue-add": [
+  "#selection-queue"
+ ],
+ "radio": [
+  "#radio-stations > div.radio-row > button.radio-play > span.radio-station-icon",
+  "main.workspace > section.collection > nav.tabs > button"
+ ],
+ "redo": [
+  "#graph-redo",
+  "#restore-redo"
+ ],
+ "remove": [
+  "#queue-list > div.queue-item > button.icon-button"
+ ],
+ "repeat": [
+  "#repeat"
+ ],
+ "reset": [
+  "#main-menu > button.has-icon"
+ ],
+ "room": [
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon"
+ ],
+ "saturation": [
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon"
+ ],
+ "search": [
+  "section.collection > div.filterbar > div.search > span"
+ ],
+ "settings": [
+  "#main-menu > button.has-icon",
+  "#preferences",
+  "nav.mobile-navigation > button"
+ ],
+ "shield": [
+  "#preferences-nav > button.has-icon"
+ ],
+ "shuffle": [
+  "#shuffle"
+ ],
+ "sparkle": [
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon",
+  "#main-menu > button.has-icon",
+  "#preferences-nav > button.has-icon",
+  "#restore-open"
+ ],
+ "speaker": [
+  "header.appbar > div.brand > button.faithful-output"
+ ],
+ "star": [
+  "#meter-menu > div.visualizer-favorite-row > button.visualizer-star",
+  "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-star",
+  "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button.visualizer-star"
+ ],
+ "stereo": [
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon"
+ ],
+ "stop": [
+  "#main-menu > button.has-icon",
+  "#stop"
+ ],
+ "undo": [
+  "#graph-undo",
+  "#restore-undo"
+ ],
+ "vinyl": [
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon",
+  "main.workspace > section.collection > nav.tabs > button"
+ ],
+ "volume": [
+  "#mute"
+ ],
+ "±": [
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon"
+ ],
+ "∽": [
+  "#graph-catalog > div.processor-row > button > span.graph-palette-icon"
+ ]
+}

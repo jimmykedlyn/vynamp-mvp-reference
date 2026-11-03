@@ -1,0 +1,15 @@
+{
+ "file": "11-matriz-led.svg",
+ "prefix": "11-matriz-led",
+ "title": "Matriz · LEDs discretos",
+ "description": "480 diodos circulares em duas matrizes, com colunas animáveis por canal.",
+ "kind": "matrix",
+ "segments": 48,
+ "rows": 5,
+ "channels": [
+  "L",
+  "R"
+ ],
+ "sha256": "b5ce024f4991fd4a4a60eb77ae175495ce14ef969200a3fe85308cb91da1d2ca",
+ "selectable": false
+}

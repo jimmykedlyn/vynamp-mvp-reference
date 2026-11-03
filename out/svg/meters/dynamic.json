@@ -1,0 +1,3960 @@
+{
+ "02-dark-studio": {
+  "meter": "02-dark-studio",
+  "playing": true,
+  "mutated": {
+   "#02-dark-studio-needle-L": {
+    "attributes": [
+     "transform"
+    ]
+   },
+   "#02-dark-studio-needle-R": {
+    "attributes": [
+     "transform"
+    ]
+   },
+   "#wave-creative-inner": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-live": {
+    "attributes": [
+     "data-level"
+    ]
+   },
+   "#wave-creative-mesh": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-middle": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-nodes": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-outer": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-right": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-columns": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-line": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-styles": {
+    "attributes": [
+     "data-peak"
+    ]
+   },
+   "#wave-progress": {
+    "attributes": [
+     "width"
+    ]
+   },
+   "#wave-pulse": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-reactive-bars": {
+    "attributes": [
+     "data-level",
+     "transform"
+    ]
+   },
+   "#wave-spectrum-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-live": {
+    "attributes": [
+     "data-frequency-left",
+     "data-frequency-right",
+     "data-level"
+    ]
+   },
+   "#wave-spectrum-right": {
+    "attributes": [
+     "d"
+    ]
+   }
+  },
+  "canvases": [
+   {
+    "where": "#restore-wave",
+    "w": 300,
+    "h": 140,
+    "visible": false
+   },
+   {
+    "where": "#restore-spectrum",
+    "w": 300,
+    "h": 160,
+    "visible": false
+   },
+   {
+    "where": "#eq-spectrum > canvas",
+    "w": 1,
+    "h": 1,
+    "visible": false
+   }
+  ]
+ },
+ "01-vintage-marfim": {
+  "meter": "01-vintage-marfim",
+  "playing": true,
+  "mutated": {
+   "#01-vintage-marfim-needle-L": {
+    "attributes": [
+     "transform"
+    ]
+   },
+   "#01-vintage-marfim-needle-R": {
+    "attributes": [
+     "transform"
+    ]
+   },
+   "#wave-creative-inner": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-live": {
+    "attributes": [
+     "data-level"
+    ]
+   },
+   "#wave-creative-mesh": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-middle": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-nodes": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-outer": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-right": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-columns": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-line": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-styles": {
+    "attributes": [
+     "data-peak"
+    ]
+   },
+   "#wave-progress": {
+    "attributes": [
+     "width"
+    ]
+   },
+   "#wave-pulse": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-reactive-bars": {
+    "attributes": [
+     "data-level",
+     "transform"
+    ]
+   },
+   "#wave-spectrum-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-live": {
+    "attributes": [
+     "data-frequency-left",
+     "data-frequency-right",
+     "data-level"
+    ]
+   },
+   "#wave-spectrum-right": {
+    "attributes": [
+     "d"
+    ]
+   }
+  },
+  "canvases": [
+   {
+    "where": "#restore-wave",
+    "w": 300,
+    "h": 140,
+    "visible": false
+   },
+   {
+    "where": "#restore-spectrum",
+    "w": 300,
+    "h": 160,
+    "visible": false
+   },
+   {
+    "where": "#eq-spectrum > canvas",
+    "w": 1,
+    "h": 1,
+    "visible": false
+   }
+  ]
+ },
+ "03-led-horizontal-estereo": {
+  "meter": "03-led-horizontal-estereo",
+  "playing": true,
+  "mutated": {
+   "#03-led-horizontal-estereo-led-L-00": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-01": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-02": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-03": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-04": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-05": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-06": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-07": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-08": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-09": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-10": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-11": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-12": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-13": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-14": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-15": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-16": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-17": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-18": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-19": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-20": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-21": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-22": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-23": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-24": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-25": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-26": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-27": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-28": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-29": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-30": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-31": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-32": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-33": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-34": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-35": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-36": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-37": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-38": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-L-39": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-00": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-01": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-02": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-03": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-04": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-05": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-06": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-07": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-08": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-09": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-10": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-11": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-12": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-13": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-14": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-15": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-16": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-17": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-18": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-19": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-20": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-21": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-22": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-23": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-24": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-25": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-26": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-27": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-28": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-29": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-30": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-31": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-32": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-33": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-34": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-35": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-36": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-37": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-38": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-led-R-39": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#03-led-horizontal-estereo-peak-L": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#03-led-horizontal-estereo-peak-R": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#wave-creative-inner": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-live": {
+    "attributes": [
+     "data-level"
+    ]
+   },
+   "#wave-creative-mesh": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-middle": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-nodes": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-outer": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-right": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-columns": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-line": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-styles": {
+    "attributes": [
+     "data-peak"
+    ]
+   },
+   "#wave-progress": {
+    "attributes": [
+     "width"
+    ]
+   },
+   "#wave-pulse": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-reactive-bars": {
+    "attributes": [
+     "data-level",
+     "transform"
+    ]
+   },
+   "#wave-spectrum-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-live": {
+    "attributes": [
+     "data-frequency-left",
+     "data-frequency-right",
+     "data-level"
+    ]
+   },
+   "#wave-spectrum-right": {
+    "attributes": [
+     "d"
+    ]
+   }
+  },
+  "canvases": [
+   {
+    "where": "#restore-wave",
+    "w": 300,
+    "h": 140,
+    "visible": false
+   },
+   {
+    "where": "#restore-spectrum",
+    "w": 300,
+    "h": 160,
+    "visible": false
+   },
+   {
+    "where": "#eq-spectrum > canvas",
+    "w": 1,
+    "h": 1,
+    "visible": false
+   }
+  ]
+ },
+ "06-hifi-spectrum": {
+  "meter": "06-hifi-spectrum",
+  "playing": true,
+  "mutated": {
+   "#06-hifi-spectrum-band-L-00 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-01 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-02 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-03 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-04 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-05 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-06 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-07 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-08 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-09 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-10 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-11 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-12 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-13 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-14 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-15 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-16 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-17 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-18 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-19 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-20 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-21 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-22 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-L-23 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-00 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-01 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-02 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-03 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-04 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-05 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-06 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-07 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-08 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-09 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-10 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-11 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-12 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-13 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-14 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-15 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-16 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-17 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-18 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-19 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-20 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-21 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-22 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-R-23 > g": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-00": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-01": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-02": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-03": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-04": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-05": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-06": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-07": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-08": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-09": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-10": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-11": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-12": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-13": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-14": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-15": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-16": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-17": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-18": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-19": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-20": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-21": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-22": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-L-23": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-00": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-01": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-02": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-03": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-04": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-05": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-06": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-07": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-08": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-09": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-10": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-11": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-12": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-13": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-14": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-15": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-16": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-17": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-18": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-19": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-20": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-21": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-22": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-band-peak-R-23": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-00": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-01": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-02": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-03": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-04": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-05": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-06": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-07": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-08": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-09": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-10": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-11": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-12": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-13": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-14": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-15": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-16": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-17": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-18": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-19": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-20": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-21": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-22": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-23": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-24": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-25": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-26": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-27": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-28": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-29": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-30": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-31": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-32": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-33": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-34": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-35": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-36": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-37": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-38": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-39": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-40": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-41": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-42": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-43": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-44": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-45": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-46": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-L-47": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-00": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-01": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-02": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-03": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-04": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-05": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-06": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-07": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-08": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-09": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-10": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-11": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-12": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-13": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-14": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-15": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-16": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-17": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-18": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-19": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-20": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-21": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-22": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-23": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-24": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-25": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-26": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-27": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-28": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-29": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-30": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-31": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-32": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-33": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-34": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-35": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-36": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-37": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-38": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-39": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-40": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-41": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-42": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-43": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-44": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-45": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-46": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#06-hifi-spectrum-led-R-47": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#wave-creative-inner": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-live": {
+    "attributes": [
+     "data-level"
+    ]
+   },
+   "#wave-creative-mesh": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-middle": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-nodes": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-outer": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-right": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-columns": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-line": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-styles": {
+    "attributes": [
+     "data-peak"
+    ]
+   },
+   "#wave-progress": {
+    "attributes": [
+     "width"
+    ]
+   },
+   "#wave-pulse": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-reactive-bars": {
+    "attributes": [
+     "data-level",
+     "transform"
+    ]
+   },
+   "#wave-spectrum-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-live": {
+    "attributes": [
+     "data-frequency-left",
+     "data-frequency-right",
+     "data-level"
+    ]
+   },
+   "#wave-spectrum-right": {
+    "attributes": [
+     "d"
+    ]
+   }
+  },
+  "canvases": [
+   {
+    "where": "#restore-wave",
+    "w": 300,
+    "h": 140,
+    "visible": false
+   },
+   {
+    "where": "#restore-spectrum",
+    "w": 300,
+    "h": 160,
+    "visible": false
+   },
+   {
+    "where": "#eq-spectrum > canvas",
+    "w": 1,
+    "h": 1,
+    "visible": false
+   }
+  ]
+ },
+ "05-circular-digital": {
+  "meter": "05-circular-digital",
+  "playing": true,
+  "mutated": {
+   "#05-circular-digital-peak-L": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#05-circular-digital-peak-R": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#05-circular-digital-segment-L-00": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-01": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-02": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-03": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-04": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-05": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-06": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-07": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-08": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-09": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-10": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-11": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-12": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-13": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-14": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-15": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-16": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-17": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-18": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-19": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-20": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-21": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-22": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-23": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-24": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-25": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-26": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-27": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-28": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-29": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-30": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-31": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-32": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-33": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-34": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-35": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-36": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-37": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-38": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-39": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-40": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-41": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-42": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-43": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-44": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-45": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-46": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-47": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-48": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-49": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-50": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-51": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-52": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-53": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-54": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-55": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-56": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-57": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-58": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-L-59": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-00": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-01": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-02": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-03": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-04": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-05": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-06": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-07": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-08": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-09": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-10": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-11": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-12": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-13": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-14": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-15": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-16": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-17": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-18": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-19": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-20": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-21": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-22": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-23": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-24": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-25": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-26": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-27": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-28": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-29": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-30": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-31": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-32": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-33": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-34": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-35": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-36": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-37": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-38": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-39": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-40": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-41": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-42": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-43": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-44": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-45": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-46": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-47": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-48": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-49": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-50": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-51": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-52": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-53": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-54": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-55": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-56": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-57": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-58": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#05-circular-digital-segment-R-59": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#wave-creative-inner": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-live": {
+    "attributes": [
+     "data-level"
+    ]
+   },
+   "#wave-creative-mesh": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-middle": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-nodes": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-outer": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-right": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-columns": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-line": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-styles": {
+    "attributes": [
+     "data-peak"
+    ]
+   },
+   "#wave-progress": {
+    "attributes": [
+     "width"
+    ]
+   },
+   "#wave-pulse": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-reactive-bars": {
+    "attributes": [
+     "data-level",
+     "transform"
+    ]
+   },
+   "#wave-spectrum-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-live": {
+    "attributes": [
+     "data-frequency-left",
+     "data-frequency-right",
+     "data-level"
+    ]
+   },
+   "#wave-spectrum-right": {
+    "attributes": [
+     "d"
+    ]
+   }
+  },
+  "canvases": [
+   {
+    "where": "#restore-wave",
+    "w": 300,
+    "h": 140,
+    "visible": false
+   },
+   {
+    "where": "#restore-spectrum",
+    "w": 300,
+    "h": 160,
+    "visible": false
+   },
+   {
+    "where": "#eq-spectrum > canvas",
+    "w": 1,
+    "h": 1,
+    "visible": false
+   }
+  ]
+ },
+ "13-industrial-amarelo": {
+  "meter": "13-industrial-amarelo",
+  "playing": true,
+  "mutated": {
+   "#13-industrial-amarelo-needle-L": {
+    "attributes": [
+     "transform"
+    ]
+   },
+   "#13-industrial-amarelo-needle-R": {
+    "attributes": [
+     "transform"
+    ]
+   },
+   "#wave-creative-inner": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-live": {
+    "attributes": [
+     "data-level"
+    ]
+   },
+   "#wave-creative-mesh": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-middle": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-nodes": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-outer": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-right": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-columns": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-line": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-styles": {
+    "attributes": [
+     "data-peak"
+    ]
+   },
+   "#wave-progress": {
+    "attributes": [
+     "width"
+    ]
+   },
+   "#wave-pulse": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-reactive-bars": {
+    "attributes": [
+     "data-level",
+     "transform"
+    ]
+   },
+   "#wave-spectrum-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-live": {
+    "attributes": [
+     "data-frequency-left",
+     "data-frequency-right",
+     "data-level"
+    ]
+   },
+   "#wave-spectrum-right": {
+    "attributes": [
+     "d"
+    ]
+   }
+  },
+  "canvases": [
+   {
+    "where": "#restore-wave",
+    "w": 300,
+    "h": 140,
+    "visible": false
+   },
+   {
+    "where": "#restore-spectrum",
+    "w": 300,
+    "h": 160,
+    "visible": false
+   },
+   {
+    "where": "#eq-spectrum > canvas",
+    "w": 1,
+    "h": 1,
+    "visible": false
+   }
+  ]
+ },
+ "14-analogico-vermelho": {
+  "meter": "14-analogico-vermelho",
+  "playing": true,
+  "mutated": {
+   "#14-analogico-vermelho-needle-L": {
+    "attributes": [
+     "transform"
+    ]
+   },
+   "#14-analogico-vermelho-needle-R": {
+    "attributes": [
+     "transform"
+    ]
+   },
+   "#wave-creative-inner": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-live": {
+    "attributes": [
+     "data-level"
+    ]
+   },
+   "#wave-creative-mesh": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-middle": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-nodes": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-outer": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-right": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-columns": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-line": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-styles": {
+    "attributes": [
+     "data-peak"
+    ]
+   },
+   "#wave-progress": {
+    "attributes": [
+     "width"
+    ]
+   },
+   "#wave-pulse": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-reactive-bars": {
+    "attributes": [
+     "data-level",
+     "transform"
+    ]
+   },
+   "#wave-spectrum-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-live": {
+    "attributes": [
+     "data-frequency-left",
+     "data-frequency-right",
+     "data-level"
+    ]
+   },
+   "#wave-spectrum-right": {
+    "attributes": [
+     "d"
+    ]
+   }
+  },
+  "canvases": [
+   {
+    "where": "#restore-wave",
+    "w": 300,
+    "h": 140,
+    "visible": false
+   },
+   {
+    "where": "#restore-spectrum",
+    "w": 300,
+    "h": 160,
+    "visible": false
+   },
+   {
+    "where": "#eq-spectrum > canvas",
+    "w": 1,
+    "h": 1,
+    "visible": false
+   }
+  ]
+ },
+ "15-led-horizontal-classico": {
+  "meter": "15-led-horizontal-classico",
+  "playing": true,
+  "mutated": {
+   "#15-led-horizontal-classico-L-0": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-1": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-10": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-11": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-12": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-13": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-14": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-15": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-16": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-17": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-18": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-19": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-2": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-20": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-21": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-22": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-23": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-24": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-25": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-26": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-27": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-28": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-29": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-3": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-30": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-31": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-32": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-33": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-34": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-35": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-4": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-5": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-6": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-7": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-8": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-L-9": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-0": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-1": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-10": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-11": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-12": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-13": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-14": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-15": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-16": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-17": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-18": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-19": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-2": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-20": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-21": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-22": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-23": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-24": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-25": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-26": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-27": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-28": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-29": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-3": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-30": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-31": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-32": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-33": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-34": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-35": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-4": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-5": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-6": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-7": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-8": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#15-led-horizontal-classico-R-9": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#wave-creative-inner": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-live": {
+    "attributes": [
+     "data-level"
+    ]
+   },
+   "#wave-creative-mesh": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-middle": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-nodes": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-outer": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-right": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-columns": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-line": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-styles": {
+    "attributes": [
+     "data-peak"
+    ]
+   },
+   "#wave-progress": {
+    "attributes": [
+     "width"
+    ]
+   },
+   "#wave-pulse": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-reactive-bars": {
+    "attributes": [
+     "data-level",
+     "transform"
+    ]
+   },
+   "#wave-spectrum-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-live": {
+    "attributes": [
+     "data-frequency-left",
+     "data-frequency-right",
+     "data-level"
+    ]
+   },
+   "#wave-spectrum-right": {
+    "attributes": [
+     "d"
+    ]
+   }
+  },
+  "canvases": [
+   {
+    "where": "#restore-wave",
+    "w": 300,
+    "h": 140,
+    "visible": false
+   },
+   {
+    "where": "#restore-spectrum",
+    "w": 300,
+    "h": 160,
+    "visible": false
+   },
+   {
+    "where": "#eq-spectrum > canvas",
+    "w": 1,
+    "h": 1,
+    "visible": false
+   }
+  ]
+ },
+ "16-matriz-led-classica": {
+  "meter": "16-matriz-led-classica",
+  "playing": true,
+  "mutated": {
+   "#16-matriz-led-classica-L-0": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-1": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-10": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-11": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-12": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-13": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-14": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-15": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-16": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-17": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-18": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-19": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-2": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-20": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-21": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-22": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-23": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-24": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-25": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-26": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-27": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-28": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-29": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-3": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-30": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-31": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-4": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-5": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-6": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-7": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-8": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-L-9": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-0": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-1": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-10": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-11": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-12": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-13": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-14": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-15": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-16": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-17": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-18": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-19": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-2": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-20": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-21": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-22": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-23": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-24": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-25": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-26": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-27": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-28": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-29": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-3": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-30": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-31": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-4": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-5": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-6": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-7": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-8": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#16-matriz-led-classica-R-9": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#wave-creative-inner": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-live": {
+    "attributes": [
+     "data-level"
+    ]
+   },
+   "#wave-creative-mesh": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-middle": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-nodes": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-outer": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-right": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-columns": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-line": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-styles": {
+    "attributes": [
+     "data-peak"
+    ]
+   },
+   "#wave-progress": {
+    "attributes": [
+     "width"
+    ]
+   },
+   "#wave-pulse": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-reactive-bars": {
+    "attributes": [
+     "data-level",
+     "transform"
+    ]
+   },
+   "#wave-spectrum-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-live": {
+    "attributes": [
+     "data-frequency-left",
+     "data-frequency-right",
+     "data-level"
+    ]
+   },
+   "#wave-spectrum-right": {
+    "attributes": [
+     "d"
+    ]
+   }
+  },
+  "canvases": [
+   {
+    "where": "#restore-wave",
+    "w": 300,
+    "h": 140,
+    "visible": false
+   },
+   {
+    "where": "#restore-spectrum",
+    "w": 300,
+    "h": 160,
+    "visible": false
+   },
+   {
+    "where": "#eq-spectrum > canvas",
+    "w": 1,
+    "h": 1,
+    "visible": false
+   }
+  ]
+ }
+}

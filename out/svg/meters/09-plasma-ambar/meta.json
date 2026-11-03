@@ -1,0 +1,14 @@
+{
+ "file": "09-plasma-ambar.svg",
+ "prefix": "09-plasma-ambar",
+ "title": "Plasma · âmbar",
+ "description": "Tubos luminosos de 64 células por canal, vidro fumê e brilho âmbar.",
+ "kind": "plasma",
+ "segments": 64,
+ "channels": [
+  "L",
+  "R"
+ ],
+ "sha256": "8366706197c4ead7ff9cb0a6d8abdf33af91686be407336694d1e6bce344da76",
+ "selectable": false
+}

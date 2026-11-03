@@ -1,0 +1,76 @@
+/* Instrument integration: the approved SVG is the enclosure.
+   The host contributes layout/focus only, never a second case or recoloring. */
+:root {
+  --instrument-sidebar: clamp(352px, 28vw, 416px);
+  --instrument-edge: 8px;
+}
+.instrument {
+  margin-inline: calc(var(--instrument-edge) - var(--now-gutter));
+  border-top: 0;
+}
+.instrument > .section-top,
+.instrument > .instrument-hint,
+.instrument > .meter-caption {
+  margin-inline: calc(var(--now-gutter) - var(--instrument-edge));
+}
+#meter-stage,
+#meter-stage:hover,
+#meter-stage:active {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  margin-top: 4px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+  line-height: 0;
+  transform: none;
+}
+#meter-stage > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+}
+#large-meter { background: transparent; }
+#meter-stage[data-off=true]::after,
+#large-meter[data-off=true]::after { color: var(--text-secondary); line-height: 1.5; }
+.instrument-hint { margin-top: 8px; }
+
+@media (min-width: 1151px) {
+  .workspace { grid-template-columns: var(--instrument-sidebar) minmax(420px, 1fr) 280px; }
+  .cover-wrap { width: min(100%, 19vh, 192px); margin: 12px 0 16px; }
+}
+@media (min-width: 1600px) {
+  .workspace { grid-template-columns: var(--instrument-sidebar) minmax(420px, 1fr) 320px; }
+}
+@media (min-width: 1151px) and (max-height: 950px) {
+  /* Short desktop windows keep a full-size VU by compacting track information. */
+  .now {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    column-gap: 16px;
+    align-content: start;
+  }
+  .now > .eyebrow { grid-column: 1 / -1; margin-bottom: 16px; }
+  .now .cover-wrap { grid-column: 1; grid-row: 2 / 5; width: 112px; margin: 0; align-self: start; }
+  .now .track-heading, .now #album, .now .source { grid-column: 2; }
+  .now .track-heading { align-items: start; }
+  .now .track-heading h1 { font-size:calc(20px * var(--font-scale, 1)); }
+  .now .track-heading p { font-size:calc(13px * var(--font-scale, 1)); margin-top: 4px; }
+  .now .track-heading .icon-button { width: 32px; height: 36px; }
+  .now #album, .now .source { font-size:calc(12px * var(--font-scale, 1)); margin-top: 6px; }
+  .now .instrument { grid-column: 1 / -1; margin-top: 20px; }
+  .now .now-foot { grid-column: 1 / -1; margin-top: 12px; padding-top: 0; }
+}
+@media (min-width: 701px) and (max-width: 1150px) {
+  .workspace { grid-template-columns: 320px minmax(360px, 1fr); }
+}
+@media (forced-colors: active) {
+  #meter-stage { border: 0; }
+  #meter-stage:focus-visible { outline: 2px solid Highlight; }
+}

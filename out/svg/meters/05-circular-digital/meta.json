@@ -1,0 +1,760 @@
+{
+ "file": "05-circular-digital.svg",
+ "prefix": "05-circular-digital",
+ "title": "Circular · digital estéreo",
+ "description": "Dois anéis de 60 segmentos, leituras e indicadores de pico L/R separados.",
+ "kind": "circular",
+ "channels": [
+  "L",
+  "R"
+ ],
+ "segments": 60,
+ "centers": {
+  "L": [
+   272,
+   310
+  ],
+  "R": [
+   688,
+   310
+  ]
+ },
+ "sha256": "41d943941c1f75adeacf92028f5715f927251d3624e00937389c0439a12e047b",
+ "selectable": true,
+ "dynamic": [
+  {
+   "element": "#05-circular-digital-peak-L",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-peak-R",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-00",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-01",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-02",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-03",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-04",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-05",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-06",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-07",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-08",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-09",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-10",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-11",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-12",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-13",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-14",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-15",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-16",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-17",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-18",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-19",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-20",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-21",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-22",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-23",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-24",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-25",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-26",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-27",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-28",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-29",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-30",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-31",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-32",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-33",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-34",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-35",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-36",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-37",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-38",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-39",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-40",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-41",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-42",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-43",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-44",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-45",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-46",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-47",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-48",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-49",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-50",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-51",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-52",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-53",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-54",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-55",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-56",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-57",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-58",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-L-59",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-00",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-01",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-02",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-03",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-04",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-05",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-06",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-07",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-08",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-09",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-10",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-11",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-12",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-13",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-14",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-15",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-16",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-17",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-18",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-19",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-20",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-21",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-22",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-23",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-24",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-25",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-26",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-27",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-28",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-29",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-30",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-31",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-32",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-33",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-34",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-35",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-36",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-37",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-38",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-39",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-40",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-41",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-42",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-43",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-44",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-45",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-46",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-47",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-48",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-49",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-50",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-51",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-52",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-53",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-54",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-55",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-56",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-57",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-58",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#05-circular-digital-segment-R-59",
+   "attributes": [
+    "opacity"
+   ]
+  }
+ ]
+}

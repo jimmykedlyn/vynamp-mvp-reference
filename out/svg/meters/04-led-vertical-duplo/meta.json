@@ -1,0 +1,14 @@
+{
+ "file": "04-led-vertical-duplo.svg",
+ "prefix": "04-led-vertical-duplo",
+ "title": "LED vertical · duplo",
+ "description": "Duas colunas de 32 segmentos, pico e indicadores OVER independentes.",
+ "kind": "led-vertical",
+ "segments": 32,
+ "channels": [
+  "L",
+  "R"
+ ],
+ "sha256": "1a41db020df359fca2ecb1ee0c457e64b6bf3e0ff35c217532e322c4c0386ed0",
+ "selectable": false
+}

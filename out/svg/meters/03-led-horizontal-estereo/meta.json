@@ -1,0 +1,510 @@
+{
+ "file": "03-led-horizontal-estereo.svg",
+ "prefix": "03-led-horizontal-estereo",
+ "title": "LED horizontal · estéreo",
+ "description": "Duas barras de 40 LEDs, escala −60 a 0 dBFS e marcadores de pico.",
+ "kind": "led-horizontal",
+ "segments": 40,
+ "channels": [
+  "L",
+  "R"
+ ],
+ "sha256": "f335b23149863ab4545e90a8d54e87b420e1748102a022991815be43eaf4c88a",
+ "selectable": true,
+ "dynamic": [
+  {
+   "element": "#03-led-horizontal-estereo-led-L-00",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-01",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-02",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-03",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-04",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-05",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-06",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-07",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-08",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-09",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-10",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-11",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-12",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-13",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-14",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-15",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-16",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-17",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-18",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-19",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-20",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-21",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-22",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-23",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-24",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-25",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-26",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-27",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-28",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-29",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-30",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-31",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-32",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-33",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-34",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-35",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-36",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-37",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-38",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-L-39",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-00",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-01",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-02",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-03",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-04",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-05",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-06",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-07",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-08",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-09",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-10",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-11",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-12",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-13",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-14",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-15",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-16",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-17",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-18",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-19",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-20",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-21",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-22",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-23",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-24",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-25",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-26",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-27",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-28",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-29",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-30",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-31",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-32",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-33",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-34",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-35",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-36",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-37",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-38",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-led-R-39",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-peak-L",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#03-led-horizontal-estereo-peak-R",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  }
+ ]
+}

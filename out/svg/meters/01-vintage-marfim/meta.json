@@ -1,0 +1,69 @@
+{
+ "file": "01-vintage-marfim.svg",
+ "prefix": "01-vintage-marfim",
+ "title": "Analógico vintage · marfim estéreo",
+ "description": "Dois mostradores retangulares VU, com escala e ponteiro independentes por canal.",
+ "kind": "analog-vintage",
+ "channels": [
+  "L",
+  "R"
+ ],
+ "scaleDB": [
+  -20,
+  -10,
+  -7,
+  -5,
+  -3,
+  -2,
+  -1,
+  0,
+  1,
+  2,
+  3
+ ],
+ "scaleAngles": [
+  -54,
+  -40,
+  -29,
+  -20,
+  -10,
+  -2,
+  7,
+  19,
+  30,
+  41,
+  54
+ ],
+ "pivots": {
+  "L": [
+   264,
+   356
+  ],
+  "R": [
+   696,
+   356
+  ]
+ },
+ "viewBox": [
+  0,
+  0,
+  960,
+  470
+ ],
+ "sha256": "053822577fce30aa408b1babaebaa873aa7a16be162c5d8c37e73b179124f18a",
+ "selectable": true,
+ "dynamic": [
+  {
+   "element": "#01-vintage-marfim-needle-L",
+   "attributes": [
+    "transform"
+   ]
+  },
+  {
+   "element": "#01-vintage-marfim-needle-R",
+   "attributes": [
+    "transform"
+   ]
+  }
+ ]
+}

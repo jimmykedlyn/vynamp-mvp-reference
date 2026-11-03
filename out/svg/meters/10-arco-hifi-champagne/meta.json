@@ -1,0 +1,23 @@
+{
+ "file": "10-arco-hifi-champagne.svg",
+ "prefix": "10-arco-hifi-champagne",
+ "title": "Arco hi-fi · champagne",
+ "description": "Arcos contínuos concêntricos L/R, metal escovado e marcadores de pico.",
+ "kind": "dual-arc",
+ "center": [
+  480,
+  352
+ ],
+ "radii": {
+  "L": 215,
+  "R": 178
+ },
+ "startAngle": -115,
+ "endAngle": 115,
+ "channels": [
+  "L",
+  "R"
+ ],
+ "sha256": "9bcff4d60fca23d72208cf71b3421aae48dd45150d684dd6f4d3aa29c04e049d",
+ "selectable": false
+}

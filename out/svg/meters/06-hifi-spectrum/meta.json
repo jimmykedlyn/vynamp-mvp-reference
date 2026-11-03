@@ -1,0 +1,1248 @@
+{
+ "file": "06-hifi-spectrum.svg",
+ "prefix": "06-hifi-spectrum",
+ "title": "Moderno · hi-fi / spectrum estéreo",
+ "description": "Dois espectros de 24 bandas e barras de nível L/R independentes.",
+ "kind": "spectrum",
+ "segments": 48,
+ "channels": [
+  "L",
+  "R"
+ ],
+ "bands": 24,
+ "spectrumCellStep": 4,
+ "spectrumBaselines": {
+  "L": 260,
+  "R": 391
+ },
+ "frequenciesHz": [
+  20,
+  27.01,
+  36.47,
+  49.24,
+  66.49,
+  89.79,
+  121.24,
+  163.71,
+  221.06,
+  298.5,
+  403.07,
+  544.27,
+  734.93,
+  992.39,
+  1340.04,
+  1809.47,
+  2443.35,
+  3299.3,
+  4455.09,
+  6015.77,
+  8123.17,
+  10968.83,
+  14811.37,
+  20000
+ ],
+ "sha256": "1e1c38e12b3b7867368205e2d4ea574120b37ae894ec2f13d08ed50726471938",
+ "selectable": true,
+ "dynamic": [
+  {
+   "element": "#06-hifi-spectrum-band-L-00 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-01 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-02 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-03 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-04 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-05 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-06 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-07 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-08 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-09 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-10 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-11 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-12 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-13 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-14 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-15 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-16 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-17 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-18 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-19 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-20 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-21 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-22 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-L-23 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-00 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-01 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-02 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-03 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-04 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-05 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-06 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-07 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-08 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-09 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-10 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-11 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-12 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-13 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-14 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-15 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-16 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-17 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-18 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-19 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-20 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-21 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-22 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-R-23 > g",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-00",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-01",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-02",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-03",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-04",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-05",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-06",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-07",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-08",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-09",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-10",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-11",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-12",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-13",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-14",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-15",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-16",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-17",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-18",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-19",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-20",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-21",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-22",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-L-23",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-00",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-01",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-02",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-03",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-04",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-05",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-06",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-07",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-08",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-09",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-10",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-11",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-12",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-13",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-14",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-15",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-16",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-17",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-18",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-19",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-20",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-21",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-22",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-band-peak-R-23",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-00",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-01",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-02",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-03",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-04",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-05",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-06",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-07",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-08",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-09",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-10",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-11",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-12",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-13",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-14",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-15",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-16",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-17",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-18",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-19",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-20",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-21",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-22",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-23",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-24",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-25",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-26",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-27",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-28",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-29",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-30",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-31",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-32",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-33",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-34",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-35",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-36",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-37",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-38",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-39",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-40",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-41",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-42",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-43",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-44",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-45",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-46",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-L-47",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-00",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-01",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-02",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-03",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-04",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-05",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-06",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-07",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-08",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-09",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-10",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-11",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-12",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-13",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-14",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-15",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-16",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-17",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-18",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-19",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-20",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-21",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-22",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-23",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-24",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-25",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-26",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-27",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-28",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-29",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-30",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-31",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-32",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-33",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-34",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-35",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-36",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-37",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-38",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-39",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-40",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-41",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-42",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-43",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-44",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-45",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-46",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#06-hifi-spectrum-led-R-47",
+   "attributes": [
+    "opacity"
+   ]
+  }
+ ]
+}

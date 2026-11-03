@@ -1,0 +1,11 @@
+'use strict';
+(() => {
+ const api=VynampReference,audio=document.getElementById('audio'),host=document.createElement('div');host.id='media-state';host.setAttribute('role','status');host.setAttribute('aria-live','polite');const label=document.createElement('span'),retry=document.createElement('button');retry.id='media-retry';retry.textContent='Tentar novamente';retry.hidden=true;host.append(label,retry);document.getElementById('track-file-info').after(host);
+ let last='';
+ const names={preroll:'Agulha · preparando faixa…',tail:'Sulco final',idle:'Parado',paused:'Pausado',playing:'Reproduzindo',loading:'Carregando áudio…',connecting:'Conectando à rádio…',buffering:'Aguardando áudio…',error:'Não foi possível reproduzir'};
+ function draw(){const t=api.getTrackSnapshot(),status=api.state.mediaStatus||(api.state.playing?'playing':api.state.position>0?'paused':'idle'),text=status==='playing'&&t.demo?'Demonstração · sem áudio':status==='error'&&t.radio?'Rádio indisponível · verifique a conexão e a URL':names[status]||names.idle;if(last!==text){label.textContent=text;last=text;}host.dataset.state=status;host.setAttribute('aria-busy',String(['loading','connecting','buffering'].includes(status)));retry.hidden=!['error','connecting','loading','buffering'].includes(status);retry.textContent=status==='error'?'Tentar novamente':'Cancelar';document.getElementById('play-state').textContent=names[status]||names.idle;}
+ function update(status){api.state.mediaStatus=status;draw();}
+ retry.onclick=()=>{if(api.state.mediaStatus==='error')api.playTrack(api.state.current,true,api.state.cursor);else document.getElementById('stop').click();};
+ audio.addEventListener('waiting',()=>{if(api.state.playing||['loading','connecting'].includes(api.state.mediaStatus))update('buffering');});audio.addEventListener('stalled',()=>{if(api.state.playing||['loading','connecting'].includes(api.state.mediaStatus))update('buffering');});audio.addEventListener('playing',()=>{if(!api.isDemo())update('playing');});audio.addEventListener('error',()=>{if(!api.isDemo()&&audio.getAttribute('src'))update('error');});
+ document.addEventListener('vynamp:transport-state',draw);document.addEventListener('vynamp:playback',draw);draw();
+})();

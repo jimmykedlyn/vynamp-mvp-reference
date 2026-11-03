@@ -1,0 +1,21 @@
+{
+ "file": "12-osciloscopio-crt.svg",
+ "prefix": "12-osciloscopio-crt",
+ "title": "Osciloscópio · CRT verde",
+ "description": "Tela de fósforo com duas formas de onda e medidores estéreo independentes.",
+ "kind": "scope",
+ "segments": 40,
+ "channels": [
+  "L",
+  "R"
+ ],
+ "waveformBounds": [
+  110,
+  143,
+  850,
+  407
+ ],
+ "baseline": 276,
+ "sha256": "eb45088df80c08ee52145d6cc189c25abb0d81dfd3bfbcd245535d4e6d59d8ad",
+ "selectable": false
+}

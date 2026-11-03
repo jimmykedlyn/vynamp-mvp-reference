@@ -1,0 +1,453 @@
+{
+ "file": "15-led-horizontal-classico.svg",
+ "prefix": "15-led-horizontal-classico",
+ "title": "LED horizontal clássico · estéreo",
+ "description": "Referência visual fornecida pelo usuário, redesenhada como instrumento SVG estéreo editável.",
+ "kind": "reference-led",
+ "channels": [
+  "L",
+  "R"
+ ],
+ "viewBox": [
+  0,
+  0,
+  900,
+  308
+ ],
+ "segments": 36,
+ "selectable": true,
+ "dynamic": [
+  {
+   "element": "#15-led-horizontal-classico-L-0",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-1",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-10",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-11",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-12",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-13",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-14",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-15",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-16",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-17",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-18",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-19",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-2",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-20",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-21",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-22",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-23",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-24",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-25",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-26",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-27",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-28",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-29",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-3",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-30",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-31",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-32",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-33",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-34",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-35",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-4",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-5",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-6",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-7",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-8",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-L-9",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-0",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-1",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-10",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-11",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-12",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-13",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-14",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-15",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-16",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-17",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-18",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-19",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-2",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-20",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-21",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-22",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-23",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-24",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-25",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-26",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-27",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-28",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-29",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-3",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-30",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-31",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-32",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-33",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-34",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-35",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-4",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-5",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-6",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-7",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-8",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#15-led-horizontal-classico-R-9",
+   "attributes": [
+    "opacity"
+   ]
+  }
+ ]
+}

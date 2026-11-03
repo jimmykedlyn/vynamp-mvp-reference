@@ -1,0 +1,1022 @@
+/* Revisão 40 — correções da triagem de design (DS-01+). */
+
+/* DS-01: High Contrast Wide mantém alto contraste real em divisórias e contornos. */
+:root[data-skin="high-contrast-wide"]{
+  --line:var(--border-light);
+}
+
+/* DS-01: Estados de reprodução (.current), seleção (.selected), foco (:focus-visible) e erro
+   distinguíveis entre si por forma, borda, peso e superfície — não apenas por cor. */
+
+/* Faixa em reprodução: barra lateral esquerda contínua (3px) + indicador ▶ no título. */
+:root[data-faithful] #library>.track-row.current{
+  background:color-mix(in srgb,var(--panel-inset) 55%,var(--background));
+  box-shadow:inset 3px 0 0 var(--lime);
+}
+
+/* Faixa selecionada: superfície própria (--selection ≠ --panel-inset), contorno interno tracejado
+   e caixa do marcador ✓ emoldurada. */
+:root[data-faithful] #library>.track-row.selected{
+  background:var(--selection);
+  outline:1px dashed color-mix(in srgb,var(--cyan) 75%,var(--text-primary));
+  outline-offset:-2px;
+  box-shadow:inset 3px 0 0 var(--cyan);
+}
+:root[data-faithful] #library>.track-row.current.selected{
+  background:var(--selection);
+  box-shadow:inset 3px 0 0 var(--lime),inset 6px 0 0 var(--text-primary);
+}
+:root[data-faithful] #library .track-row .row-select[aria-pressed="true"]{
+  background:color-mix(in srgb,var(--cyan) 16%,var(--panel-inset));
+  border:1px solid var(--cyan);
+  border-radius:4px;
+  color:var(--cyan);
+  font-weight:700;
+}
+
+/* Estado de erro: moldura com barra lateral espessa + ícone ⚠ explícito (nunca só ponto circular). */
+:root[data-faithful] #media-state[data-state="error"]{
+  padding:3px 8px;
+  border:1px solid var(--danger);
+  border-left-width:3px;
+  border-radius:4px;
+  background:color-mix(in srgb,var(--danger) 12%,var(--panel-inset));
+  color:var(--text-primary);
+  font-weight:600;
+}
+:root[data-faithful] #media-state[data-state="error"]::before{
+  content:'';display:inline-block;width:14px;height:14px;vertical-align:-.125em;background:var(--danger);-webkit-mask:var(--icon-alert) center/contain no-repeat;mask:var(--icon-alert) center/contain no-repeat;
+  border-radius:0;
+  color:var(--danger);
+  font-weight:700;
+  line-height:1;
+}
+.faithful-notice{
+  border-left:4px solid var(--danger);
+}
+.faithful-notice::before{
+  content:'';display:inline-block;width:16px;height:16px;vertical-align:-.125em;background:currentColor;-webkit-mask:var(--icon-alert) center/contain no-repeat;mask:var(--icon-alert) center/contain no-repeat;
+  color:var(--danger);
+  font-weight:700;
+  flex:none;
+}
+
+/* DS-02: Desktop compacto (600–900 px com ponteiro fino e sem modo toque forçado):
+   não ativa barra inferior mobile; mantém appbar desktop enxuta, workspace rolável
+   e transporte fixo na base sem cortar tempo ou controles. */
+@media(min-width:600px) and (max-width:900px) and (pointer:fine){
+  :root[data-faithful][data-layout="full"]:not([data-touch="true"]){
+    body{
+      display:flex;
+      flex-direction:column;
+      height:100dvh;
+      min-height:100dvh;
+      overflow:hidden;
+      padding:0;
+      background:var(--background);
+    }
+    .faithful-body{
+      display:flex;
+      flex:1;
+      min-height:0;
+      flex-direction:column;
+      overflow:hidden;
+      padding-bottom:0;
+    }
+    .mobile-navigation,
+    .player-context-actions,
+    #faithful-mobile-back,
+    .faithful-mobile-brand,
+    .faithful-output,
+    .faithful-mini-badge,
+    .faithful-mini-close,
+    .faithful-mini-footer,
+    .appbar .edition,
+    .appbar>a{
+      display:none!important;
+    }
+    .appbar{
+      position:static;
+      flex:none;
+      height:52px;
+      min-height:52px;
+      padding:8px 12px;
+      gap:6px;
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      background:var(--chassis);
+      border-bottom:1px solid var(--line);
+    }
+    #main-menu-button{
+      order:0;
+      width:32px;
+      min-width:32px;
+      height:32px;
+      border-radius:7px;
+      background:var(--panel-inset);
+    }
+    .brand{
+      order:0;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin:0 auto 0 0;
+    }
+    .appbar .appearance{
+      display:flex;
+      width:auto;
+      order:0;
+      height:32px;
+    }
+    .appbar #skin-picker{
+      height:32px;
+      min-width:130px;
+      max-width:154px;
+      padding:2px 8px;
+      gap:6px;
+    }
+    .appbar .skin-current{
+      min-width:0;
+      overflow:hidden;
+    }
+    .appbar .skin-current strong{
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .appbar #open{
+      display:inline-flex;
+      height:32px;
+      min-height:32px;
+      padding-inline:8px;
+      font-size:11px;
+      border-radius:7px;
+      white-space:nowrap;
+    }
+    .appbar #audio-effects-open,
+    .appbar #restore-open,
+    .appbar #preferences,
+    .appbar #layout-mini-toggle,
+    .appbar #help{
+      display:inline-flex;
+      order:0;
+      width:32px;
+      min-width:32px;
+      height:32px;
+      min-height:32px;
+      padding:0;
+      justify-content:center;
+      align-items:center;
+      font-size:0;
+      gap:0;
+      border-radius:7px;
+    }
+    .appbar #audio-effects-open>:not(.icon),
+    .appbar .restore-launch-label{
+      display:none!important;
+    }
+    .appbar #audio-effects-open .icon,
+    .appbar #restore-open .icon{
+      width:17px;
+      height:17px;
+      margin:0;
+    }
+    .workspace{
+      flex:1;
+      min-height:0;
+      display:flex;
+      flex-direction:column;
+      overflow-y:auto;
+      overflow-x:hidden;
+    }
+    .workspace>.now,
+    .workspace>.collection,
+    .workspace>.queue{
+      display:flex!important;
+      flex-direction:column;
+    }
+    .now{
+      flex:none;
+      max-width:none;
+      width:100%;
+      margin:0;
+      padding:10px 16px;
+      gap:8px;
+      background:var(--chassis);
+      border-bottom:1px solid var(--line);
+    }
+    .now-summary{
+      display:grid;
+      grid-template-columns:56px minmax(0,1fr) auto;
+      grid-template-rows:auto auto auto auto;
+      gap:2px 12px;
+      padding:10px 12px;
+      min-height:0;
+      align-items:center;
+      background:var(--panel-inset);
+      border:1px solid var(--line);
+      border-radius:6px;
+    }
+    .now-summary>.eyebrow{
+      display:block;
+      grid-column:1/-1;
+      grid-row:1;
+      margin:0 0 2px;
+    }
+    .now-summary .cover-wrap{
+      order:0;
+      grid-column:1;
+      grid-row:2/5;
+      width:56px;
+      height:56px;
+      min-height:56px;
+      margin:0;
+      padding:0;
+      border-radius:6px;
+      box-shadow:none;
+    }
+    .now-summary .cover{
+      border-radius:5px;
+    }
+    .now-summary .track-heading{
+      order:0;
+      grid-column:2/4;
+      grid-row:2;
+      margin:0;
+      width:auto;
+    }
+    .now-summary h1{
+      font-size:calc(15px * var(--font-scale));
+      line-height:1.25;
+    }
+    .now-summary #artist{
+      font-size:calc(12px * var(--font-scale));
+      margin-top:2px;
+    }
+    .now-summary #favorite{
+      width:32px;
+      min-width:32px;
+      height:32px;
+      min-height:32px;
+    }
+    .now-summary #album{
+      order:0;
+      grid-column:2;
+      grid-row:3;
+      margin:0;
+      font-size:11px;
+    }
+    .now-summary #track-file-info{
+      order:0;
+      grid-column:3;
+      grid-row:3;
+      margin:0;
+      justify-content:flex-end;
+    }
+    #media-state{
+      grid-column:2/4;
+      grid-row:4;
+      margin-top:2px;
+    }
+    .collection{
+      flex:1 0 auto;
+      min-height:0;
+    }
+    .queue{
+      flex:none;
+      min-height:0;
+      border-top:1px solid var(--line);
+      padding:0 16px 12px;
+    }
+    .transport{
+      position:static!important;
+      flex:none;
+      width:100%;
+      max-width:none;
+      margin:0;
+      height:auto;
+      min-height:92px;
+      padding:8px 16px;
+      display:grid;
+      grid-template-columns:auto minmax(0,1fr) auto;
+      grid-template-rows:36px minmax(38px,auto);
+      gap:6px 12px;
+      background:var(--chassis);
+      border-top:1px solid var(--line);
+    }
+    .transport .timeline{
+      grid-column:1/3;
+      grid-row:1;
+      display:grid;
+      grid-template-columns:52px minmax(0,1fr) 44px;
+      grid-template-rows:36px;
+      gap:8px;
+      align-items:center;
+      padding:0;
+    }
+    .transport .timeline #elapsed{
+      grid-column:1;
+      grid-row:1;
+      font:700 14px Consolas,monospace;
+    }
+    .transport .timeline .wave-wrap{
+      grid-column:2;
+      grid-row:1;
+      height:36px;
+    }
+    .transport .timeline .wave-wrap>svg,
+    .transport .timeline #seek{
+      height:36px;
+    }
+    .transport .timeline #duration{
+      grid-column:3;
+      grid-row:1;
+      font:11px Consolas,monospace;
+      text-align:right;
+    }
+    .transport .volume{
+      display:flex!important;
+      grid-column:3;
+      grid-row:1;
+      align-self:center;
+      justify-self:end;
+      gap:4px;
+    }
+    .transport .volume input{
+      width:68px;
+    }
+    .transport .volume output{
+      font:11px Consolas,monospace;
+      min-width:28px;
+    }
+    .transport .buttons{
+      grid-column:1;
+      grid-row:2;
+      width:auto;
+      display:flex;
+      justify-content:flex-start;
+      align-items:center;
+      gap:6px;
+    }
+    .transport .buttons #previous,
+    .transport .buttons #next{
+      width:34px;
+      min-width:34px;
+      height:34px;
+      border-radius:6px;
+    }
+    .transport .buttons .play-button{
+      width:40px;
+      min-width:40px;
+      height:40px;
+      border-radius:6px;
+    }
+    .transport .transport-copy{
+      display:block!important;
+      grid-column:2;
+      grid-row:2;
+      align-self:center;
+      text-align:center;
+      min-width:0;
+      overflow:hidden;
+    }
+    .transport #timeline-label{
+      display:block;
+      font-size:12px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .transport #feedback{
+      font-size:11px;
+      margin-top:2px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .transport .secondary-controls{
+      display:flex!important;
+      grid-column:3;
+      grid-row:2;
+      align-self:center;
+      justify-self:end;
+      gap:4px;
+      flex-wrap:nowrap;
+    }
+    .transport #repeat-label{
+      display:none;
+    }
+    .transport .secondary-controls .small-button{
+      width:30px;
+      min-width:30px;
+      height:30px;
+      border:1px solid var(--line);
+      border-radius:5px;
+    }
+    .transport #eq-open{
+      width:auto;
+      min-width:52px;
+      padding-inline:6px;
+    }
+  }
+}
+
+/* DS-02: Em viewports com barra inferior mobile (< 600 px ou pointer: coarse / data-touch)
+   e altura enxuta (ex.: 480×660) ou fonte ampliada, compacta capa e espaçamentos e mantém
+   transporte + tempo 100% visíveis acima da navegação inferior sem corte vertical. */
+@media(max-width:599px) and (max-height:780px),(max-width:900px) and (max-height:780px) and (pointer:coarse){
+  :root[data-faithful][data-layout="full"][data-mobile-view="player"]{
+    .appbar{
+      height:58px;
+      min-height:58px;
+      padding:6px 14px;
+    }
+    .faithful-body{
+      overflow:hidden;
+      padding-bottom:4px;
+    }
+    .workspace{
+      flex:1 1 auto;
+      min-height:0;
+      overflow-y:auto;
+      overflow-x:hidden;
+      display:flex;
+      flex-direction:column;
+    }
+    .now{
+      padding:4px 16px 0;
+      gap:6px;
+      margin:0 auto;
+    }
+    .now-summary .cover-wrap{
+      width:min(32vw,92px,14dvh);
+      height:min(32vw,92px,14dvh);
+      min-height:0;
+      margin:0 auto 2px;
+      padding:4px;
+      border-radius:14px;
+    }
+    .now-summary .cover{
+      border-radius:10px;
+    }
+    .now-summary .track-heading{
+      margin:2px 4px 0;
+    }
+    .now-summary h1{
+      font-size:clamp(15px,calc(18px * var(--font-scale)),22px);
+      line-height:1.15;
+    }
+    .now-summary #artist{
+      font-size:clamp(12px,calc(13px * var(--font-scale)),16px);
+      margin-top:2px;
+    }
+    .now-summary #album{
+      margin:0 4px;
+      font-size:11px;
+    }
+    .now-summary #track-file-info{
+      margin-top:2px;
+    }
+    #media-state{
+      margin-top:2px;
+    }
+    .transport{
+      flex:none;
+      padding:6px 16px 4px;
+      gap:8px;
+    }
+    .timeline{
+      grid-template-rows:36px 18px;
+      gap:4px;
+    }
+    .timeline .wave-wrap,
+    .timeline .wave-wrap>svg,
+    .timeline #seek{
+      height:36px;
+    }
+    .buttons .play-button{
+      width:52px;
+      height:52px;
+      min-width:52px;
+      border-radius:14px;
+    }
+    .player-context-actions{
+      flex:none;
+      margin:4px auto 0;
+    }
+    .player-context-actions button{
+      min-height:48px;
+      padding:4px;
+      font-size:12px;
+    }
+    .mobile-navigation{
+      min-height:58px;
+      height:calc(58px + env(safe-area-inset-bottom));
+      padding:4px 12px calc(4px + env(safe-area-inset-bottom));
+    }
+  }
+}
+
+@media(max-width:599px),(max-width:900px) and (pointer:coarse){
+  :root[data-faithful][data-layout="full"][data-mobile-view="player"][data-font-scaled="true"]{
+    .appbar{
+      height:auto;
+      min-height:68px;
+      padding:4px 12px;
+    }
+    .faithful-body{
+      overflow:hidden;
+      padding-bottom:4px;
+    }
+    .workspace{
+      flex:1 1 auto;
+      min-height:0;
+      overflow-y:auto;
+      overflow-x:hidden;
+      display:flex;
+      flex-direction:column;
+    }
+    .now{
+      padding:4px 16px 0;
+      gap:6px;
+      margin:0 auto;
+    }
+    .now-summary .cover-wrap{
+      width:min(32vw,92px,14dvh);
+      height:min(32vw,92px,14dvh);
+      min-height:0;
+      margin:0 auto 2px;
+      padding:4px;
+      border-radius:14px;
+    }
+    .now-summary .track-heading{
+      margin:2px 4px 0;
+    }
+    .now-summary h1{
+      font-size:clamp(16px,calc(15px * var(--font-scale)),24px);
+      line-height:1.15;
+    }
+    .now-summary #artist{
+      font-size:clamp(12px,calc(11px * var(--font-scale)),17px);
+      margin-top:2px;
+    }
+    .now-summary #album{
+      margin:0 4px;
+      font-size:11px;
+    }
+    .now-summary #track-file-info,
+    #media-state{
+      margin-top:2px;
+    }
+    .transport{
+      flex:none;
+      min-height:0;
+      padding:6px 16px 4px;
+      gap:8px;
+    }
+    .timeline{
+      grid-template-rows:36px 18px;
+      gap:4px;
+    }
+    .timeline .wave-wrap,
+    .timeline .wave-wrap>svg,
+    .timeline #seek{
+      height:36px;
+    }
+    .buttons .play-button{
+      width:52px;
+      height:52px;
+      min-width:52px;
+      border-radius:14px;
+    }
+    .player-context-actions{
+      flex:none;
+      margin:4px auto 0;
+    }
+    .player-context-actions button{
+      min-height:48px;
+      padding:4px;
+      font-size:12px;
+    }
+    .mobile-navigation{
+      min-height:58px;
+      height:calc(58px + env(safe-area-inset-bottom));
+      padding:4px 12px calc(4px + env(safe-area-inset-bottom));
+    }
+  }
+}
+
+/* DS-07 (e garantia de alvos do DS-05): Alvos de toque >= 44×44 px em todos os controles
+   mobile listados (#faithful-output, #shuffle, #repeat, #faithful-mobile-back,
+   #main-menu-button e #previous/#next no mini-transporte das abas Biblioteca/Fila),
+   além de alvos >= 24 px (mouse) / >= 44 px (toque) no modo Mini. */
+@media(max-width:599px),(max-width:900px) and (pointer:coarse){
+  :root[data-faithful][data-layout="full"]{
+    .appbar{
+      height:auto;
+      min-height:76px;
+      padding:8px 14px;
+      align-items:center;
+    }
+    #faithful-mobile-back,
+    #main-menu-button{
+      width:44px;
+      min-width:44px;
+      height:44px;
+      min-height:44px;
+    }
+    .faithful-output{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:44px;
+      height:44px;
+      min-height:44px;
+      padding:4px 14px;
+      border-radius:22px;
+    }
+    .buttons #shuffle,
+    .buttons #repeat{
+      width:44px;
+      min-width:44px;
+      height:44px;
+      min-height:44px;
+    }
+    &[data-mobile-view="library"] .transport,
+    &[data-mobile-view="queue"] .transport{
+      grid-template-columns:minmax(0,1fr) 144px;
+    }
+    &:not([data-mobile-view="player"]) .buttons{
+      gap:4px;
+    }
+    &:not([data-mobile-view="player"]) .buttons #previous,
+    &:not([data-mobile-view="player"]) .buttons #next{
+      width:44px;
+      min-width:44px;
+      height:44px;
+      min-height:44px;
+    }
+  }
+}
+
+@media(max-width:599px) and (max-height:780px),(max-width:900px) and (max-height:780px) and (pointer:coarse){
+  :root[data-faithful][data-layout="full"][data-mobile-view="player"] .appbar{
+    height:auto;
+    min-height:68px;
+    padding:4px 12px;
+  }
+}
+
+:root[data-faithful][data-layout="mini"]{
+  #preferences,
+  #layout-mini-toggle,
+  .faithful-mini-close,
+  .secondary-controls .small-button,
+  .volume .icon-button,
+  .faithful-mini-footer button{
+    min-width:28px;
+    min-height:28px;
+  }
+}
+@media(pointer:coarse){
+  :root[data-faithful][data-layout="mini"] :is(#preferences,#layout-mini-toggle,.faithful-mini-close,.secondary-controls .small-button,.volume .icon-button,.faithful-mini-footer button,.buttons #previous,.buttons #next){
+    min-width:44px;
+    min-height:44px;
+  }
+}
+:root[data-faithful][data-layout="mini"][data-touch="true"] :is(#preferences,#layout-mini-toggle,.faithful-mini-close,.secondary-controls .small-button,.volume .icon-button,.faithful-mini-footer button,.buttons #previous,.buttons #next){
+  min-width:44px;
+  min-height:44px;
+}
+
+/* DS-11: Foco de teclado (:focus-visible) com cor do accent/cyan + halo duplo de contraste
+   que funciona em todas as 12 skins e 10 cores neon, e variáveis de tema no lugar de hex soltos. */
+:root{
+  --focus-ring:var(--cyan,var(--neon-accent-readable,var(--lime)));
+  --cta-bg:var(--text-primary);
+  --cta-ink:var(--background);
+  --cta-border:var(--border-light);
+}
+:root[data-skin="graphite-studio"]{
+  --cta-bg:rgb(229, 229, 229);
+}
+:root[data-faithful] :is(button,a,input,select,[tabindex]:not([tabindex="-1"])):focus-visible,
+:is(button,a,input,select,[tabindex]:not([tabindex="-1"])):focus-visible,
+.advanced-readout>button:focus-visible,
+#skin-picker:focus-visible,
+.neon-swatch:focus-visible{
+  outline:2px solid var(--focus-ring);
+  outline-offset:2px;
+  box-shadow:0 0 0 2px var(--background),0 0 0 4px var(--focus-ring);
+}
+:root[data-faithful] .search:focus-within{
+  outline:2px solid var(--focus-ring);
+  outline-offset:2px;
+  border-color:var(--focus-ring);
+}
+:root[data-faithful] .meter-menu button:focus-visible{
+  outline:2px solid var(--focus-ring);
+  outline-offset:-2px;
+  box-shadow:inset 0 0 0 3px var(--chassis);
+}
+:root[data-reduced-motion="true"] *,
+:root[data-reduced-motion="true"] *::before,
+:root[data-reduced-motion="true"] *::after{
+  animation:none!important;
+  transition:none!important;
+  scroll-behavior:auto!important;
+}
+
+/* DS-13: Selo de honestidade de áudio com estilo visual unificado
+   (border: 1px solid var(--amber), background: var(--panel-inset), cor legível >= 4.5:1)
+   e metadados demo em linha única compacta. */
+.capability,
+#dsp-capability{
+  border:1px solid var(--amber);
+  background:var(--panel-inset);
+  color:var(--text-primary);
+  border-radius:var(--radius,6px);
+  padding:6px 10px;
+}
+:root[data-faithful] .now-summary #track-file-info{
+  flex-wrap:nowrap;
+  overflow:hidden;
+  max-width:100%;
+}
+:root[data-faithful] .now-summary .track-file-details{
+  min-width:0;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/* DS-10: Piso tipográfico de 11 px em todos os rótulos, badges, cabeçalhos, botões secundários
+   e legendas técnicas que antes usavam 8 px, 9 px ou 10 px, preservando --r na composição fiel. */
+:root[data-faithful] :is(
+  .edition,
+  .eyebrow,
+  .now-summary>.eyebrow,
+  .now-summary #album,
+  .now-summary #source,
+  .now-summary #track-file-info,
+  .now-summary .cover-tag,
+  .format-badge,
+  .instrument h2,
+  .meter-caption,
+  .meter-caption>span,
+  .meter-caption>.plain,
+  #enlarge,
+  .lyrics-heading h3,
+  #lyrics-origin-badge,
+  #lyrics-source,
+  .faithful-lyrics-hint,
+  .audio-shortcuts-label,
+  .audio-shortcuts button,
+  .tabs button,
+  .collection-head .eyebrow,
+  .column-head,
+  .collection-foot,
+  #queue-count,
+  #clear-queue,
+  .queue>.queue-sub,
+  .queue-cover .number,
+  .queue-item .number,
+  .queue-item small,
+  .queue-item .time,
+  .queue-footer,
+  .timeline #duration,
+  .volume output,
+  #feedback,
+  .secondary-controls>span,
+  .secondary-controls .small-button,
+  #repeat-label,
+  .transport-title-row #eq-badge:not([hidden]),
+  .faithful-mobile-brand,
+  .faithful-action-detail,
+  .mobile-navigation button,
+  .faithful-mini-badge,
+  .faithful-mini-footer,
+  .skin-current small,
+  .skin-picker-heading span,
+  .folders-header .eyebrow,
+  .folder-root small,
+  .folder-grid-heading,
+  .folder-entry-main>small,
+  .radio-header .eyebrow,
+  .radio-catalog-settings small,
+  .radio-catalog-badge,
+  .restore-header .eyebrow,
+  #restore-state,
+  .restore-viewbar>span,
+  .restore-axis,
+  .restore-region-heading h3,
+  .restore-inspector h3,
+  #restore-region-count,
+  .restore-inspector small,
+  .restore-tool>button span,
+  .restore-hum button,
+  .restore-scope button,
+  .restore-kind button,
+  .restore-region-row,
+  .response-scale,
+  .response-axis,
+  #dsp-categories h3,
+  .dsp-user-preset small,
+  .dsp-cap-state,
+  #dsp-catalog-filter button,
+  .dsp-ir-import input[type="file"],
+  .dsp-ir-import p,
+  .dsp-tools-tabs button,
+  .neon-choice,
+  .menu-group-label,
+  .eq-band output,
+  .meter-menu-section,
+  kbd
+),
+:root[data-faithful][data-layout="mini"] :is(
+  .edition,
+  .brand,
+  .faithful-mini-badge,
+  .now-summary>.eyebrow,
+  .now-summary #album,
+  .now-summary #source,
+  .now-summary #track-file-info,
+  .instrument h2,
+  .timeline #duration,
+  .volume output,
+  #feedback,
+  .player-context-actions button,
+  .faithful-mini-footer
+),
+#graph-dialog :is(
+  .graph-header .eyebrow,
+  .graph-header .graph-legacy,
+  .graph-toolbar,
+  .graph-browser label,
+  .graph-browser h3,
+  .graph-availability,
+  .graph-instance-label,
+  .graph-canvas-tools,
+  .graph-canvas-tools button,
+  .graph-node-status,
+  .graph-node-quick output,
+  .graph-port-label,
+  .graph-rack span,
+  .graph-inspector h4,
+  .graph-inspector .capability,
+  .graph-fields label,
+  .graph-actions button,
+  .graph-levels,
+  .graph-band,
+  .graph-filter-editor label,
+  .graph-filter-list button,
+  .graph-connection-form label,
+  .graph-connections-list button,
+  .graph-statusbar,
+  .graph-hint
+),
+.graph-settings-menu h3,
+.graph-settings-menu label>span{
+  font-size:clamp(11px,calc(11px * var(--font-scale,1)),14px)!important;
+}
+:root[data-wave-style="spectrum-stereo"] .wave-spectrum-label{
+  font-size:11px!important;
+}
+
+/* DS-14: Handle permanente de arraste (⋮⋮, 16×28 px, text-muted) à esquerda de cada item de #queue-list
+   e botão de remoção ([data-remove], 28×28 px) permanentemente visível sem depender de hover
+   (opacity: 0.65 em repouso, subindo para 1.0 no hover/foco), preservando largura legível para o título. */
+:root[data-faithful] #queue-list .queue-item{
+  grid-template-columns:16px minmax(0,1fr) auto 28px 28px;
+  align-items:center;
+  column-gap:3px;
+}
+:root[data-faithful] #queue-list .queue-item>.queue-drag-handle{
+  grid-column:1;
+  grid-row:1;
+  width:16px;
+  min-width:16px;
+  height:28px;
+  min-height:28px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--text-muted);
+  font:700 12px/1 Consolas,monospace;
+  letter-spacing:-2px;
+  cursor:grab;
+  user-select:none;
+}
+:root[data-faithful] #queue-list .queue-item>.queue-drag-handle:active{
+  cursor:grabbing;
+}
+:root[data-faithful] #queue-list .queue-item>.track-name{
+  grid-column:2;
+  grid-row:1;
+  grid-template-columns:16px 32px minmax(0,1fr);
+  gap:6px;
+}
+:root[data-faithful] #queue-list .queue-item>.time{
+  grid-column:3;
+  grid-row:1;
+}
+:root[data-faithful] #queue-list .queue-item>[data-remove]{
+  grid-column:4;
+  grid-row:1;
+  position:static!important;
+  top:auto!important;
+  right:auto!important;
+  translate:none!important;
+  width:28px;
+  min-width:28px;
+  height:28px;
+  min-height:28px;
+  opacity:.65;
+  pointer-events:auto;
+}
+:root[data-faithful] #queue-list .queue-item .queue-order>.queue-more{
+  grid-column:5;
+  grid-row:1;
+  position:static;
+  top:auto;
+  right:auto;
+  translate:none;
+  width:28px;
+  min-width:28px;
+  height:28px;
+  min-height:28px;
+  opacity:.65;
+  pointer-events:auto;
+}
+@media(hover:hover) and (pointer:fine){
+  :root[data-faithful]:not([data-touch="true"]) #queue-list .queue-item{
+    grid-template-columns:16px minmax(0,1fr) auto 28px;
+  }
+  :root[data-faithful]:not([data-touch="true"]) #queue-list .queue-item .queue-order>.queue-more{
+    position:absolute!important;
+    top:50%!important;
+    right:30px!important;
+    translate:0 -50%!important;
+  }
+  :root[data-faithful]:not([data-touch="true"]) #queue-list .queue-item:not(:hover):not(:focus-within) .queue-more:not([aria-expanded="true"]){
+    opacity:0;
+  }
+}
+:root[data-faithful] #queue-list .queue-item:not(:hover):not(:focus-within)>[data-remove]{
+  opacity:.65!important;
+}
+:root[data-faithful] #queue-list .queue-item:is(:hover,:focus-within) :is([data-remove],.queue-more){
+  opacity:1!important;
+}
+:root[data-faithful] #queue-list .queue-item:is(:hover,:focus-within)>.queue-drag-handle{
+  color:var(--text-secondary);
+}
+:root[data-faithful] #queue-list .queue-item:is(:hover,:focus-within) .queue-copy{
+  padding-right:0!important;
+}
+
+/* DS-09: Escala de fonte até 200% no #graph-dialog sem truncar #graph-search ("Buscar efeito…"),
+   botões de cabeçalho ou ações do inspetor, preservando largura útil do canvas central (>= 480 px
+   em desktop) e recolhendo o catálogo lateral em gaveta quando o espaço horizontal é reduzido. */
+#graph-dialog{
+  font-size:clamp(12px,calc(12px * var(--font-scale,1)),16px);
+}
+#graph-dialog #graph-search{
+  font-size:clamp(12px,calc(12px * var(--font-scale,1)),15px)!important;
+  padding:7px 10px;
+}
+#graph-dialog :is(.graph-header .graph-power,.graph-header .graph-legacy){
+  font-size:clamp(12px,calc(12px * var(--font-scale,1)),15px)!important;
+  padding:7px 12px;
+}
+#graph-dialog #dsp-catalog-filter button{
+  font-size:clamp(11px,calc(11px * var(--font-scale,1)),12.5px)!important;
+  padding:4px 6px;
+}
+#graph-dialog .graph-browser[hidden]{
+  display:none!important;
+}
+@media(min-width:1101px){
+  :root[data-font-scaled="true"] #graph-dialog .graph-workspace:not([data-floating-properties="true"]){
+    grid-template-columns:236px minmax(480px,1fr) var(--properties-width,320px);
+  }
+  :root[data-font-scaled="true"] #graph-dialog .graph-workspace[data-floating-properties="true"]{
+    grid-template-columns:236px minmax(480px,1fr);
+  }
+}
+@media(min-width:801px) and (max-width:1100px){
+  :root[data-font-scaled="true"] #graph-dialog .graph-workspace{
+    grid-template-columns:minmax(0,1fr) min(42vw,var(--properties-width,300px))!important;
+    position:relative;
+  }
+  :root[data-font-scaled="true"] #graph-dialog .graph-workspace[data-floating-properties="true"]{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+  :root[data-font-scaled="true"] #graph-dialog .graph-browser{
+    position:absolute;
+    inset:0 auto 0 0;
+    width:240px;
+    z-index:6;
+    box-shadow:8px 0 20px #0005;
+  }
+}
