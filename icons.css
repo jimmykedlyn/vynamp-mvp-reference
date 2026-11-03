@@ -47,8 +47,6 @@ select:not([multiple]):not([size]){appearance:none;background-image:var(--icon-s
 .diag-severity-mild{color:var(--lime)}
 .diag-severity-none{color:var(--text-muted)}
 [class*=diag-severity-].icon{width:16px;height:16px;margin-right:6px}
-.diag-suggestion{display:flex;gap:7px;align-items:flex-start}
-.diag-suggestion .icon{width:14px;height:14px;margin-top:2px;color:var(--amber)}
 #restore-feedback[data-tone=warning]{color:var(--text-primary)}
 #restore-feedback[data-tone=warning]>.icon{width:14px;height:14px;margin-right:6px;color:var(--amber)}
 .restore-diag-card strong .icon,.restore-diag strong .icon{width:15px;height:15px;margin-right:6px;vertical-align:-.2em}
