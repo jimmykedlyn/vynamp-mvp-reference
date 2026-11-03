@@ -14,5 +14,583 @@
  "themes": [
   "high-contrast-wide"
  ],
- "selectable": false
+ "selectable": true,
+ "dynamic": [
+  {
+   "element": "#11-matriz-led-column-L-00",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-01",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-02",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-03",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-04",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-05",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-06",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-07",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-08",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-09",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-10",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-11",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-12",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-13",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-14",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-15",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-16",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-17",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-18",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-19",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-20",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-21",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-22",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-23",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-24",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-25",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-26",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-27",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-28",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-29",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-30",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-31",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-32",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-33",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-34",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-35",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-36",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-37",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-38",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-39",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-40",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-41",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-42",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-43",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-44",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-45",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-46",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-L-47",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-00",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-01",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-02",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-03",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-04",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-05",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-06",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-07",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-08",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-09",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-10",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-11",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-12",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-13",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-14",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-15",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-16",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-17",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-18",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-19",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-20",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-21",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-22",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-23",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-24",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-25",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-26",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-27",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-28",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-29",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-30",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-31",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-32",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-33",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-34",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-35",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-36",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-37",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-38",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-39",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-40",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-41",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-42",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-43",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-44",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-45",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-46",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#11-matriz-led-column-R-47",
+   "attributes": [
+    "opacity"
+   ]
+  }
+ ]
 }

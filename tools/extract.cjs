@@ -105,13 +105,14 @@ async function harvest(p,label){const list=await p.evaluate(([SER,SEL,dyn,rest])
    write(path.join(OUT,'svg/icons/icons.json'),JSON.stringify({grid:24,tint:'currentColor',names:Object.keys(icons.out),aliases:icons.aliases,cssIcons:icons.css},null,1));summary.icons=Object.keys(icons.out).length;
    // ---- meters: source + metadata ----
    const meters=await p.evaluate(()=>VYNAMP_ASSETS.meters.map(m=>({...m})));
-   // themes whose asset entry names this meter (rev.37 never switches meters by theme; kept as asset data)
+   // themes whose asset entry names this meter (the MVP never switches meters by theme; kept as asset data)
    const themeMeter=await p.evaluate(()=>VYNAMP_ASSETS.themes.map(t=>[t.id,t.meter]));
    for(const m of meters){m.themes=themeMeter.filter(x=>x[1]===m.file).map(x=>x[0]);write(path.join(OUT,'svg/meters',m.prefix,'source.svg'),m.svg);}
    summary.meters=meters.length;
    // ---- dynamic elements per selectable meter (settings + reload, like a returning user) ----
-   // only these are ever mounted: player.js resets any other stored index to the first choice
-   const choices=await p.evaluate(()=>['analog-dark','analog-vintage','led-horizontal','spectrum','circular','industrial-yellow','reference-red','reference-led','reference-matrix'].map(k=>VYNAMP_ASSETS.meters.findIndex(m=>m.kind===k)));
+   // only the meter menu's entries are ever mounted: player.js resets any other stored index to the first choice
+   const choices=await p.evaluate(()=>[...document.querySelectorAll('#meter-menu [data-meter]')].map(e=>Number(e.dataset.meter)));
+   if(!choices.length||choices.some(i=>!(i>=0&&i<meters.length)))throw new Error('meter menu not found or out of range: '+JSON.stringify(choices));
    for(const m of meters)m.selectable=choices.includes(meters.indexOf(m));
    const dyn={};
    for(const mi of choices){await p.evaluate(mi=>{const s=JSON.parse(localStorage.getItem('vynamp-reference-settings')||'{}');s.meter=mi;s.meterOff=false;localStorage.setItem('vynamp-reference-settings',JSON.stringify(s));},mi);

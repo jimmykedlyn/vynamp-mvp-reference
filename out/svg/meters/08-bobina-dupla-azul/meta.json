@@ -54,5 +54,19 @@
  "themes": [
   "cobalt-session"
  ],
- "selectable": false
+ "selectable": true,
+ "dynamic": [
+  {
+   "element": "#08-bobina-dupla-azul-needle-L",
+   "attributes": [
+    "transform"
+   ]
+  },
+  {
+   "element": "#08-bobina-dupla-azul-needle-R",
+   "attributes": [
+    "transform"
+   ]
+  }
+ ]
 }

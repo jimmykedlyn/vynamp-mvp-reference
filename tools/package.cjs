@@ -21,7 +21,7 @@ const ver=(cmd,args)=>{try{return execFileSync(cmd,args,{encoding:'utf8'}).trim(
 const files={};for(const f of walk(TARGET)){const r=rel(TARGET,f);if(r!=='README.md'&&r!=='SOURCE.json')files[r]=sha(fs.readFileSync(f));}
 (async()=>{const {chromium}=require('playwright');const b=await chromium.launch({...(process.env.CHROME?{executablePath:process.env.CHROME}:{channel:'chrome'})});const CHROME=b.version();await b.close();
 const source={
-  mvp:{revision:'rev.37',treeSha256:treeHash,files:walk(mvp).length},
+  mvp:{revision:'rev.38',treeSha256:treeHash,files:walk(mvp).length},
   tool:{repository:'vynamp-mvp-reference',commit:git('rev-parse','HEAD'),dirty:git('status','--porcelain')!==''},
   environment:{node:process.version,playwright:require('playwright/package.json').version,
     chrome:CHROME,resvg:ver(process.env.RESVG||path.join(require('os').homedir(),'.cargo/bin/resvg'+(process.platform==='win32'?'.exe':'')),['--version'])},

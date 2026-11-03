@@ -22,5 +22,49 @@
  "themes": [
   "pearl-workspace"
  ],
- "selectable": false
+ "selectable": true,
+ "dynamic": [
+  {
+   "element": "#10-arco-hifi-champagne-arc-L > path",
+   "attributes": [
+    "stroke-dasharray",
+    "visibility"
+   ]
+  },
+  {
+   "element": "#10-arco-hifi-champagne-arc-R > path",
+   "attributes": [
+    "stroke-dasharray",
+    "visibility"
+   ]
+  },
+  {
+   "element": "#10-arco-hifi-champagne-peak-L",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#10-arco-hifi-champagne-peak-R",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#10-arco-hifi-champagne-value-L",
+   "attributes": [
+    "stroke-dasharray",
+    "visibility"
+   ]
+  },
+  {
+   "element": "#10-arco-hifi-champagne-value-R",
+   "attributes": [
+    "stroke-dasharray",
+    "visibility"
+   ]
+  }
+ ]
 }

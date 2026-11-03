@@ -13,5 +13,417 @@
  "themes": [
   "forest-room"
  ],
- "selectable": false
+ "selectable": true,
+ "dynamic": [
+  {
+   "element": "#04-led-vertical-duplo-clip-L",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-clip-R",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-00",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-01",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-02",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-03",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-04",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-05",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-06",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-07",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-08",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-09",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-10",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-11",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-12",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-13",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-14",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-15",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-16",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-17",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-18",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-19",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-20",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-21",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-22",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-23",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-24",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-25",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-26",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-27",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-28",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-29",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-30",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-L-31",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-00",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-01",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-02",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-03",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-04",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-05",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-06",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-07",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-08",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-09",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-10",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-11",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-12",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-13",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-14",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-15",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-16",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-17",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-18",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-19",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-20",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-21",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-22",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-23",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-24",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-25",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-26",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-27",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-28",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-29",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-30",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-led-R-31",
+   "attributes": [
+    "opacity"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-peak-L",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  },
+  {
+   "element": "#04-led-vertical-duplo-peak-R",
+   "attributes": [
+    "opacity",
+    "transform"
+   ]
+  }
+ ]
 }

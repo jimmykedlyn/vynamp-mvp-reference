@@ -1,6 +1,6 @@
 # vynamp-mvp-reference
 
-Freezes the Vynamp web MVP (rev.37) and extracts the reference package that the native Rust UI (egui, no browser) is measured against. The product never ships this code; it is the visual and behavioural specification.
+Freezes the Vynamp web MVP (rev.38) and extracts the reference package that the native Rust UI (egui, no browser) is measured against. The product never ships this code; it is the visual and behavioural specification.
 
 ## Layout
 
@@ -40,7 +40,7 @@ Commit the tool repository before packaging so `SOURCE.json` records a clean com
 
 - `out/themes/themes.json`: per theme, source tokens, every resolved `--*` custom property, body styles and `<html>` attributes; `unsetVars` lists the variables the sources reference that `:root` does not define, with their fallback literals and whether element CSS or a script sets them.
 - `out/svg/icons/`: one standalone SVG per icon (24×24, `currentColor`), `icons.json` (names, aliases, CSS icons) and `usage.json` (where each icon appears).
-- `out/svg/meters/<prefix>/`: meter source SVG plus `meta.json` (kind, channels, scale, pivots, themes whose asset entry names it, selectable, dynamic attributes); `dynamic.json` records which attributes animate while a test tone plays. Rev.37 mounts only the 9 selectable meters, so only those have dynamics.
+- `out/svg/meters/<prefix>/`: meter source SVG plus `meta.json` (kind, channels, scale, pivots, themes whose asset entry names it, selectable, dynamic attributes); `dynamic.json` records which attributes animate while a test tone plays. Rev.38 makes all 16 meters selectable, so every one has dynamics.
 - `out/svg/rendered/`: every distinct SVG the UI renders, serialized standalone with computed presentation styles inlined; `index.json` maps each hash to the states where it appears; `click-failures.json` lists sweep clicks that timed out.
 
 Rules: attributes that scripts animate are written at rest (their value in the meter source SVG, or dropped when it has none) and listed under `neutralized` in `index.json`, so a file never depends on when it was captured; `dynamic.json` records which elements and attributes animate, not sampled values; hashes ignore width/height; `currentColor` is preserved through a sentinel colour. Two extractions of the same `mvp/` produce byte-identical output; `npm run verify` checks it.

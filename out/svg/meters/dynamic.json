@@ -3956,5 +3956,2881 @@
     "visible": false
    }
   ]
+ },
+ "04-led-vertical-duplo": {
+  "meter": "04-led-vertical-duplo",
+  "playing": true,
+  "mutated": {
+   "#04-led-vertical-duplo-clip-L": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-clip-R": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-00": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-01": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-02": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-03": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-04": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-05": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-06": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-07": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-08": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-09": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-10": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-11": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-12": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-13": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-14": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-15": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-16": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-17": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-18": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-19": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-20": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-21": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-22": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-23": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-24": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-25": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-26": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-27": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-28": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-29": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-30": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-L-31": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-00": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-01": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-02": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-03": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-04": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-05": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-06": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-07": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-08": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-09": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-10": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-11": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-12": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-13": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-14": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-15": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-16": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-17": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-18": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-19": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-20": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-21": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-22": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-23": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-24": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-25": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-26": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-27": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-28": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-29": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-30": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-led-R-31": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#04-led-vertical-duplo-peak-L": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#04-led-vertical-duplo-peak-R": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#wave-creative-inner": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-live": {
+    "attributes": [
+     "data-level"
+    ]
+   },
+   "#wave-creative-mesh": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-middle": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-nodes": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-outer": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-right": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-columns": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-line": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-styles": {
+    "attributes": [
+     "data-peak"
+    ]
+   },
+   "#wave-progress": {
+    "attributes": [
+     "width"
+    ]
+   },
+   "#wave-pulse": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-reactive-bars": {
+    "attributes": [
+     "data-level",
+     "transform"
+    ]
+   },
+   "#wave-spectrum-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-live": {
+    "attributes": [
+     "data-frequency-left",
+     "data-frequency-right",
+     "data-level"
+    ]
+   },
+   "#wave-spectrum-right": {
+    "attributes": [
+     "d"
+    ]
+   }
+  },
+  "canvases": [
+   {
+    "where": "#restore-wave",
+    "w": 300,
+    "h": 140,
+    "visible": false
+   },
+   {
+    "where": "#restore-spectrum",
+    "w": 300,
+    "h": 160,
+    "visible": false
+   },
+   {
+    "where": "#eq-spectrum > canvas",
+    "w": 1,
+    "h": 1,
+    "visible": false
+   }
+  ]
+ },
+ "07-broadcast-retro": {
+  "meter": "07-broadcast-retro",
+  "playing": true,
+  "mutated": {
+   "#07-broadcast-retro-pointer-L": {
+    "attributes": [
+     "transform"
+    ]
+   },
+   "#07-broadcast-retro-pointer-R": {
+    "attributes": [
+     "transform"
+    ]
+   },
+   "#wave-creative-inner": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-live": {
+    "attributes": [
+     "data-level"
+    ]
+   },
+   "#wave-creative-mesh": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-middle": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-nodes": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-outer": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-right": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-columns": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-line": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-styles": {
+    "attributes": [
+     "data-peak"
+    ]
+   },
+   "#wave-progress": {
+    "attributes": [
+     "width"
+    ]
+   },
+   "#wave-pulse": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-reactive-bars": {
+    "attributes": [
+     "data-level",
+     "transform"
+    ]
+   },
+   "#wave-spectrum-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-live": {
+    "attributes": [
+     "data-frequency-left",
+     "data-frequency-right",
+     "data-level"
+    ]
+   },
+   "#wave-spectrum-right": {
+    "attributes": [
+     "d"
+    ]
+   }
+  },
+  "canvases": [
+   {
+    "where": "#restore-wave",
+    "w": 300,
+    "h": 140,
+    "visible": false
+   },
+   {
+    "where": "#restore-spectrum",
+    "w": 300,
+    "h": 160,
+    "visible": false
+   },
+   {
+    "where": "#eq-spectrum > canvas",
+    "w": 1,
+    "h": 1,
+    "visible": false
+   }
+  ]
+ },
+ "08-bobina-dupla-azul": {
+  "meter": "08-bobina-dupla-azul",
+  "playing": true,
+  "mutated": {
+   "#08-bobina-dupla-azul-needle-L": {
+    "attributes": [
+     "transform"
+    ]
+   },
+   "#08-bobina-dupla-azul-needle-R": {
+    "attributes": [
+     "transform"
+    ]
+   },
+   "#wave-creative-inner": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-live": {
+    "attributes": [
+     "data-level"
+    ]
+   },
+   "#wave-creative-mesh": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-middle": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-nodes": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-outer": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-right": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-columns": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-line": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-styles": {
+    "attributes": [
+     "data-peak"
+    ]
+   },
+   "#wave-progress": {
+    "attributes": [
+     "width"
+    ]
+   },
+   "#wave-pulse": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-reactive-bars": {
+    "attributes": [
+     "data-level",
+     "transform"
+    ]
+   },
+   "#wave-spectrum-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-live": {
+    "attributes": [
+     "data-frequency-left",
+     "data-frequency-right",
+     "data-level"
+    ]
+   },
+   "#wave-spectrum-right": {
+    "attributes": [
+     "d"
+    ]
+   }
+  },
+  "canvases": [
+   {
+    "where": "#restore-wave",
+    "w": 300,
+    "h": 140,
+    "visible": false
+   },
+   {
+    "where": "#restore-spectrum",
+    "w": 300,
+    "h": 160,
+    "visible": false
+   },
+   {
+    "where": "#eq-spectrum > canvas",
+    "w": 1,
+    "h": 1,
+    "visible": false
+   }
+  ]
+ },
+ "09-plasma-ambar": {
+  "meter": "09-plasma-ambar",
+  "playing": true,
+  "mutated": {
+   "#09-plasma-ambar-tube-L-00": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-01": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-02": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-03": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-04": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-05": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-06": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-07": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-08": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-09": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-10": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-11": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-12": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-13": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-14": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-15": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-16": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-17": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-18": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-19": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-20": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-21": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-22": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-23": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-24": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-25": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-26": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-27": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-28": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-29": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-30": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-31": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-32": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-33": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-34": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-35": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-36": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-37": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-38": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-39": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-40": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-41": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-42": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-43": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-44": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-45": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-46": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-47": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-48": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-49": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-50": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-51": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-52": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-53": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-54": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-55": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-56": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-57": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-58": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-59": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-60": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-61": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-62": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-L-63": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-00": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-01": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-02": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-03": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-04": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-05": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-06": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-07": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-08": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-09": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-10": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-11": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-12": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-13": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-14": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-15": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-16": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-17": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-18": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-19": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-20": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-21": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-22": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-23": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-24": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-25": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-26": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-27": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-28": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-29": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-30": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-31": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-32": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-33": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-34": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-35": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-36": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-37": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-38": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-39": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-40": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-41": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-42": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-43": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-44": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-45": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-46": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-47": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-48": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-49": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-50": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-51": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-52": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-53": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-54": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-55": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-56": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-57": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-58": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-59": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-60": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-61": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-62": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#09-plasma-ambar-tube-R-63": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#wave-creative-inner": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-live": {
+    "attributes": [
+     "data-level"
+    ]
+   },
+   "#wave-creative-mesh": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-middle": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-nodes": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-outer": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-right": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-columns": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-line": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-styles": {
+    "attributes": [
+     "data-peak"
+    ]
+   },
+   "#wave-progress": {
+    "attributes": [
+     "width"
+    ]
+   },
+   "#wave-pulse": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-reactive-bars": {
+    "attributes": [
+     "data-level",
+     "transform"
+    ]
+   },
+   "#wave-spectrum-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-live": {
+    "attributes": [
+     "data-frequency-left",
+     "data-frequency-right",
+     "data-level"
+    ]
+   },
+   "#wave-spectrum-right": {
+    "attributes": [
+     "d"
+    ]
+   }
+  },
+  "canvases": [
+   {
+    "where": "#restore-wave",
+    "w": 300,
+    "h": 140,
+    "visible": false
+   },
+   {
+    "where": "#restore-spectrum",
+    "w": 300,
+    "h": 160,
+    "visible": false
+   },
+   {
+    "where": "#eq-spectrum > canvas",
+    "w": 1,
+    "h": 1,
+    "visible": false
+   }
+  ]
+ },
+ "10-arco-hifi-champagne": {
+  "meter": "10-arco-hifi-champagne",
+  "playing": true,
+  "mutated": {
+   "#10-arco-hifi-champagne-arc-L > path": {
+    "attributes": [
+     "stroke-dasharray",
+     "visibility"
+    ]
+   },
+   "#10-arco-hifi-champagne-arc-R > path": {
+    "attributes": [
+     "stroke-dasharray",
+     "visibility"
+    ]
+   },
+   "#10-arco-hifi-champagne-peak-L": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#10-arco-hifi-champagne-peak-R": {
+    "attributes": [
+     "opacity",
+     "transform"
+    ]
+   },
+   "#10-arco-hifi-champagne-value-L": {
+    "attributes": [
+     "stroke-dasharray",
+     "visibility"
+    ]
+   },
+   "#10-arco-hifi-champagne-value-R": {
+    "attributes": [
+     "stroke-dasharray",
+     "visibility"
+    ]
+   },
+   "#wave-creative-inner": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-live": {
+    "attributes": [
+     "data-level"
+    ]
+   },
+   "#wave-creative-mesh": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-middle": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-nodes": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-outer": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-right": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-columns": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-line": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-styles": {
+    "attributes": [
+     "data-peak"
+    ]
+   },
+   "#wave-progress": {
+    "attributes": [
+     "width"
+    ]
+   },
+   "#wave-pulse": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-reactive-bars": {
+    "attributes": [
+     "data-level",
+     "transform"
+    ]
+   },
+   "#wave-spectrum-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-live": {
+    "attributes": [
+     "data-frequency-left",
+     "data-frequency-right",
+     "data-level"
+    ]
+   },
+   "#wave-spectrum-right": {
+    "attributes": [
+     "d"
+    ]
+   }
+  },
+  "canvases": [
+   {
+    "where": "#restore-wave",
+    "w": 300,
+    "h": 140,
+    "visible": false
+   },
+   {
+    "where": "#restore-spectrum",
+    "w": 300,
+    "h": 160,
+    "visible": false
+   },
+   {
+    "where": "#eq-spectrum > canvas",
+    "w": 1,
+    "h": 1,
+    "visible": false
+   }
+  ]
+ },
+ "11-matriz-led": {
+  "meter": "11-matriz-led",
+  "playing": true,
+  "mutated": {
+   "#11-matriz-led-column-L-00": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-01": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-02": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-03": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-04": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-05": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-06": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-07": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-08": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-09": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-10": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-11": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-12": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-13": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-14": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-15": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-16": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-17": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-18": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-19": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-20": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-21": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-22": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-23": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-24": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-25": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-26": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-27": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-28": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-29": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-30": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-31": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-32": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-33": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-34": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-35": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-36": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-37": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-38": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-39": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-40": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-41": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-42": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-43": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-44": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-45": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-46": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-L-47": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-00": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-01": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-02": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-03": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-04": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-05": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-06": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-07": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-08": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-09": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-10": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-11": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-12": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-13": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-14": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-15": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-16": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-17": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-18": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-19": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-20": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-21": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-22": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-23": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-24": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-25": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-26": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-27": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-28": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-29": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-30": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-31": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-32": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-33": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-34": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-35": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-36": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-37": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-38": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-39": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-40": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-41": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-42": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-43": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-44": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-45": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-46": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#11-matriz-led-column-R-47": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#wave-creative-inner": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-live": {
+    "attributes": [
+     "data-level"
+    ]
+   },
+   "#wave-creative-mesh": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-middle": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-nodes": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-outer": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-right": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-columns": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-line": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-styles": {
+    "attributes": [
+     "data-peak"
+    ]
+   },
+   "#wave-progress": {
+    "attributes": [
+     "width"
+    ]
+   },
+   "#wave-pulse": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-reactive-bars": {
+    "attributes": [
+     "data-level",
+     "transform"
+    ]
+   },
+   "#wave-spectrum-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-live": {
+    "attributes": [
+     "data-frequency-left",
+     "data-frequency-right",
+     "data-level"
+    ]
+   },
+   "#wave-spectrum-right": {
+    "attributes": [
+     "d"
+    ]
+   }
+  },
+  "canvases": [
+   {
+    "where": "#restore-wave",
+    "w": 300,
+    "h": 140,
+    "visible": false
+   },
+   {
+    "where": "#restore-spectrum",
+    "w": 300,
+    "h": 160,
+    "visible": false
+   },
+   {
+    "where": "#eq-spectrum > canvas",
+    "w": 1,
+    "h": 1,
+    "visible": false
+   }
+  ]
+ },
+ "12-osciloscopio-crt": {
+  "meter": "12-osciloscopio-crt",
+  "playing": true,
+  "mutated": {
+   "#12-osciloscopio-crt-led-L-00": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-01": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-02": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-03": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-04": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-05": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-06": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-07": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-08": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-09": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-10": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-11": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-12": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-13": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-14": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-15": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-16": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-17": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-18": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-19": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-20": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-21": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-22": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-23": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-24": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-25": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-26": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-27": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-28": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-29": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-30": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-31": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-32": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-33": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-34": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-35": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-36": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-37": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-38": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-L-39": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-00": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-01": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-02": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-03": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-04": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-05": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-06": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-07": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-08": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-09": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-10": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-11": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-12": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-13": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-14": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-15": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-16": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-17": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-18": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-19": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-20": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-21": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-22": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-23": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-24": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-25": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-26": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-27": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-28": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-29": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-30": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-31": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-32": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-33": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-34": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-35": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-36": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-37": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-38": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-led-R-39": {
+    "attributes": [
+     "opacity"
+    ]
+   },
+   "#12-osciloscopio-crt-trace-L": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#12-osciloscopio-crt-trace-R": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#12-osciloscopio-crt-waveform-L > path": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#12-osciloscopio-crt-waveform-R > path": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-inner": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-live": {
+    "attributes": [
+     "data-level"
+    ]
+   },
+   "#wave-creative-mesh": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-middle": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-nodes": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-outer": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-creative-right": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-columns": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-line": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-live-styles": {
+    "attributes": [
+     "data-peak"
+    ]
+   },
+   "#wave-progress": {
+    "attributes": [
+     "width"
+    ]
+   },
+   "#wave-pulse": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-reactive-bars": {
+    "attributes": [
+     "data-level",
+     "transform"
+    ]
+   },
+   "#wave-spectrum-fill": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-halo": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-left": {
+    "attributes": [
+     "d"
+    ]
+   },
+   "#wave-spectrum-live": {
+    "attributes": [
+     "data-frequency-left",
+     "data-frequency-right",
+     "data-level"
+    ]
+   },
+   "#wave-spectrum-right": {
+    "attributes": [
+     "d"
+    ]
+   }
+  },
+  "canvases": [
+   {
+    "where": "#restore-wave",
+    "w": 300,
+    "h": 140,
+    "visible": false
+   },
+   {
+    "where": "#restore-spectrum",
+    "w": 300,
+    "h": 160,
+    "visible": false
+   },
+   {
+    "where": "#eq-spectrum > canvas",
+    "w": 1,
+    "h": 1,
+    "visible": false
+   }
+  ]
  }
 }

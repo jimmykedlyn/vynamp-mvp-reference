@@ -36,5 +36,19 @@
  "themes": [
   "obsidian-reference"
  ],
- "selectable": false
+ "selectable": true,
+ "dynamic": [
+  {
+   "element": "#07-broadcast-retro-pointer-L",
+   "attributes": [
+    "transform"
+   ]
+  },
+  {
+   "element": "#07-broadcast-retro-pointer-R",
+   "attributes": [
+    "transform"
+   ]
+  }
+ ]
 }
