@@ -3432,7 +3432,7 @@
    "w1440/click:Vynamp — referência ",
    "w1440/click:Ir para a biblioteca"
   ],
-  "more": 69
+  "more": 71
  },
  {
   "hash": "4c1605a8df5f0614",
@@ -3622,47 +3622,6 @@
    "w1440/click:Reproduzir Soft Geometry, Clara Mendes"
   ],
   "more": 3
- },
- {
-  "hash": "8b3e80e02ba8f600",
-  "bytes": 102226,
-  "where": "#wave",
-  "box": [
-   99,
-   786,
-   1089,
-   48
-  ],
-  "neutralized": [
-   "#wave-creative-inner|d",
-   "#wave-creative-left|d",
-   "#wave-creative-live|data-level",
-   "#wave-creative-mesh|d",
-   "#wave-creative-middle|d",
-   "#wave-creative-nodes|d",
-   "#wave-creative-outer|d",
-   "#wave-creative-right|d",
-   "#wave-live-columns|d",
-   "#wave-live-fill|d",
-   "#wave-live-halo|d",
-   "#wave-live-line|d",
-   "#wave-live-styles|data-peak",
-   "#wave-progress|width",
-   "#wave-pulse|d",
-   "#wave-reactive-bars|data-level",
-   "#wave-reactive-bars|transform",
-   "#wave-spectrum-fill|d",
-   "#wave-spectrum-halo|d",
-   "#wave-spectrum-left|d",
-   "#wave-spectrum-live|data-frequency-left",
-   "#wave-spectrum-live|data-frequency-right",
-   "#wave-spectrum-live|data-level",
-   "#wave-spectrum-right|d"
-  ],
-  "seen": [
-   "w1440/click:Reproduzir Artist - Song, Arquivo local",
-   "w1440/click:Reproduzir Artist - Song da fila"
-  ]
  },
  {
   "hash": "e8dfc5ee36011676",

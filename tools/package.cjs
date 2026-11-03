@@ -25,7 +25,7 @@ const source={
   tool:{repository:'vynamp-mvp-reference',commit:git('rev-parse','HEAD'),dirty:git('status','--porcelain')!==''},
   environment:{node:process.version,playwright:require('playwright/package.json').version,
     chrome:CHROME,resvg:ver(process.env.RESVG||path.join(require('os').homedir(),'.cargo/bin/resvg'+(process.platform==='win32'?'.exe':'')),['--version'])},
-  commands:['npm run serve','npm run extract','npm run check-svg','node tools/package.cjs <target>'],
+  commands:['npm run serve','npm run extract','npm run check-svg','npm run verify','node tools/package.cjs <target>'],
   files};
 fs.writeFileSync(path.join(TARGET,'SOURCE.json'),JSON.stringify(source,null,1)+'\n');
 console.log('packaged',Object.keys(files).length,'files, mvp',treeHash.slice(0,12),'tool',source.tool.commit.slice(0,8),source.tool.dirty?'(dirty)':'');

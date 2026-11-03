@@ -42,6 +42,9 @@
   20000
  ],
  "sha256": "1e1c38e12b3b7867368205e2d4ea574120b37ae894ec2f13d08ed50726471938",
+ "themes": [
+  "slate-spectrum"
+ ],
  "selectable": true,
  "dynamic": [
   {

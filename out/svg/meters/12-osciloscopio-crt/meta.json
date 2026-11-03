@@ -17,5 +17,8 @@
  ],
  "baseline": 276,
  "sha256": "eb45088df80c08ee52145d6cc189c25abb0d81dfd3bfbcd245535d4e6d59d8ad",
+ "themes": [
+  "midnight-focus"
+ ],
  "selectable": false
 }

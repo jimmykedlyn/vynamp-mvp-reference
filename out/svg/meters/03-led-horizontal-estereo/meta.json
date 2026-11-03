@@ -10,6 +10,9 @@
   "R"
  ],
  "sha256": "f335b23149863ab4545e90a8d54e87b420e1748102a022991815be43eaf4c88a",
+ "themes": [
+  "sandstone-collection"
+ ],
  "selectable": true,
  "dynamic": [
   {

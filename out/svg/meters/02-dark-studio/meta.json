@@ -51,6 +51,9 @@
   470
  ],
  "sha256": "0821d883b5a3c15ecdfa6b3a247426999c24fbdf18f57fac2a2d023f9c72ac07",
+ "themes": [
+  "graphite-studio"
+ ],
  "selectable": true,
  "dynamic": [
   {

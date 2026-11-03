@@ -3,11 +3,14 @@
   "private": true,
   "description": "Freezes the Vynamp web MVP and extracts the reference package (SVGs, themes, baselines) the native Rust UI is measured against.",
   "license": "UNLICENSED",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "serve": "node tools/serve.cjs mvp 8766",
     "extract": "node tools/extract.cjs mvp http://localhost:8766/ out",
-    "check-svg": "node tools/svgcheck.cjs out/svg out/check 2"
+    "check-svg": "node tools/svgcheck.cjs out/svg out/check 2",
+    "verify": "node tools/verify.cjs http://localhost:8766/"
   },
   "devDependencies": {
     "playwright": "1.64.1"

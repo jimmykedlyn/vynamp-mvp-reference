@@ -50,7 +50,13 @@ async function fresh(b,w,h){const ctx=await b.newContext({viewport:{width:w,heig
 async function ready(p){await p.waitForFunction(()=>window.VynampReference&&window.VynampLayout,null,{timeout:15000}).catch(()=>{});await p.waitForTimeout(500);}
 async function setTheme(p,t){await p.evaluate(t=>{const s=document.getElementById('theme');s.selectedIndex=t;s.dispatchEvent(new Event('change',{bubbles:true}));},t);await p.waitForTimeout(250);}
 async function loadTrack(p){await p.evaluate(()=>{const rate=44100,n=rate*60,a=new ArrayBuffer(44+n*4),v=new DataView(a),text=(o,s)=>[...s].forEach((c,i)=>v.setUint8(o+i,c.charCodeAt(0)));text(0,'RIFF');v.setUint32(4,a.byteLength-8,true);text(8,'WAVEfmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,2,true);v.setUint32(24,rate,true);v.setUint32(28,rate*4,true);v.setUint16(32,4,true);v.setUint16(34,16,true);text(36,'data');v.setUint32(40,n*4,true);for(let i=0;i<n;i++){const x=Math.round(12000*Math.sin(2*Math.PI*440*i/rate)*(0.5+0.5*Math.sin(2*Math.PI*0.7*i/rate)));v.setInt16(44+i*4,x,true);v.setInt16(46+i*4,x,true);}
-  const id=VynampReference.registerLocalFile(new File([a],'Artist - Song.wav',{type:'audio/wav'}));VynampReference.enqueueTrack(id);VynampReference.playTrack(id,true);}).catch(e=>console.error('loadTrack',e.message));await p.waitForTimeout(400);}
+  const id=VynampReference.registerLocalFile(new File([a],'Artist - Song.wav',{type:'audio/wav'}));VynampReference.enqueueTrack(id);VynampReference.playTrack(id,true);}).catch(e=>console.error('loadTrack',e.message));
+  // the waveform is decoded asynchronously and drawn once; wait for it so no capture races the decode
+  await p.waitForFunction(()=>['decoded','unavailable'].includes(document.getElementById('wave')?.dataset.source),null,{timeout:15000}).catch(()=>console.error('loadTrack: waveform not decoded'));
+  await waveSettled(p);await p.waitForTimeout(250);}
+// selecting a track (load or a play click) decodes its waveform again; capture only after the decode has drawn
+async function waveSettled(p){await p.waitForFunction(()=>document.getElementById('wave')?.dataset.source!=='loading',null,{timeout:15000}).catch(()=>console.error('waveform still loading'));
+  await p.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));await p.waitForTimeout(150);}
 
 const svgs=new Map();const DYN=new Set();let REST={};const iconUse={};// hash -> {file, seen:[ctx]}
 // in the page: CSS selector for a DYN key, the observer path ("#id > g", "tag.class")
@@ -99,23 +105,25 @@ async function harvest(p,label){const list=await p.evaluate(([SER,SEL,dyn,rest])
    write(path.join(OUT,'svg/icons/icons.json'),JSON.stringify({grid:24,tint:'currentColor',names:Object.keys(icons.out),aliases:icons.aliases,cssIcons:icons.css},null,1));summary.icons=Object.keys(icons.out).length;
    // ---- meters: source + metadata ----
    const meters=await p.evaluate(()=>VYNAMP_ASSETS.meters.map(m=>({...m})));
-   for(const m of meters){const {svg,...meta}=m;write(path.join(OUT,'svg/meters',m.prefix,'source.svg'),svg);
-     meta.themes=(await p.evaluate(()=>VYNAMP_ASSETS.themes.map(t=>[t.id,t.meter]))).filter(x=>x[1]===m.file).map(x=>x[0]);
-     write(path.join(OUT,'svg/meters',m.prefix,'meta.json'),JSON.stringify(meta,null,1));}
+   // themes whose asset entry names this meter (rev.37 never switches meters by theme; kept as asset data)
+   const themeMeter=await p.evaluate(()=>VYNAMP_ASSETS.themes.map(t=>[t.id,t.meter]));
+   for(const m of meters){m.themes=themeMeter.filter(x=>x[1]===m.file).map(x=>x[0]);write(path.join(OUT,'svg/meters',m.prefix,'source.svg'),m.svg);}
    summary.meters=meters.length;
    // ---- dynamic elements per selectable meter (settings + reload, like a returning user) ----
+   // only these are ever mounted: player.js resets any other stored index to the first choice
    const choices=await p.evaluate(()=>['analog-dark','analog-vintage','led-horizontal','spectrum','circular','industrial-yellow','reference-red','reference-led','reference-matrix'].map(k=>VYNAMP_ASSETS.meters.findIndex(m=>m.kind===k)));
    for(const m of meters)m.selectable=choices.includes(meters.indexOf(m));
    const dyn={};
    for(const mi of choices){await p.evaluate(mi=>{const s=JSON.parse(localStorage.getItem('vynamp-reference-settings')||'{}');s.meter=mi;s.meterOff=false;localStorage.setItem('vynamp-reference-settings',JSON.stringify(s));},mi);
      await p.reload();await ready(p);await loadTrack(p);await p.waitForTimeout(600);
      const r=await p.evaluate(async()=>{const seen={};const key=n=>{const w=[];for(let x=n;x&&x!==document.body&&w.length<4;x=x.parentElement){if(x.id){w.unshift('#'+x.id);break;}w.unshift(x.tagName.toLowerCase()+(x.classList[0]?'.'+x.classList[0]:''));}return w.join(' > ');};
-       const mo=new MutationObserver(ms=>{for(const m of ms){const n=m.type==='characterData'?m.target.parentElement:m.target;if(!n||!(n.closest('svg')||n.tagName==='CANVAS'))continue;const k=key(n);const e=seen[k]||(seen[k]={attrs:{},count:0});e.count++;if(m.attributeName){const v=n.getAttribute(m.attributeName);const a=e.attrs[m.attributeName]||(e.attrs[m.attributeName]=[]);if(a.length<4)a.push(v&&v.slice(0,80));}else e.text=true;}});
+       const mo=new MutationObserver(ms=>{for(const m of ms){const n=m.type==='characterData'?m.target.parentElement:m.target;if(!n||!(n.closest('svg')||n.tagName==='CANVAS'))continue;const k=key(n);const e=seen[k]||(seen[k]={attrs:{},count:0,text:0});e.count++;if(m.attributeName)e.attrs[m.attributeName]=(e.attrs[m.attributeName]||0)+1;else e.text++;}});
        mo.observe(document.body,{subtree:true,attributes:true,characterData:true});await new Promise(r=>setTimeout(r,3000));mo.disconnect();
        const canv=[...document.querySelectorAll('canvas')].map(c=>({where:key(c),w:c.width,h:c.height,visible:c.getBoundingClientRect().width>0}));
        const a=document.querySelector('audio');return {playing:!!a&&!a.paused,mutated:seen,canvases:canv};},);
-     // only which elements/attributes animate: sampled values depend on timing (curves are TASK-E02-13)
-     const mut=Object.fromEntries(Object.keys(r.mutated).sort().map(k=>[k,{attributes:Object.keys(r.mutated[k].attrs).sort(),...(r.mutated[k].text?{text:true}:{})}]));
+     // only which elements/attributes animate: sampled values depend on timing (curves are TASK-E02-13);
+     // an attribute counts as animated when it changed at least ANIM times in the window, so a one-shot late write is not animation
+     const ANIM=3,mut=Object.fromEntries(Object.keys(r.mutated).sort().map(k=>{const m=r.mutated[k],at=Object.keys(m.attrs).filter(a=>m.attrs[a]>=ANIM).sort();return [k,{attributes:at,...(m.text>=ANIM?{text:true}:{})}];}).filter(([,v])=>v.attributes.length||v.text));
      const pre=meters[mi].prefix;dyn[pre]={meter:pre,playing:r.playing,mutated:mut,canvases:r.canvases};
      meters[mi].dynamic=Object.entries(mut).filter(([k])=>k.includes(pre)).map(([k,v])=>({element:k,...v}));
      process.stdout.write('d');}
@@ -133,13 +141,15 @@ async function harvest(p,label){const list=await p.evaluate(([SER,SEL,dyn,rest])
     for(let t=0;t<n;t++){await setTheme(p,t);await harvest(p,`w${w}/${layout}/theme${t}`);}}
    await ctx.close();process.stdout.write('w');}
   // ---- click sweep (default theme) to reach dialogs/panels ----
-  if(!QUICK){const CLICK='button,[role=tab],[role=button],summary,a[href]:not([href^=".."]),input[type=checkbox],input[type=radio],[data-pref],[data-mobile-view],[data-view]';
+  if(!QUICK){const clickFail=[];const CLICK='button,[role=tab],[role=button],summary,a[href]:not([href^=".."]),input[type=checkbox],input[type=radio],[data-pref],[data-mobile-view],[data-view]';
    for(const w of [1440,390]){const {ctx,p}=await fresh(b,w,w<500?844:900);await loadTrack(p);
     const vis=async()=>p.evaluate(sel=>[...document.querySelectorAll(sel)].map((el,i)=>{const r=el.getBoundingClientRect();return r.width>0&&r.height>0&&getComputedStyle(el).visibility!=='hidden'?i+'|'+(el.id||el.getAttribute('aria-label')||el.textContent.trim().slice(0,20)):null}).filter(Boolean),CLICK);
     const base=await vis();
-    for(const k of base){await p.reload();await ready(p);await loadTrack(p);await p.locator(CLICK).nth(+k.split('|')[0]).click({timeout:1200}).catch(()=>{});await p.waitForTimeout(250);
+    for(const k of base){await p.reload();await ready(p);await loadTrack(p);await p.locator(CLICK).nth(+k.split('|')[0]).click({timeout:1200}).catch(()=>{clickFail.push(w+'|'+k);});await p.waitForTimeout(250);await waveSettled(p);
      await harvest(p,`w${w}/click:${k.split('|')[1]}`);process.stdout.write('.');}
-    await ctx.close();}}
+    await ctx.close();}
+   // a click that times out drops its state; listed so two runs that differ here show up in the comparison
+   write(path.join(OUT,'svg/rendered/click-failures.json'),JSON.stringify(clickFail,null,1));summary.clickFailures=clickFail.length;}
  }finally{await b.close();}
  const idx=[...svgs.values()].sort((a,b)=>a.where.localeCompare(b.where));write(path.join(OUT,'svg/rendered/index.json'),JSON.stringify(idx,null,1));summary.renderedSvgs=idx.length;write(path.join(OUT,'svg/icons/usage.json'),JSON.stringify(Object.fromEntries(Object.entries(iconUse).sort().map(([k,v])=>[k,[...v].sort()])),null,1));
  console.log('\n'+JSON.stringify(summary));

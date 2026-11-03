@@ -51,6 +51,9 @@
   470
  ],
  "sha256": "053822577fce30aa408b1babaebaa873aa7a16be162c5d8c37e73b179124f18a",
+ "themes": [
+  "ivory-atelier"
+ ],
  "selectable": true,
  "dynamic": [
   {

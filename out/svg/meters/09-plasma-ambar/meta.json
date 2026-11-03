@@ -10,5 +10,8 @@
   "R"
  ],
  "sha256": "8366706197c4ead7ff9cb0a6d8abdf33af91686be407336694d1e6bce344da76",
+ "themes": [
+  "copper-console"
+ ],
  "selectable": false
 }

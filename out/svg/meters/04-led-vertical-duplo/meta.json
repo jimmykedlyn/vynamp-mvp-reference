@@ -10,5 +10,8 @@
   "R"
  ],
  "sha256": "1a41db020df359fca2ecb1ee0c457e64b6bf3e0ff35c217532e322c4c0386ed0",
+ "themes": [
+  "forest-room"
+ ],
  "selectable": false
 }

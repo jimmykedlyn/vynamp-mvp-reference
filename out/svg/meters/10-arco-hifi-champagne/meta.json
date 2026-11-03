@@ -19,5 +19,8 @@
   "R"
  ],
  "sha256": "9bcff4d60fca23d72208cf71b3421aae48dd45150d684dd6f4d3aa29c04e049d",
+ "themes": [
+  "pearl-workspace"
+ ],
  "selectable": false
 }

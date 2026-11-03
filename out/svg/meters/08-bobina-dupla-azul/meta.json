@@ -51,5 +51,8 @@
   470
  ],
  "sha256": "112ef15c9771e3bcdcedd5b8a6de8f7408c13bcd94a675cf0393eaa62ad817ff",
+ "themes": [
+  "cobalt-session"
+ ],
  "selectable": false
 }

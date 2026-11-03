@@ -11,5 +11,8 @@
   "R"
  ],
  "sha256": "b5ce024f4991fd4a4a60eb77ae175495ce14ef969200a3fe85308cb91da1d2ca",
+ "themes": [
+  "high-contrast-wide"
+ ],
  "selectable": false
 }

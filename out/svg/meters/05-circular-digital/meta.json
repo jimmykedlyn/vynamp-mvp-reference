@@ -20,6 +20,9 @@
   ]
  },
  "sha256": "41d943941c1f75adeacf92028f5715f927251d3624e00937389c0439a12e047b",
+ "themes": [
+  "arctic-library"
+ ],
  "selectable": true,
  "dynamic": [
   {
