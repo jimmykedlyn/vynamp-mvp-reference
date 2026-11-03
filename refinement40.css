@@ -731,8 +731,7 @@
    (border: 1px solid var(--amber), background: var(--panel-inset), cor legível >= 4.5:1)
    e metadados demo em linha única compacta. */
 .capability,
-#dsp-capability,
-#eq-status[data-demo-badge="true"]{
+#dsp-capability{
   border:1px solid var(--amber);
   background:var(--panel-inset);
   color:var(--text-primary);
