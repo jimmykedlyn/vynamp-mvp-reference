@@ -1,12 +1,12 @@
 # vynamp-mvp-reference
 
-Freezes the Vynamp web MVP (rev.38) and extracts the reference package that the native Rust UI (egui, no browser) is measured against. The product never ships this code; it is the visual and behavioural specification.
+Home of the Vynamp web MVP (rev.38) and of the tools that extract the reference package the native Rust UI (egui, no browser) is measured against. The product never ships this code; it is the visual and behavioural specification. This is the only copy of the MVP: edit it here.
 
 ## Layout
 
 | Path | Content |
 |---|---|
-| `mvp/` | Frozen MVP: only the files the app actually loads. Do not edit; a new revision is a new commit with a new tree hash. |
+| `mvp/` | The MVP: only the files the app loads (no tests, previews or tooling). Keep LF line endings; each revision is a commit, and `SOURCE.json` records its tree hash. Open `http://localhost:8766/index.html` after `npm run serve`. |
 | `tools/serve.cjs` | No-store static server for `mvp/`, loopback only. |
 | `tools/verify.cjs` | Re-extracts into a temporary directory and fails when any file differs from `out/` (`check/` excluded); the second copy of each differing file is kept in `verify-diff/` (untracked). |
 | `tools/extract.cjs` | Drives Chrome through every theme, layout, width and one-level click state and writes `out/`. |
