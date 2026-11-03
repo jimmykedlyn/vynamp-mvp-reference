@@ -4,11 +4,8 @@
   --instrument-sidebar: clamp(352px, 28vw, 416px);
   --instrument-edge: 8px;
 }
-.now { --now-gutter: 24px; }
 .instrument {
   margin-inline: calc(var(--instrument-edge) - var(--now-gutter));
-  margin-top: 16px;
-  padding-top: 8px;
   border-top: 0;
 }
 .instrument > .section-top,
@@ -50,7 +47,6 @@
 }
 @media (min-width: 1600px) {
   .workspace { grid-template-columns: var(--instrument-sidebar) minmax(420px, 1fr) 320px; }
-  .now { --now-gutter: 28px; }
 }
 @media (min-width: 1151px) and (max-height: 950px) {
   /* Short desktop windows keep a full-size VU by compacting track information. */
@@ -59,7 +55,6 @@
     grid-template-columns: 112px minmax(0, 1fr);
     column-gap: 16px;
     align-content: start;
-    padding: 16px var(--now-gutter);
   }
   .now > .eyebrow { grid-column: 1 / -1; margin-bottom: 16px; }
   .now .cover-wrap { grid-column: 1; grid-row: 2 / 5; width: 112px; margin: 0; align-self: start; }
@@ -74,10 +69,6 @@
 }
 @media (min-width: 701px) and (max-width: 1150px) {
   .workspace { grid-template-columns: 320px minmax(360px, 1fr); }
-  .now { --now-gutter: 20px; }
-}
-@media (max-width: 700px) {
-  .now { --now-gutter: 16px; }
 }
 @media (forced-colors: active) {
   #meter-stage { border: 0; }
