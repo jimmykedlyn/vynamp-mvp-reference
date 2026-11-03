@@ -15,20 +15,20 @@
   "checks": [
     {
       "mode": "spectrum-aurora",
-      "quiet": 0.4646,
-      "loud": 0.7825,
+      "quiet": 0.3932,
+      "loud": 0.7107,
       "left": 1007.8125
     },
     {
       "mode": "spectrum-ribbon",
-      "quiet": 0.4758,
-      "loud": 0.7826,
+      "quiet": 0.4046,
+      "loud": 0.711,
       "left": 1007.8125
     },
     {
       "mode": "spectrum-stereo",
-      "quiet": 0.476,
-      "loud": 0.7893,
+      "quiet": 0.4114,
+      "loud": 0.7167,
       "left": 1007.8125
     }
   ]

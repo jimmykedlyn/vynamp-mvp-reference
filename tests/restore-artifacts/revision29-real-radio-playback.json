@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Radio Paradise · Main Mix",
+    "playing": true,
+    "sampleRead": true,
+    "rms": 0.12252905154631248,
+    "mediaError": null
+  },
+  {
+    "name": "Radio Paradise · Mellow Mix",
+    "playing": true,
+    "sampleRead": true,
+    "rms": 0.22299954048334614,
+    "mediaError": null
+  },
+  {
+    "name": "Radio Paradise · Rock Mix",
+    "playing": true,
+    "sampleRead": true,
+    "rms": 0.14487944100158942,
+    "mediaError": null
+  }
+]

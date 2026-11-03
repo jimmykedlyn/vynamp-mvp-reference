@@ -5,7 +5,7 @@
   "radioRetryWithActualAudio": true,
   "stereoSignal": true,
   "pauseState": true,
-  "metadataBatch700Ms": 3087,
+  "metadataBatch700Ms": 12250,
   "firstRenderRows": 200,
   "loadMoreRows": 400,
   "browserErrors": []
