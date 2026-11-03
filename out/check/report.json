@@ -2056,19 +2056,23 @@
   "file": "rendered/02f634db6c4c58f9.svg",
   "W": 844,
   "H": 64,
-  "inkPx": 9240,
-  "strictPct": 0,
-  "shiftPx": 0,
-  "shiftPct": 0,
-  "blobPx": 0,
+  "inkPx": 9680,
+  "strictPct": 0.847,
+  "shiftPx": 60,
+  "shiftPct": 0.62,
+  "blobPx": 22,
   "text": false,
-  "gaps": [],
+  "gaps": [
+   "blurFn"
+  ],
   "cropped": true,
   "resvgError": null,
-  "bg": "white",
+  "bg": "black",
   "note": "",
+  "normalizedBlobPx": 0,
+  "normalizedPass": true,
   "empty": false,
-  "pass": true
+  "pass": false
  },
  {
   "file": "rendered/034ea59ac5f507a1.svg",
@@ -3592,19 +3596,23 @@
   "file": "rendered/4719decdf855bbbf.svg",
   "W": 844,
   "H": 64,
-  "inkPx": 9240,
-  "strictPct": 0,
-  "shiftPx": 0,
-  "shiftPct": 0,
-  "blobPx": 0,
+  "inkPx": 9680,
+  "strictPct": 0.847,
+  "shiftPx": 60,
+  "shiftPct": 0.62,
+  "blobPx": 22,
   "text": false,
-  "gaps": [],
+  "gaps": [
+   "blurFn"
+  ],
   "cropped": true,
   "resvgError": null,
-  "bg": "white",
+  "bg": "black",
   "note": "",
+  "normalizedBlobPx": 0,
+  "normalizedPass": true,
   "empty": false,
-  "pass": true
+  "pass": false
  },
  {
   "file": "rendered/47d4d2b2c644c853.svg",
@@ -6193,7 +6201,7 @@
   "noTextBlobPx": 0,
   "noTextShiftPct": 0,
   "empty": true,
-  "pass": true
+  "pass": false
  },
  {
   "file": "rendered/b7f032e88976f5fd.svg",
@@ -6478,19 +6486,23 @@
   "file": "rendered/c936e75101185a73.svg",
   "W": 844,
   "H": 64,
-  "inkPx": 9240,
-  "strictPct": 0,
-  "shiftPx": 0,
-  "shiftPct": 0,
-  "blobPx": 0,
+  "inkPx": 9680,
+  "strictPct": 0.847,
+  "shiftPx": 60,
+  "shiftPct": 0.62,
+  "blobPx": 22,
   "text": false,
-  "gaps": [],
+  "gaps": [
+   "blurFn"
+  ],
   "cropped": true,
   "resvgError": null,
-  "bg": "white",
+  "bg": "black",
   "note": "",
+  "normalizedBlobPx": 0,
+  "normalizedPass": true,
   "empty": false,
-  "pass": true
+  "pass": false
  },
  {
   "file": "rendered/c976c84af495a927.svg",
@@ -7195,19 +7207,23 @@
   "file": "rendered/ef8bd2333c30c6fe.svg",
   "W": 844,
   "H": 64,
-  "inkPx": 9240,
-  "strictPct": 0,
-  "shiftPx": 0,
-  "shiftPct": 0,
-  "blobPx": 0,
+  "inkPx": 9680,
+  "strictPct": 0.847,
+  "shiftPx": 60,
+  "shiftPct": 0.62,
+  "blobPx": 22,
   "text": false,
-  "gaps": [],
+  "gaps": [
+   "blurFn"
+  ],
   "cropped": true,
   "resvgError": null,
-  "bg": "white",
+  "bg": "black",
   "note": "",
+  "normalizedBlobPx": 0,
+  "normalizedPass": true,
   "empty": false,
-  "pass": true
+  "pass": false
  },
  {
   "file": "rendered/f0ab9eab2267e8dd.svg",

@@ -34,7 +34,7 @@ node tools/package.cjs ../repo/assets/reference/mvp
 
 Commit the tool repository before packaging so `SOURCE.json` records a clean commit.
 
-`check-svg` passes a file only when no non-text pixel differs beyond 1px antialiasing (see the header of `tools/svgcheck.cjs`). Text is compared and recorded but judged in the main repository's font task. A `pathLength` file is judged by resvg on the dash-rescaled file against Chrome on the original. Files with no ink over white are compared again over black (`bg` in the report); files with no ink over either are listed as `empty`: nothing was compared, so each needs an explanation in the evidence.
+`check-svg` passes a file only when no non-text pixel differs beyond 1px antialiasing (see the header of `tools/svgcheck.cjs`). Text is compared and recorded but judged in the main repository's font task. A file using a renderer gap (`pathLength`, CSS `filter:blur()`) is judged by resvg on the file after the fix the native loader must apply (dashes rescaled; blur turned into an `feGaussianBlur` with an explicit region) against Chrome on the original. Every file is compared over white and over black (white ink on transparent shows only on black) and the worse backdrop is reported (`bg`). Files with no ink over either are `empty`: nothing was compared, so they do not pass and each needs an explanation in the evidence.
 
 ## Output
 

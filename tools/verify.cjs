@@ -8,7 +8,8 @@ const hashes=d=>Object.fromEntries(walk(d).map(f=>[path.relative(d,f).split(path
   .map(([r,f])=>[r,crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex')]));
 try{
   execFileSync(process.execPath,[path.join(__dirname,'extract.cjs'),path.join(ROOT,'mvp'),BASE,TMP],{stdio:['ignore','ignore','inherit']});
-  const a=hashes(OUT),b=hashes(TMP),diff=[...new Set([...Object.keys(a),...Object.keys(b)])].sort().filter(k=>a[k]!==b[k]);
+  const a=hashes(OUT),b=hashes(TMP);if(!Object.keys(a).length||!Object.keys(b).length)throw new Error('nothing to compare: out/ or the re-extraction is empty');
+  const diff=[...new Set([...Object.keys(a),...Object.keys(b)])].sort().filter(k=>a[k]!==b[k]);
   for(const k of diff.slice(0,40))console.log(!(k in a)?'extra  ':!(k in b)?'missing':'differs',k);
   // keep the second extraction's copy of each differing file for inspection (verify-diff/ is not tracked)
   const KEEP=path.join(ROOT,'verify-diff');fs.rmSync(KEEP,{recursive:true,force:true});

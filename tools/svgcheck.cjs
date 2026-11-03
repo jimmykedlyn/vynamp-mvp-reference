@@ -1,13 +1,14 @@
 // Render every SVG under <dir> in Chrome and in resvg (the native renderer) and compare.
 // node svgcheck.cjs <dir> <work-dir> [scale=2]
-// Metrics, over white (over black when nothing shows on white: white-ink themes) and at zoom <scale>: a pixel differs when a channel differs by more than 48.
+// Metrics, at zoom <scale>, over white and over black (white ink on transparent shows only on black); the worse backdrop is reported: a pixel differs when a channel differs by more than 48.
 //  strict  - differing pixels / ink pixels
 //  shift   - differing pixels outside the per-channel range of the other render's 3x3 neighbourhood, both ways (edge antialiasing removed)
 //  noText  - shift metric with every <text> removed from both renders (geometry only; text is TASK-E02-12)
 //  blob    - largest 8-connected group of shift pixels; the verdict is blob <= BLOB (default 0, i.e. no shift pixel) outside text
-//  normalized - for files using a feature in GAPS: resvg on the file after the fix the native loader must apply (pathLength: rescale dashes)
+//  normalized - for files using a feature in GAPS: resvg on the file after the fix the native loader must apply (pathLength: rescale dashes;
+//               blurFn: CSS filter:blur() becomes an feGaussianBlur whose region is the painted box plus 3 sigma, as Chrome paints it)
 //               against Chrome on the original file, geometry only
-//  empty   - no ink in either render over white nor over black: nothing was compared, so the file is reported apart and needs an explanation
+//  empty   - no ink in either render over white nor over black: nothing was compared, so the file does not pass and needs an explanation
 const fs=require('fs'),path=require('path'),os=require('os'),{execFileSync}=require('child_process');
 const {chromium}=require('playwright');
 const [DIR,WORK,SC='2']=process.argv.slice(2);const S=+SC;
@@ -17,7 +18,7 @@ fs.mkdirSync(path.join(WORK,'resvg'),{recursive:true});fs.mkdirSync(path.join(WO
 const id=f=>path.relative(DIR,f).replace(/[\\/]/g,'__').replace(/\.svg$/,'');
 // SVG features resvg does not implement; the native renderer must handle them itself
 const BLOB=+(process.env.BLOB||0);
-const GAPS={pathLength:/\spathLength=/};
+const GAPS={pathLength:/\spathLength=/,blurFn:/filter:\s*blur\(/};
 
 function resvg(svg,out){const tmp=out.replace(/\.png$/,'.svg');fs.writeFileSync(tmp,svg);
   try{execFileSync(RESVG,['--zoom',String(S),tmp,out],{stdio:['ignore','ignore','pipe']});return null;}catch(e){return String(e.stderr||e.message).slice(0,300);}finally{fs.rmSync(tmp,{force:true});}}
@@ -48,14 +49,22 @@ async function crop(svg){return page.evaluate(([svg,S,MAXPX])=>{const h=document
   const w=+el.getAttribute('width'),ht=+el.getAttribute('height');if(!(w*ht*S*S>MAXPX))return null;document.body.appendChild(h);
   const b=el.getBBox({stroke:true});h.remove();const vb=[b.x-16,b.y-16,b.width+32,b.height+32].map(v=>Math.round(v*100)/100);
   return svg.replace(/(<svg[^>]*?)\swidth="[^"]*"/,'$1 width="'+vb[2]+'"').replace(/(<svg[^>]*?)\sheight="[^"]*"/,'$1 height="'+vb[3]+'"').replace(/(<svg[^>]*?)\sviewBox="[^"]*"/,'$1 viewBox="'+vb.join(' ')+'"');},[svg,S,MAXPX]);}
-// what the native loader must do for pathLength: rescale dash attributes by getTotalLength()/pathLength
-async function normalizePathLength(svg){return page.evaluate(svg=>{const h=document.createElement('div');h.innerHTML=svg;document.body.appendChild(h);
+// what the native loader must do for pathLength (rescale dash attributes by getTotalLength()/pathLength) and for CSS blur()
+// (resvg derives the region from the bounding box, which has zero height on a straight wire, and clips the glow's ends)
+async function normalizeGaps(svg){return page.evaluate(svg=>{const h=document.createElement('div');h.innerHTML=svg;document.body.appendChild(h);
+  const root=h.querySelector('svg'),NS='http://www.w3.org/2000/svg';let n=0;
+  for(const e of h.querySelectorAll('[style*="blur("]')){const m=/filter:\s*blur\(([\d.]+)px\)/.exec(e.getAttribute('style'));if(!m)continue;const sd=+m[1],b=e.getBBox({stroke:true}),pad=3*sd+1;
+    const f=document.createElementNS(NS,'filter'),g=document.createElementNS(NS,'feGaussianBlur'),id='normalized-blur-'+(n++);
+    f.setAttribute('id',id);f.setAttribute('filterUnits','userSpaceOnUse');[['x',b.x-pad],['y',b.y-pad],['width',b.width+2*pad],['height',b.height+2*pad]].forEach(([k,v])=>f.setAttribute(k,Math.round(v*100)/100));
+    g.setAttribute('stdDeviation',sd);f.append(g);(root.querySelector('defs')||root.insertBefore(document.createElementNS(NS,'defs'),root.firstChild)).append(f);
+    e.setAttribute('style',e.getAttribute('style').replace(m[0],'filter:url(#'+id+')'));}
   for(const e of h.querySelectorAll('[pathLength]')){const k=e.getTotalLength()/+e.getAttribute('pathLength');
     for(const a of ['stroke-dasharray','stroke-dashoffset']){const v=e.getAttribute(a);if(v&&v!=='none')e.setAttribute(a,v.split(/[\s,]+/).filter(Boolean).map(x=>Math.round(parseFloat(x)*k*1000)/1000).join(' '));}
     e.removeAttribute('pathLength');}
   const out=h.innerHTML;h.remove();return out;},svg);}
-// a file with no ink over white is compared again over black (white strokes and fills of the high-contrast themes)
-let page;async function compareRetry(b,svg,png){const r=await compareRetry1(b,svg,png,255);if(r.ink!==0)return r;const k=await compareRetry1(b,svg,png,0);return k.ink?{...k,bg:'black'}:r;}
+// compared over white and over black: white strokes and fills are invisible over white; the backdrop with the larger difference blob is kept
+let page;async function compareRetry(b,svg,png){const w=await compareRetry1(b,svg,png,255);if(w.error||w.missing||w.size)return w;const k=await compareRetry1(b,svg,png,0);
+  return (k.blob>w.blob||(!w.ink&&k.ink))?{...k,bg:'black'}:w;}
 async function compareRetry1(b,svg,png,BG){for(let k=0;;k++){try{return await compare(page,svg,png,BG);}catch(e){if(k)return {error:e.message.split(String.fromCharCode(10))[0]};await page.close();page=await b.newPage();}}}
 
 (async()=>{const b=await chromium.launch({headless:true,...(process.env.CHROME?{executablePath:process.env.CHROME}:{channel:'chrome'})});page=await b.newPage();
@@ -68,14 +77,14 @@ async function compareRetry1(b,svg,png,BG){for(let k=0;;k++){try{return await co
   if(text&&!err){const bare=svg.replace(/<text[\s\S]*?<\/text>/g,'');const o2=path.join(WORK,'resvg',name+'.notext.png');const e2=resvg(bare,o2);
     const t=await compareRetry(b,bare,e2?null:fs.readFileSync(o2).toString('base64'));row.noTextShiftPx=t.shift;row.noTextBlobPx=t.blob;row.noTextShiftPct=pct(t.shift,t.ink);
     if(t.diff)fs.writeFileSync(path.join(WORK,'diff',name+'.notext.png'),Buffer.from(t.diff,'base64'));}
-  if(gaps.includes('pathLength')){const strip=s=>s.replace(/<text[\s\S]*?<\/text>/g,''),n=strip(await normalizePathLength(svg)),o3=path.join(WORK,'resvg',name+'.normalized.png'),e3=resvg(n,o3);
+  if(gaps.length){const strip=s=>s.replace(/<text[\s\S]*?<\/text>/g,''),n=strip(await normalizeGaps(svg)),o3=path.join(WORK,'resvg',name+'.normalized.png'),e3=resvg(n,o3);
     const t=await compareRetry(b,strip(svg),e3?null:fs.readFileSync(o3).toString('base64'));row.normalizedBlobPx=t.blob;row.normalizedPass=!e3&&t.blob<=BLOB;}
   row.empty=!err&&!row.note&&r.ink===0;
-  // geometry verdict: outside text, no blob larger than BLOB pixels
-  const geo=text?row.noTextBlobPx:row.blobPx;row.pass=!err&&!row.note&&geo<=BLOB;
+  // geometry verdict: something was compared and, outside text, no blob is larger than BLOB pixels
+  const geo=text?row.noTextBlobPx:row.blobPx;row.pass=!err&&!row.note&&!row.empty&&geo<=BLOB;
   report.push(row);process.stdout.write(row.empty?'0':row.pass?'.':gaps.length?'g':'x');}
  await b.close();fs.writeFileSync(path.join(WORK,'report.json'),JSON.stringify(report,null,1)+'\n');
- const fail=report.filter(r=>!r.pass);console.log('\nchecked',report.length,'pass',report.length-fail.length,'fail',fail.length,'(of which renderer gaps',fail.filter(r=>r.gaps.length).length+', passing once normalized',fail.filter(r=>r.normalizedPass).length+')','empty',report.filter(r=>r.empty).length);
+ const fail=report.filter(r=>!r.pass);console.log('\nchecked',report.length,'pass',report.length-fail.length,'fail',fail.length,'(of which empty',report.filter(r=>r.empty).length+', renderer gaps',fail.filter(r=>r.gaps.length).length+', passing once normalized',fail.filter(r=>r.normalizedPass).length+')');
  for(const r of report.filter(r=>r.empty))console.log('empty',r.file);
- const geo=r=>r.text?r.noTextBlobPx:r.blobPx;for(const r of fail.sort((a,b)=>geo(b)-geo(a)).slice(0,60))console.log('blob '+geo(r)+'px',(r.text?'noText '+r.noTextShiftPx:'shift '+r.shiftPx)+'px',r.gaps.join(','),r.file,r.resvgError||r.note||'');
+ const geo=r=>r.text?r.noTextBlobPx:r.blobPx;for(const r of fail.filter(r=>!r.empty).sort((a,b)=>geo(b)-geo(a)).slice(0,60))console.log('blob '+geo(r)+'px',(r.text?'noText '+r.noTextShiftPx:'shift '+r.shiftPx)+'px',r.gaps.join(','),r.file,r.resvgError||r.note||'');
 })().catch(e=>{console.error(e);process.exit(1)});
