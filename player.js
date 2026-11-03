@@ -162,8 +162,9 @@
   window.addEventListener('pagehide',event=>{stopLoop();if(event.persisted)return;tracks.filter(t=>t.url).forEach(t=>URL.revokeObjectURL(t.url));ctx?.close();});
 
   // Reference controls required by the skin brief; native-only operations remain explicit.
-  const preferenceSections=[['playback','Reprodução'],['output','Saída'],['dsp','DSP'],['library','Biblioteca'],['streaming','Streaming'],['appearance','Aparência'],['shortcuts','Atalhos'],['plugins','Extensões'],['privacy','Privacidade'],['advanced','Avançado']];
+  const preferenceSections=[['playback','Reprodução','play-circle'],['output','Saída','cabinet'],['dsp','DSP','dsp'],['library','Biblioteca','library'],['streaming','Streaming','cloud'],['appearance','Aparência','palette'],['shortcuts','Atalhos','keyboard'],['plugins','Extensões','puzzle'],['privacy','Privacidade','shield'],['advanced','Avançado','gear']];
   $('preferences-nav').innerHTML=preferenceSections.map(([id,label])=>`<button data-pref="${id}" aria-pressed="${id==='appearance'}">${label}</button>`).join('');
+  preferenceSections.forEach(([id,label,icon])=>VynampIcons.lead($('preferences-nav').querySelector(`[data-pref="${id}"]`),icon,label));
   function applyAppearance(){
     const root=document.documentElement;root.dataset.density=state.density;root.dataset.touch=String(state.touch);root.dataset.reducedMotion=String(state.reducedMotion);root.dataset.fontScaled=String(state.fontScale!==100);root.style.setProperty('--font-scale',state.fontScale/100);
     $('density').value=state.density;$('font-scale').value=state.fontScale;$('touch-mode').checked=state.touch;$('reduce-motion').checked=state.reducedMotion;$('meter-fps').value=state.fps;save();

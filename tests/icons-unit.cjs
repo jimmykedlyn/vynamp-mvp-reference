@@ -51,6 +51,12 @@ test('ícones usados pelo app existem (sem cair no fallback)', () => {
 	assert.deepEqual(missing, []);
 });
 
+test('seções de Preferências têm ícone próprio', () => {
+	for (const name of ['play-circle', 'cabinet', 'dsp', 'library', 'cloud', 'palette', 'keyboard', 'puzzle', 'shield', 'gear']) assert(Icons.has(name), name);
+	const src = fs.readFileSync(path.resolve(__dirname, '..', 'player.js'), 'utf8');
+	assert.match(src, /VynampIcons\.lead\(\$\('preferences-nav'\)/);
+});
+
 test('nenhum módulo desenha ícone 24×24 próprio fora de icons.js', () => {
 	const dir = path.resolve(__dirname, '..');
 	const files = fs.readdirSync(dir).filter(f => (f.endsWith('.js') && f !== 'icons.js') || f === 'index.html');

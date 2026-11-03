@@ -52,3 +52,6 @@ select:not([multiple]):not([size]){appearance:none;background-image:var(--icon-s
 #restore-feedback[data-tone=warning]{color:var(--text-primary)}
 #restore-feedback[data-tone=warning]>.icon{width:14px;height:14px;margin-right:6px;color:var(--amber)}
 .restore-diag-card strong .icon,.restore-diag strong .icon{width:15px;height:15px;margin-right:6px;vertical-align:-.2em}
+#preferences-nav button.has-icon{display:flex;align-items:center;justify-content:flex-start;gap:10px}
+#preferences-nav button.has-icon>.icon{width:16px;height:16px;color:var(--text-secondary)}
+#preferences-nav button[aria-pressed=true]>.icon,#preferences-nav button:hover>.icon{color:var(--cyan)}
