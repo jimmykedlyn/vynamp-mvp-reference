@@ -6,13 +6,13 @@ Home of the Vynamp web MVP (rev.38) and of the tools that extract the reference 
 
 | Path | Content |
 |---|---|
-| `mvp/` | The MVP: only the files the app loads (no tests, previews or tooling). Keep LF line endings; each revision is a commit, and `SOURCE.json` records its tree hash. Open `http://localhost:8766/index.html` after `npm run serve`. |
+| `mvp/` | The MVP: only the files the app loads (no tests, previews or tooling). Keep LF line endings; each revision is a commit, and the main repository pins that commit (see Pinning). Open `http://localhost:8766/index.html` after `npm run serve`. |
 | `tools/serve.cjs` | No-store static server for `mvp/`, loopback only. |
 | `tools/verify.cjs` | Re-extracts into a temporary directory and fails when any file differs from `out/` (`check/` excluded); the second copy of each differing file is kept in `verify-diff/` (untracked). |
 | `tools/extract.cjs` | Drives Chrome through every theme, layout, width and one-level click state and writes `out/`. |
 | `tools/svgcheck.cjs` | Renders every extracted SVG in Chrome and in resvg (the native renderer) and reports pixel differences. |
-| `tools/package.cjs` | Copies `out/` into the main repository's `assets/reference/mvp/` and writes `SOURCE.json` (tree hash, tool commit, versions, per-file sha256). |
-| `out/` | Extraction output, copied into the main repository under `assets/reference/mvp/`. |
+| `tools/pin.cjs` | Prints the pin record for a commit (`npm run pin -- [ref]`, default `HEAD`): commit, content hash, git tree, file count and bytes of `mvp/`, and the git tree of `out/`. Reads git objects only, so line endings in the working copy do not change it. |
+| `out/` | Extraction output. The main repository cites it in place (`out/...` at the pinned commit) and copies none of it. |
 
 ## Run
 
@@ -29,10 +29,17 @@ In a second shell:
 npm run extract
 npm run check-svg
 npm run verify
-node tools/package.cjs ../vynamp-media-player/repo/assets/reference/mvp
 ```
 
-Commit the tool repository before packaging so `SOURCE.json` records a clean commit.
+## Pinning
+
+The main repository (`vynamp-media-player`) does not copy `mvp/` or `out/`. Its specs cite `vynamp-mvp-reference@<commit>` with paths under `mvp/...` and `out/...` (see its `docs/design/06-mvp-reference.md`). To move the pin to a new revision, commit here, then run:
+
+```bash
+npm run pin -- <commit>
+```
+
+Copy the printed values into the main repository's reference doc. The content hash is the sha256 of the `<sha256> *./<path>` lines (`sha256sum --binary` format, LF-terminated, sorted by path) over every file of `mvp/`, read from the commit's blobs.
 
 `check-svg` passes a file only when no non-text pixel differs beyond 1px antialiasing (see the header of `tools/svgcheck.cjs`). Text is compared and recorded but judged in the main repository's font task. A file using a renderer gap (`pathLength`, CSS `filter:blur()`) is judged by resvg on the file after the fix the native loader must apply (dashes rescaled; blur turned into an `feGaussianBlur` with an explicit region) against Chrome on the original. Every file is compared over white and over black (white ink on transparent shows only on black) and the worse backdrop is reported (`bg`). Files with no ink over either are `empty`: nothing was compared, so they do not pass and each needs an explanation in the evidence.
 

@@ -10,7 +10,8 @@
     "serve": "node tools/serve.cjs mvp 8766",
     "extract": "node tools/extract.cjs mvp http://localhost:8766/ out",
     "check-svg": "node tools/svgcheck.cjs out/svg out/check 2",
-    "verify": "node tools/verify.cjs http://localhost:8766/"
+    "verify": "node tools/verify.cjs http://localhost:8766/",
+    "pin": "node tools/pin.cjs"
   },
   "devDependencies": {
     "playwright": "1.64.1"
