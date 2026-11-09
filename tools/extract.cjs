@@ -66,7 +66,33 @@ async function fresh(b,w,h){const ctx=await b.newContext({viewport:{width:w,heig
  await ctx.addInitScript(PIN_RATE,RATE);
  const p=await ctx.newPage();p.on('dialog',d=>d.dismiss().catch(()=>{}));
   await p.goto(BASE+'index.html');await ready(p);return {ctx,p};}
-async function ready(p){await p.waitForFunction(()=>window.VynampReference&&window.VynampLayout,null,{timeout:15000}).catch(()=>{});await p.waitForTimeout(500);}
+// `ready` gates every capture, and it used to be a 500 ms sleep -- which is a guess
+// about how long 20-odd <link>ed stylesheets need. The guess loses: `SERIALIZE`
+// reads *computed* style, so a sheet still in flight yields the unstyled cascade.
+// Two files in `out/` are exactly that failure. `#eq-response{stroke:var(--amber)}`
+// with `spec-controls.css` absent computes `stroke:none`, and the file it produces is
+// 689 bytes against the 796 of the styled one. `#graph-minimap` is worse: without
+// `.graph-minimap{width:156px;height:96px}` its rect is 0x0, so the serializer falls
+// back to the viewBox and writes `width="890" height="246"`, and `drawMini`'s
+// `$('graph-viewport').getBoundingClientRect()` gives a width of 0 that lands in the
+// minimap as a zero-size rect. Both are visible above: on this host the styled read
+// arrives between ~180 and ~860 ms depending on load, and the GitHub runner -- where
+// the font metrics differ enough to shift layout -- catches the unstyled one often
+// enough that `verify` went red with exactly those two files swapping hashes.
+//
+// So: wait for every stylesheet object to exist (`link.sheet` is null until the sheet
+// is parsed and in the cascade), for the font set to settle, and for a frame to be
+// painted. `document.fonts` matters for the same reason: a text metric read before
+// the font resolves is a different layout, which is how the runner's metrics leaked
+// into `out/`. The trailing wait is only there to let the page's own startup run.
+async function ready(p){
+  await p.waitForFunction(()=>[...document.querySelectorAll('link[rel="stylesheet"]')].every(l=>l.sheet&&(()=>{try{return l.sheet.cssRules.length>0}catch{return true}})()),null,{timeout:20000})
+    .catch(()=>console.error('ready: not every stylesheet entered the cascade'));
+  await p.waitForFunction(()=>document.fonts&&document.fonts.status==='loaded',null,{timeout:20000})
+    .catch(()=>console.error('ready: fonts did not settle'));
+  await p.waitForFunction(()=>window.VynampReference&&window.VynampLayout,null,{timeout:15000}).catch(()=>{});
+  await p.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
+  await p.waitForTimeout(500);}
 async function setTheme(p,t){await p.evaluate(t=>{const s=document.getElementById('theme');s.selectedIndex=t;s.dispatchEvent(new Event('change',{bubbles:true}));},t);await p.waitForTimeout(250);}
 async function loadTrack(p){await p.evaluate(()=>{const rate=44100,n=rate*60,a=new ArrayBuffer(44+n*4),v=new DataView(a),text=(o,s)=>[...s].forEach((c,i)=>v.setUint8(o+i,c.charCodeAt(0)));text(0,'RIFF');v.setUint32(4,a.byteLength-8,true);text(8,'WAVEfmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,2,true);v.setUint32(24,rate,true);v.setUint32(28,rate*4,true);v.setUint16(32,4,true);v.setUint16(34,16,true);text(36,'data');v.setUint32(40,n*4,true);for(let i=0;i<n;i++){const x=Math.round(12000*Math.sin(2*Math.PI*440*i/rate)*(0.5+0.5*Math.sin(2*Math.PI*0.7*i/rate)));v.setInt16(44+i*4,x,true);v.setInt16(46+i*4,x,true);}
   const id=VynampReference.registerLocalFile(new File([a],'Artist - Song.wav',{type:'audio/wav'}));VynampReference.enqueueTrack(id);VynampReference.playTrack(id,true);}).catch(e=>console.error('loadTrack',e.message));
