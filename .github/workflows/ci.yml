@@ -81,10 +81,17 @@ jobs:
       # Playwright is a Node dependency and arrives with `npm ci`; only its
       # browser was ever missing, and it is not used. The version is printed so a
       # runner image change is visible in the log.
+      # The version is read from the file, not from `chrome.exe --version`: Chrome
+      # is a GUI-subsystem binary on Windows, so it neither writes to the console
+      # nor returns -- run 42654628242 sat in this step for 30 minutes with no
+      # output at all. Reading `VersionInfo` proves the browser is there in a
+      # second, and that is all this step is for.
       - name: Chrome
+        shell: pwsh
         run: |
-          set -eu
-          "/c/Program Files/Google/Chrome/Application/chrome.exe" --version
+          $chrome = Join-Path $env:ProgramFiles 'Google\Chrome\Application\chrome.exe'
+          if (-not (Test-Path $chrome)) { throw "Chrome not found at $chrome" }
+          "chrome $((Get-Item $chrome).VersionInfo.ProductVersion)"
       # The server is started detached and polled, not slept on: a fixed sleep
       # is the classic flake, and `verify` re-extracts the whole MVP through it,
       # so the page must be answering before the first navigation.
