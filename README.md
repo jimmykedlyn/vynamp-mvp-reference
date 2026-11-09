@@ -33,13 +33,13 @@ npm run verify
 
 ## Pinning
 
-The main repository (`vynamp-media-player`) does not copy `mvp/` or `out/`. Its specs cite `vynamp-mvp-reference@<commit>` with paths under `mvp/...` and `out/...` (see its `docs/design/06-mvp-reference.md`). To move the pin to a new revision, commit here, then run:
+The main repository (`jimmykedlyn/vynamp`) does not copy `mvp/` or `out/`. Its specs cite `vynamp-mvp-reference@<commit>` with paths under `mvp/...` and `out/...` (see its `design/07-pin-mvp.md`). To move the pin to a new revision, commit here, then run:
 
 ```bash
 npm run pin -- <commit>
 ```
 
-Copy the printed values into the main repository's reference doc. The content hash is the sha256 of the `<sha256> *./<path>` lines (`sha256sum --binary` format, LF-terminated, sorted by path) over every file of `mvp/`, read from the commit's blobs.
+Copy the printed values into `design/07-pin-mvp.md` of the main repository. The content hash is the sha256 of the `<sha256> *./<path>` lines (`sha256sum --binary` format, LF-terminated, sorted by path) over every file of `mvp/`, read from the commit's blobs.
 
 `check-svg` passes a file only when no non-text pixel differs beyond 1px antialiasing (see the header of `tools/svgcheck.cjs`). Text is compared and recorded but judged in the main repository's font task. A file using a renderer gap (`pathLength`, CSS `filter:blur()`) is judged by resvg on the file after the fix the native loader must apply (dashes rescaled; blur turned into an `feGaussianBlur` with an explicit region) against Chrome on the original. Every file is compared over white and over black (white ink on transparent shows only on black) and the worse backdrop is reported (`bg`). Files with no ink over either are `empty`: nothing was compared, so they do not pass and each needs an explanation in the evidence.
 
