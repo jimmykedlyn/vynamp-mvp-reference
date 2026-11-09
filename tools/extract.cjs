@@ -45,7 +45,26 @@ function SERIALIZE([el,sentinel]){
   return {svg:s,where:where.join(' > '),box:[r.x,r.y,r.width,r.height].map(v=>Math.round(v)),visible:r.width>0&&r.height>0&&getComputedStyle(el).visibility!=='hidden'};
 }
 
-async function fresh(b,w,h){const ctx=await b.newContext({viewport:{width:w,height:h}});const p=await ctx.newPage();p.on('dialog',d=>d.dismiss().catch(()=>{}));
+// The page reads its sample rate from a live `AudioContext`, and that rate decides the
+// output in two places: `advanced-eq.js` places the EQ points at
+// log(f/10)/log(min(40000,.45*Fs)/10)*860, and `decodeAudioData` resamples the synthetic
+// WAV below to the context rate before `setWave` measures its peaks. A host whose device
+// runs at 44100 -- most laptops -- therefore renders different SVG from a host at 48000,
+// and `npm run verify` reports the same commit as 9 to 33 differing files. Pinning the
+// context rate makes extraction a function of `mvp/` alone, which is what "two extractions
+// produce identical output" has to mean. `VYNAMP_SAMPLE_RATE` is the escape hatch for
+// deliberately extracting at another rate.
+//
+// The pin has to be on the constructor, not on `BaseAudioContext.prototype.sampleRate`:
+// overriding the getter only changes what the page reads while the real graph keeps
+// decoding at the device rate, which reproduces neither side.
+const RATE=+(process.env.VYNAMP_SAMPLE_RATE||48000);
+const PIN_RATE=rate=>{const AC=window.AudioContext;
+ window.AudioContext=function(...args){if(!args[0]||args[0].sampleRate==null)args[0]=Object.assign({},args[0],{sampleRate:rate});return new AC(...args);};
+ window.AudioContext.prototype=AC.prototype;Object.setPrototypeOf(window.AudioContext,AC);};
+async function fresh(b,w,h){const ctx=await b.newContext({viewport:{width:w,height:h}});
+ await ctx.addInitScript(PIN_RATE,RATE);
+ const p=await ctx.newPage();p.on('dialog',d=>d.dismiss().catch(()=>{}));
   await p.goto(BASE+'index.html');await ready(p);return {ctx,p};}
 async function ready(p){await p.waitForFunction(()=>window.VynampReference&&window.VynampLayout,null,{timeout:15000}).catch(()=>{});await p.waitForTimeout(500);}
 async function setTheme(p,t){await p.evaluate(t=>{const s=document.getElementById('theme');s.selectedIndex=t;s.dispatchEvent(new Event('change',{bubbles:true}));},t);await p.waitForTimeout(250);}

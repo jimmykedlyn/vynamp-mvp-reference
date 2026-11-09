@@ -1,0 +1,81 @@
+name: CI
+
+# TASK-E19-05 AC-2: the MVP's own CI, in Node. There is no Rust here -- the
+# package is the visual and behavioural specification, not product code -- so
+# the job is `serve` and `verify` chained, which is how the repository tests
+# itself in its README.
+#
+# Actions are pinned by full commit SHA. The umbrella's `check-delivery` gate
+# does not reach into this repository (it only reads the umbrella's own
+# `.github/workflows`), but the rule is the umbrella's and AGENTS.md 1.2
+# applies to every repository in the family: a floating tag is an unreviewed
+# dependency.
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Verify
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444
+        with:
+          node-version: 20
+          cache: npm
+      # `npm ci` and not `npm install`: the lockfile is the input, and a job
+      # that silently resolves a newer playwright is not testing this commit.
+      - run: npm ci
+      # resvg is the native renderer `check-svg` compares Chrome against, and
+      # `verify` does not run without Chrome. Both are installed from the
+      # sources the README names, so CI uses the same versions a maintainer
+      # does rather than whatever the image happens to carry.
+      - name: Install resvg 0.49
+        run: |
+          set -eu
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal
+          . "$HOME/.cargo/env"
+          cargo install resvg --version 0.49.0 --locked
+      - name: Install Chrome for Testing
+        run: |
+          set -eu
+          npx --yes playwright@1.64.1 install --with-deps chromium
+          echo "CHROME=$(npx --yes playwright@1.64.1 install --dry-run chromium 2>/dev/null | sed -n 's/.*Install location: *//p' | head -1)" >> "$GITHUB_ENV"
+      # The server is started detached and polled, not slept on: a fixed sleep
+      # is the classic flake, and `verify` re-extracts the whole MVP through it,
+      # so the page must be answering before the first navigation.
+      - name: Serve and verify, chained
+        run: |
+          set -eu
+          node tools/serve.cjs mvp 8766 &
+          server=$!
+          trap 'kill $server 2>/dev/null || true' EXIT
+          for _ in $(seq 1 60); do
+            if curl -sf -o /dev/null http://127.0.0.1:8766/index.html; then break; fi
+            sleep 1
+          done
+          curl -sf -o /dev/null http://127.0.0.1:8766/index.html
+          npm run verify
+      # `check-svg` is deliberately NOT a step here, and the reason is the report,
+      # not the tool. AC-2 asks for `serve` and `verify`, both above. `check-svg`
+      # now takes `--check` and exits non-zero on a failing file, so it could be a
+      # gate -- but `out/check/report.json` lists 6 files that fail today: one
+      # `empty` (no ink in either renderer), one `pathLength` and four `blurFn`,
+      # the last five of which are renderer gaps the native loader is specified to
+      # fix. They are evidence awaiting the font and loader tasks, not a
+      # regression. Adding the step now would make every PR red on purpose, and
+      # adding it without `--check` would be a green that proves nothing. The step
+      # joins when those six are explained.
