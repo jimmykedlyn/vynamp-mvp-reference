@@ -27,7 +27,35 @@ concurrency:
 jobs:
   verify:
     name: Verify
-    runs-on: ubuntu-22.04
+    # `windows-2022`, not a Linux runner, because `out/` is an artifact of this
+    # platform and `verify` is a byte-for-byte comparison against it. The
+    # extraction reads *computed* style and *measured* geometry through Chrome, so
+    # anything the text metrics feed lands in the output -- and the fonts differ by
+    # OS. This is not a theory: on ubuntu-22.04 the job failed deterministically,
+    # twice, on exactly five files -- `#graph-minimap` in two states plus
+    # `index.json` -- while four full local runs on the freezing host compared 499
+    # files with 0 differing.
+    #
+    # The mechanism is in `mvp/graph-editor.js`. `drawMini()` decides visibility
+    # with `b.right*scale+v.x > r.width` and writes `r.width/v.scale` and
+    # `r.height/v.scale` into the minimap, where `r` is the *measured* viewport
+    # rect. The graph viewport is `flex:1` under a text-sized header, so its height
+    # follows the font metrics; measured here, swapping the font family moved it
+    # from 568.3px to 567.3px. One pixel is enough to flip `overflow` at a
+    # different point in the click sweep, and `drawMini` leaves the previous
+    # state's children in place when it hides the element, so the two hosts keep
+    # different stale content. `mvp/` is the frozen spec and is not ours to edit
+    # for this; matching the platform is the fix.
+    #
+    # The reference environment has been Windows since the freeze (README: rev.37
+    # extracted on Windows 11, Chrome 156, Node 24), and `out/` carries that host's
+    # Segoe UI metrics. Pinning the runner to the same family is what makes this
+    # job measure the spec instead of the runner image. A macOS or Linux runner
+    # would need `out/` re-frozen on it -- a different decision, for a maintainer.
+    runs-on: windows-2022
+    defaults:
+      run:
+        shell: bash
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
@@ -39,26 +67,24 @@ jobs:
       # `npm ci` and not `npm install`: the lockfile is the input, and a job
       # that silently resolves a newer playwright is not testing this commit.
       - run: npm ci
-      # resvg is the native renderer `check-svg` compares Chrome against.
-      # Installed from source at the version the README names, so CI measures the
-      # same renderer a maintainer does rather than whatever the image carries.
-      - name: Install resvg 0.49
-        run: |
-          set -eu
-          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal
-          . "$HOME/.cargo/env"
-          cargo install resvg --version 0.49.0 --locked
+      # resvg is deliberately NOT installed. It is the renderer `check-svg`
+      # compares Chrome against, and `check-svg` is not a step here (see the note
+      # at the end of this file), so `cargo install resvg` bought 33 seconds of
+      # nothing. The README still requires it for a maintainer running
+      # `check-svg` locally.
+      #
       # Chrome, not Playwright's bundled chromium. `extract.cjs` launches with
-      # `channel: 'chrome'` unless `CHROME` points elsewhere, and the ubuntu-22.04
+      # `channel: 'chrome'` unless `CHROME` points elsewhere, and the Windows
       # image ships Google Chrome -- so downloading a second browser both wastes
-      # a minute and, as it ran here, produced `spawn .../chromium-1248 EACCES`
-      # and failed `verify` before it started. Playwright is a Node dependency and
-      # arrives with `npm ci`; only its browser was ever missing, and it is not
-      # used. The version is printed so a runner image change is visible in the log.
+      # a minute and, as it ran on the Linux image, produced
+      # `spawn .../chromium-1248 EACCES` and failed `verify` before it started.
+      # Playwright is a Node dependency and arrives with `npm ci`; only its
+      # browser was ever missing, and it is not used. The version is printed so a
+      # runner image change is visible in the log.
       - name: Chrome
         run: |
           set -eu
-          google-chrome --version
+          "/c/Program Files/Google/Chrome/Application/chrome.exe" --version
       # The server is started detached and polled, not slept on: a fixed sleep
       # is the classic flake, and `verify` re-extracts the whole MVP through it,
       # so the page must be answering before the first navigation.
