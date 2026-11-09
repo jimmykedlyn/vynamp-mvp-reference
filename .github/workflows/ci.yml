@@ -39,21 +39,26 @@ jobs:
       # `npm ci` and not `npm install`: the lockfile is the input, and a job
       # that silently resolves a newer playwright is not testing this commit.
       - run: npm ci
-      # resvg is the native renderer `check-svg` compares Chrome against, and
-      # `verify` does not run without Chrome. Both are installed from the
-      # sources the README names, so CI uses the same versions a maintainer
-      # does rather than whatever the image happens to carry.
+      # resvg is the native renderer `check-svg` compares Chrome against.
+      # Installed from source at the version the README names, so CI measures the
+      # same renderer a maintainer does rather than whatever the image carries.
       - name: Install resvg 0.49
         run: |
           set -eu
           curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal
           . "$HOME/.cargo/env"
           cargo install resvg --version 0.49.0 --locked
-      - name: Install Chrome for Testing
+      # Chrome, not Playwright's bundled chromium. `extract.cjs` launches with
+      # `channel: 'chrome'` unless `CHROME` points elsewhere, and the ubuntu-22.04
+      # image ships Google Chrome -- so downloading a second browser both wastes
+      # a minute and, as it ran here, produced `spawn .../chromium-1248 EACCES`
+      # and failed `verify` before it started. Playwright is a Node dependency and
+      # arrives with `npm ci`; only its browser was ever missing, and it is not
+      # used. The version is printed so a runner image change is visible in the log.
+      - name: Chrome
         run: |
           set -eu
-          npx --yes playwright@1.64.1 install --with-deps chromium
-          echo "CHROME=$(npx --yes playwright@1.64.1 install --dry-run chromium 2>/dev/null | sed -n 's/.*Install location: *//p' | head -1)" >> "$GITHUB_ENV"
+          google-chrome --version
       # The server is started detached and polled, not slept on: a fixed sleep
       # is the classic flake, and `verify` re-extracts the whole MVP through it,
       # so the page must be answering before the first navigation.
