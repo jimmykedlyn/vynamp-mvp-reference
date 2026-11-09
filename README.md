@@ -35,6 +35,28 @@ npm run check-svg
 npm run verify
 ```
 
+## CI
+
+GitHub Actions is the only CI (ADR-014). [`.github/workflows/ci.yml`](.github/workflows/ci.yml)
+runs on every pull request to `main`: `npm ci`, then the server started and polled until the
+page answers, then `npm run verify` against `out/` — `serve` and `verify` chained, because a
+verification that does not re-extract through the server proves nothing.
+
+The runner is `windows-2022`, not a Linux image, and that is a requirement rather than a
+convenience. `out/` is an artifact of this platform: the extraction reads *computed* style and
+*measured* geometry through Chrome, so anything the text metrics feed lands in the output, and
+the fonts differ by OS. On `ubuntu-22.04` the job failed deterministically on exactly five files
+— `#graph-minimap` in two states plus `index.json` — while four full local runs on the freezing
+host compared 499 files with 0 differing. The mechanism is `drawMini()` in `mvp/graph-editor.js`:
+it decides visibility with `b.right*scale+v.x > r.width` and writes `r.width/v.scale` into the
+minimap, where `r` is the measured viewport rect, and the graph viewport is `flex:1` under a
+text-sized header. Swapping the font family moves that rect by a pixel, which is enough to flip
+`overflow` at a different point in the click sweep. A macOS or Linux runner would need `out/`
+re-frozen on it.
+
+`check-svg` is deliberately not a step: `out/check/report.json` lists 6 failing files that are
+evidence awaiting the font and loader tasks, not a regression.
+
 ## Pinning
 
 The main repository (`jimmykedlyn/vynamp`) does not copy `mvp/` or `out/`. Its specs cite `vynamp-mvp-reference@<commit>` with paths under `mvp/...` and `out/...` (see its `design/07-pin-mvp.md`). To move the pin to a new revision, commit here, then run:
@@ -108,6 +130,33 @@ npm run extract
 npm run check-svg
 npm run verify
 ```
+
+## CI
+
+O GitHub Actions é a única CI (ADR-014). O
+[`.github/workflows/ci.yml`](.github/workflows/ci.yml) roda em todo pull request
+para `main`: `npm ci`, depois o servidor iniciado e sondado até a página
+responder, depois `npm run verify` contra `out/` — `serve` e `verify`
+encadeados, porque uma verificação que não reextrai pelo servidor não prova
+nada.
+
+O runner é `windows-2022`, não uma imagem Linux, e isso é requisito e não
+conveniência. `out/` é artefato desta plataforma: a extração lê estilo
+*computado* e geometria *medida* pelo Chrome, então tudo que as métricas de texto
+alimentam cai na saída, e as fontes diferem por SO. Em `ubuntu-22.04` o job
+reprovou de forma determinística em exatamente cinco arquivos — `#graph-minimap`
+em dois estados mais `index.json` — enquanto quatro execuções locais completas no
+host que congelou compararam 499 arquivos com 0 divergência. O mecanismo é
+`drawMini()` em `mvp/graph-editor.js`: ele decide visibilidade com
+`b.right*scale+v.x > r.width` e grava `r.width/v.scale` no minimapa, onde `r` é o
+rect medido do viewport, e o viewport do grafo é `flex:1` sob um cabeçalho
+dimensionado por texto. Trocar a família de fonte move esse rect em um pixel, o
+que basta para virar `overflow` em outro ponto da varredura de cliques. Um runner
+macOS ou Linux exigiria recongelar `out/` nele.
+
+`check-svg` é deliberadamente fora do passo: `out/check/report.json` lista 6
+arquivos reprovados que são evidência à espera das tasks de fonte e de carregador,
+não regressão.
 
 ## Fixação
 
