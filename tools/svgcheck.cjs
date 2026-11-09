@@ -92,4 +92,11 @@ async function compareRetry1(b,svg,png,BG){for(let k=0;;k++){try{return await co
  const fail=report.filter(r=>!r.pass);console.log('\nchecked',report.length,'pass',report.length-fail.length,'fail',fail.length,'(of which empty',report.filter(r=>r.empty).length+', renderer gaps',fail.filter(r=>r.gaps.length).length+', passing once normalized',fail.filter(r=>r.normalizedPass).length+')');
  for(const r of report.filter(r=>r.empty))console.log('empty',r.file);
  const geo=r=>r.text?r.noTextBlobPx:r.blobPx;for(const r of fail.filter(r=>!r.empty).sort((a,b)=>geo(b)-geo(a)).slice(0,60))console.log('blob '+geo(r)+'px',(r.text?'noText '+r.noTextShiftPx:'shift '+r.shiftPx)+'px',r.gaps.join(','),r.file,r.resvgError||r.note||'');
+ // Exit status is a switch separate from the report, on purpose. The maintainer runs
+ // this to look at the rendered diffs, and a tool that refuses to finish is useless
+ // for that. `--check` is what CI needs: the report already holds the answer, so a
+ // step that reads it and still exits 0 is a green that proves nothing. Today
+ // `out/check/report.json` lists 6 failing files and this process exits 0 without
+ // the flag -- which is exactly why the CI job does not call this tool.
+  if(process.argv.includes('--check')&&fail.length){console.log('\nexit 1: '+fail.length+' file(s) failed under --check');process.exit(1);}
 })().catch(e=>{console.error(e);process.exit(1)});
