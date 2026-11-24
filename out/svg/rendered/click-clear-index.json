@@ -1,0 +1,4778 @@
+[
+ {
+  "hash": "723b10917020ad08466f896cbde29aab00b3297d5f07bc3ecdc6255e08084d73",
+  "bytes": 160,
+  "where": "#faithful-mobile-back > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "2c6c0e65e1ef393c9b2b3188e8cf0661cc1924ab13edb1c3c5329cd1bf4c4813",
+  "bytes": 167,
+  "where": "#main-menu-button > svg.icon",
+  "box": [
+   25,
+   20,
+   19,
+   19
+  ],
+  "visible": true
+ },
+ {
+  "hash": "30215ea72096ebbf9791f0fa72c10104c116b78629b0bee41c2f51483311ed07",
+  "bytes": 294,
+  "where": "header.appbar > div.brand > span.vynamp-brand-lockup > span.vynamp-brand-symbol > svg",
+  "box": [
+   66,
+   17,
+   22,
+   22
+  ],
+  "visible": true
+ },
+ {
+  "hash": "7141f7ba3d94cfb92c73b48d89ef075b47c07c0fbb41f5eda12e7eeb0d12c2b8",
+  "bytes": 262,
+  "where": "header.appbar > div.brand > button.faithful-output > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "09bab868f5af6e64247b2b272d117e5342deefb3dae53eca4a72846b97ddfd5d",
+  "bytes": 160,
+  "where": "#skin-picker > svg.icon",
+  "box": [
+   816,
+   22,
+   15,
+   15
+  ],
+  "visible": true
+ },
+ {
+  "hash": "21c2b633206ba2640427c8c5fab871a9509e545ddd18e1a6f4ff6e256118e88e",
+  "bytes": 279,
+  "where": "#audio-effects-open > svg.icon",
+  "box": [
+   870,
+   20,
+   19,
+   19
+  ],
+  "visible": true
+ },
+ {
+  "hash": "f6a9f12c2a4dea9ae0b9d21da538eb18e9ad176193d9cb8176fcd62faf90b8af",
+  "bytes": 247,
+  "where": "#open > svg.icon",
+  "box": [
+   1026,
+   20,
+   19,
+   19
+  ],
+  "visible": true
+ },
+ {
+  "hash": "774d51e029aae22c0706f1fb4eba80f35260f203972e79b4cfa51290d6696a24",
+  "bytes": 280,
+  "where": "#layout-mini-toggle > svg.icon",
+  "box": [
+   1153,
+   20,
+   19,
+   19
+  ],
+  "visible": true
+ },
+ {
+  "hash": "05251777b4a050fb24c7bb68af898222b33a75296d177bd79e8e7004f49a2f3d",
+  "bytes": 276,
+  "where": "#restore-open > svg.icon",
+  "box": [
+   1204,
+   21,
+   17,
+   17
+  ],
+  "visible": true
+ },
+ {
+  "hash": "c4d46b406b9e79881a210e7d0606f20eb25be576b1125590992742352acc6fc7",
+  "bytes": 247,
+  "where": "#preferences > svg.icon",
+  "box": [
+   1300,
+   20,
+   19,
+   19
+  ],
+  "visible": true
+ },
+ {
+  "hash": "75d98de026d45b561ec99469e175c09b75084661806a23d277c2cf32f9d293b6",
+  "bytes": 292,
+  "where": "#help > svg.icon",
+  "box": [
+   1348,
+   20,
+   19,
+   19
+  ],
+  "visible": true
+ },
+ {
+  "hash": "d1949cfb592f581a23758072ec5b50c2577055f0f022dd8f5a7186613e2f6d8f",
+  "bytes": 348,
+  "where": "header.appbar > a.icon-button > svg.icon",
+  "box": [
+   1395,
+   20,
+   19,
+   19
+  ],
+  "visible": true
+ },
+ {
+  "hash": "349e0022489d82bb36b43ed9e472a096820bd7f01d0055f815410c581803e9e7",
+  "bytes": 168,
+  "where": "header.appbar > button.faithful-mini-close > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "d730ac68bbba7598ebab362b7fa9e186a812e9fd553bf01ce0c8982578e0a7f6",
+  "bytes": 239,
+  "where": "#favorite > svg.icon",
+  "box": [
+   299,
+   128,
+   18,
+   20
+  ],
+  "visible": true
+ },
+ {
+  "hash": "841d61252416d46d9c7c60bd86094c39d091ea6604b03f3ab977d381d8b6b9e4",
+  "bytes": 289,
+  "where": "#meter-options > svg.icon",
+  "box": [
+   276,
+   283,
+   16,
+   16
+  ],
+  "visible": true
+ },
+ {
+  "hash": "fc7e0c55d4ab11f812239ed3c9968e9e16d39675574a84311db59c39cffceec2",
+  "bytes": 175,
+  "where": "#meter-off > svg.icon",
+  "box": [
+   308,
+   283,
+   16,
+   16
+  ],
+  "visible": true
+ },
+ {
+  "hash": "f8193fb832a54911b69fcbaba98328d331d821c3a6ff1b1ca2749672d05dd044",
+  "bytes": 31808,
+  "where": "#meter-stage > svg",
+  "box": [
+   29,
+   313,
+   301,
+   116
+  ],
+  "visible": true
+ },
+ {
+  "hash": "6e69e3d8776b5efd49d539e1f4ebfd33124aa4eddb955ae1adeba3977329d304",
+  "bytes": 330,
+  "where": "#lyrics-menu-button > svg.icon",
+  "box": [
+   298,
+   522,
+   20,
+   20
+  ],
+  "visible": true
+ },
+ {
+  "hash": "3a8d84833bba56f1f6e1ab12e10dc79452a6e3268e24dea570bfa7f943e26f38",
+  "bytes": 171,
+  "where": "#lyrics-full > svg.icon",
+  "box": [
+   297,
+   710,
+   16,
+   16
+  ],
+  "visible": true
+ },
+ {
+  "hash": "76ec872622f139b153a74a6b4b54e30c75e6f1eb46b91b4b4f1f1fab3fc79ef8",
+  "bytes": 230,
+  "where": "main.workspace > section.collection > nav.tabs > button > svg.icon",
+  "box": [
+   395,
+   81,
+   15,
+   15
+  ],
+  "visible": true
+ },
+ {
+  "hash": "356d80613ad0906aa75351f590fb45483fac642e182a41457b2eeb4ba60053db",
+  "bytes": 293,
+  "where": "main.workspace > section.collection > nav.tabs > button > svg.icon",
+  "box": [
+   488,
+   81,
+   15,
+   15
+  ],
+  "visible": true
+ },
+ {
+  "hash": "20e375ee8009ea1e91f486703bc1e3a26ee91df0c2d1dd2487b3eee1c66d0a7b",
+  "bytes": 239,
+  "where": "main.workspace > section.collection > nav.tabs > button > svg.icon",
+  "box": [
+   576,
+   81,
+   15,
+   15
+  ],
+  "visible": true
+ },
+ {
+  "hash": "63cbbbbfaf90a3bdba6f1f26bddc7540449815d82fb54b87e02cb7030e6bab34",
+  "bytes": 317,
+  "where": "main.workspace > section.collection > nav.tabs > button > svg.icon",
+  "box": [
+   682,
+   81,
+   15,
+   15
+  ],
+  "visible": true
+ },
+ {
+  "hash": "c60ac789e2b429bb5a2853253412a75699fd61cab1513a6cb0f2c2eb1befe42e",
+  "bytes": 241,
+  "where": "main.workspace > section.collection > nav.tabs > button > svg.icon",
+  "box": [
+   794,
+   81,
+   15,
+   15
+  ],
+  "visible": true
+ },
+ {
+  "hash": "b0c66469d510c75dedd2f88b2ca75958faaeaa87383c0be25d0769cc7ef37a35",
+  "bytes": 236,
+  "where": "#play-all > svg.icon",
+  "box": [
+   953,
+   161,
+   16,
+   20
+  ],
+  "visible": true
+ },
+ {
+  "hash": "ece573e25d918913e292ca8eb67802c69a421fe640be634a473bded8bb9eebb6",
+  "bytes": 191,
+  "where": "section.collection > div.filterbar > div.search > span > svg.icon",
+  "box": [
+   396,
+   235,
+   16,
+   16
+  ],
+  "visible": true
+ },
+ {
+  "hash": "13f075c0d04773953e098975283304729b8a3039f11c07502ebf2b76e8b2c44b",
+  "bytes": 170,
+  "where": "#library-filter-toggle > svg.icon",
+  "box": [
+   391,
+   291,
+   14,
+   14
+  ],
+  "visible": true
+ },
+ {
+  "hash": "a7d32b2557a4557db071cb83b0f98815c3886165aa954abe972291f730171136",
+  "bytes": 180,
+  "where": "#selection-queue > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "63ad9530ca51459819c8e6c94e378b4cae19032ce125616f01603f8574562c98",
+  "bytes": 225,
+  "where": "#selection-save > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "349e0022489d82bb36b43ed9e472a096820bd7f01d0055f815410c581803e9e7",
+  "bytes": 168,
+  "where": "#selection-clear > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "fb25631f2ed691c456caa64b9e367fa1ec1ea6fa3f84442509b2de10d8d91216",
+  "bytes": 236,
+  "where": "div.track-row > button.track-name > strong > span.playing-indicator > svg.icon",
+  "box": [
+   484,
+   381,
+   20,
+   20
+  ],
+  "visible": true
+ },
+ {
+  "hash": "172014dbae1b608d8dad1f8a434abb498c06b4f7e9bf5e1f6301bc82049df40b",
+  "bytes": 154,
+  "where": "#library > div.track-row > button.icon-button > svg.icon",
+  "box": [
+   1063,
+   395,
+   17,
+   17
+  ],
+  "visible": true
+ },
+ {
+  "hash": "172014dbae1b608d8dad1f8a434abb498c06b4f7e9bf5e1f6301bc82049df40b",
+  "bytes": 154,
+  "where": "#library > div.track-row > button.icon-button > svg.icon",
+  "box": [
+   1063,
+   463,
+   17,
+   17
+  ],
+  "visible": true
+ },
+ {
+  "hash": "172014dbae1b608d8dad1f8a434abb498c06b4f7e9bf5e1f6301bc82049df40b",
+  "bytes": 154,
+  "where": "#library > div.track-row > button.icon-button > svg.icon",
+  "box": [
+   1063,
+   530,
+   17,
+   17
+  ],
+  "visible": true
+ },
+ {
+  "hash": "172014dbae1b608d8dad1f8a434abb498c06b4f7e9bf5e1f6301bc82049df40b",
+  "bytes": 154,
+  "where": "#library > div.track-row > button.icon-button > svg.icon",
+  "box": [
+   1063,
+   596,
+   17,
+   17
+  ],
+  "visible": true
+ },
+ {
+  "hash": "172014dbae1b608d8dad1f8a434abb498c06b4f7e9bf5e1f6301bc82049df40b",
+  "bytes": 154,
+  "where": "#library > div.track-row > button.icon-button > svg.icon",
+  "box": [
+   1063,
+   663,
+   17,
+   17
+  ],
+  "visible": true
+ },
+ {
+  "hash": "172014dbae1b608d8dad1f8a434abb498c06b4f7e9bf5e1f6301bc82049df40b",
+  "bytes": 154,
+  "where": "#library > div.track-row > button.icon-button > svg.icon",
+  "box": [
+   1063,
+   730,
+   17,
+   17
+  ],
+  "visible": true
+ },
+ {
+  "hash": "172014dbae1b608d8dad1f8a434abb498c06b4f7e9bf5e1f6301bc82049df40b",
+  "bytes": 154,
+  "where": "#library > div.track-row > button.icon-button > svg.icon",
+  "box": [
+   1063,
+   797,
+   17,
+   17
+  ],
+  "visible": true
+ },
+ {
+  "hash": "172014dbae1b608d8dad1f8a434abb498c06b4f7e9bf5e1f6301bc82049df40b",
+  "bytes": 154,
+  "where": "#library > div.track-row > button.icon-button > svg.icon",
+  "box": [
+   1063,
+   864,
+   17,
+   17
+  ],
+  "visible": true
+ },
+ {
+  "hash": "172014dbae1b608d8dad1f8a434abb498c06b4f7e9bf5e1f6301bc82049df40b",
+  "bytes": 154,
+  "where": "#library > div.track-row > button.icon-button > svg.icon",
+  "box": [
+   1063,
+   930,
+   17,
+   17
+  ],
+  "visible": true
+ },
+ {
+  "hash": "22c6a7d01055a02f59976ea730fed21a8e18382b3ab574a51ccc10e8688d349c",
+  "bytes": 317,
+  "where": "#radio-stations > div.radio-row > button.radio-play > span.radio-station-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "22c6a7d01055a02f59976ea730fed21a8e18382b3ab574a51ccc10e8688d349c",
+  "bytes": 317,
+  "where": "#radio-stations > div.radio-row > button.radio-play > span.radio-station-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "22c6a7d01055a02f59976ea730fed21a8e18382b3ab574a51ccc10e8688d349c",
+  "bytes": 317,
+  "where": "#radio-stations > div.radio-row > button.radio-play > span.radio-station-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "81e461db2381a736e9b2d9ee3a61cd4fe0c3064e82994ab2463ade380ab00464",
+  "bytes": 241,
+  "where": "#folder-map > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "349e0022489d82bb36b43ed9e472a096820bd7f01d0055f815410c581803e9e7",
+  "bytes": 168,
+  "where": "#restore-close > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "19d9c0cfdcd3ff6e2ee1b8a56d569810bbf6d8a946e992c572faf2a75b7bd79c",
+  "bytes": 286,
+  "where": "#restore-workspace > div.restore-toolbar > button.restore-guide-btn > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "81e461db2381a736e9b2d9ee3a61cd4fe0c3064e82994ab2463ade380ab00464",
+  "bytes": 241,
+  "where": "#restore-open-audio > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "06089934098cc3cf98919a9f789b91e792abb1a2bd4367b8a69e18daff59a986",
+  "bytes": 230,
+  "where": "#restore-diagnose > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "fb4d941d447d9770f1b23000adee92108e73f1d118dd512040a35a6e4319cc77",
+  "bytes": 175,
+  "where": "#restore-enable > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "bc228171b3514ef7dd49a0a8f5564602e4b74d68ae5dec8060e74046132da2d3",
+  "bytes": 182,
+  "where": "#restore-undo > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "d425e0baa74a9e954cafd30900b2e206d2e2da3fd4dce2b198250d876616833b",
+  "bytes": 183,
+  "where": "#restore-redo > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "06089934098cc3cf98919a9f789b91e792abb1a2bd4367b8a69e18daff59a986",
+  "bytes": 230,
+  "where": "#restore-diagnostics > div.assist-intro > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#restore-zoom-in > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "01c2046e25a5855f86210fa354bbc2853df7e5e9e0d42ea93a1e1778fedcf931",
+  "bytes": 146,
+  "where": "#restore-zoom-out > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#restore-add-region > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "2b64d496eb295f324e2a9a3dc6df2d18ffc264776bcf91b4e9fd55486ef0ea61",
+  "bytes": 262,
+  "where": "#previous > svg.icon",
+  "box": [
+   31,
+   854,
+   20,
+   20
+  ],
+  "visible": true
+ },
+ {
+  "hash": "de47073fb5b2172c11ccb22b16515d0dd73d269dd1deb5e1cbecfbedd0bb3bfb",
+  "bytes": 236,
+  "where": "#play > svg.icon",
+  "box": [
+   80,
+   852,
+   24,
+   24
+  ],
+  "visible": true
+ },
+ {
+  "hash": "19252d2563acc1579d8b7ba8cfed09764869f3a2014c98eb18dc1f102deeffce",
+  "bytes": 261,
+  "where": "#next > svg.icon",
+  "box": [
+   133,
+   854,
+   20,
+   20
+  ],
+  "visible": true
+ },
+ {
+  "hash": "f2c2145e1287d29d18fc2cb0c7d54e78be24771c8dfd41d63a6df9b501515d21",
+  "bytes": 201,
+  "where": "#stop > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "077219f582414dd6f25f5d5ddfb9d3c4b36d80dbcaea1d6fc21ca864b8fcd1d5",
+  "bytes": 102206,
+  "where": "#wave",
+  "box": [
+   99,
+   786,
+   1089,
+   48
+  ],
+  "visible": true
+ },
+ {
+  "hash": "323e6133e3c1a12531727854f73bd8849222d74e250ef65e17fc305d10cc136e",
+  "bytes": 288,
+  "where": "#mute > svg.icon",
+  "box": [
+   1285,
+   797,
+   20,
+   20
+  ],
+  "visible": true
+ },
+ {
+  "hash": "320918b8763c1bcac687f1cd31c78cee722bfebec80605c75301e202c9b522d6",
+  "bytes": 284,
+  "where": "#shuffle > svg.icon",
+  "box": [
+   1254,
+   855,
+   18,
+   18
+  ],
+  "visible": true
+ },
+ {
+  "hash": "0ca38430aefb730c7a59043d293ae57654636c466f4911799e284a73fc24ebd6",
+  "bytes": 249,
+  "where": "#repeat > svg.icon",
+  "box": [
+   1291,
+   855,
+   18,
+   18
+  ],
+  "visible": true
+ },
+ {
+  "hash": "b1e2410638fff7078ed1f051042291752bff5caaab3cb13c0c42e78a978762e6",
+  "bytes": 273,
+  "where": "#eq-open > svg.icon",
+  "box": [
+   1334,
+   856,
+   15,
+   15
+  ],
+  "visible": true
+ },
+ {
+  "hash": "fd0091c2be890a57b19dfededf41cd75d6dd859fe8b480394fa90e8725c487d9",
+  "bytes": 286,
+  "where": "div.faithful-body > div.player-context-actions > button > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "63ad9530ca51459819c8e6c94e378b4cae19032ce125616f01603f8574562c98",
+  "bytes": 225,
+  "where": "div.faithful-body > div.player-context-actions > button > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be8d9d0e57235a4fd67f8aef527bdc445590db81662881e89c549e77c29ff9c8",
+  "bytes": 273,
+  "where": "div.faithful-body > div.player-context-actions > button > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "349e0022489d82bb36b43ed9e472a096820bd7f01d0055f815410c581803e9e7",
+  "bytes": 168,
+  "where": "#help-dialog > form > div.dialog-head > button.icon-button > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "349e0022489d82bb36b43ed9e472a096820bd7f01d0055f815410c581803e9e7",
+  "bytes": 168,
+  "where": "#close-meter > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "aa01ea4b404b0468380f27b2635f51ae6397ef5674c151100f0e21fb62aa7f36",
+  "bytes": 23839,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > svg.meter-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > span.menu-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#meter-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "9ad88a4f48b084d749df9071082527cc96fb594a18b49762a9dfeba173831f10",
+  "bytes": 24585,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > svg.meter-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > span.menu-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#meter-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "a0e71e877b40e0a4f520549749e925db635ffc3041d9e2054dd2fc8036373fc7",
+  "bytes": 30117,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > svg.meter-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > span.menu-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#meter-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "eb4b2e120cce924865e0fba30dab4493654012729bc5546e66317e6d8889c7bf",
+  "bytes": 203976,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > svg.meter-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > span.menu-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#meter-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "71af412135abd5a2d82138365d10b7815d59bbfe80b60674408e09d66846b65a",
+  "bytes": 36112,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > svg.meter-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > span.menu-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#meter-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "c839d2043ee475d8a8dc920e0a75a7e10cc59d9c5945039564e1314630a9651e",
+  "bytes": 31987,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > svg.meter-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > span.menu-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#meter-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "ce4a02a9612285d39800788642597d6b4c576eb0f70a7775146c217e86057563",
+  "bytes": 19337,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > svg.meter-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > span.menu-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#meter-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "7b9e2c3ca867546976812778b6cff5a85f29d732d4df95a5127fb966bd4800f1",
+  "bytes": 26733,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > svg.meter-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > span.menu-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#meter-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "c37097f5aac362f9af19fa6aedc2baf37b60f085a35c6e5636636ecc44d3279f",
+  "bytes": 71011,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > svg.meter-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > span.menu-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#meter-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "a383e146182d1aadc9cd7d7c01e557b960345443f9b8b7a626802717657e2e80",
+  "bytes": 26039,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > svg.meter-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > span.menu-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#meter-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "7d04c17880f025965ab1864cd62b3527b5d70fb5b6c8be4b3cfcdb7874a461c6",
+  "bytes": 41396,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > svg.meter-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > span.menu-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#meter-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "458d90c88f4703ed3f9ff056400616d8a9adbbd83132184b37427f6c38b8b17a",
+  "bytes": 23666,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > svg.meter-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > span.menu-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#meter-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "c365c365b18dffc9527545da9133d2872f056b61a007d241ad0ffc3a32edb40c",
+  "bytes": 57473,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > svg.meter-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > span.menu-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#meter-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "977e7b5086d5565a58028cd5c1c61c1653cdb5cf00926496d11f02bed1dd2470",
+  "bytes": 27220,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > svg.meter-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > span.menu-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#meter-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "dfd6538f64ac05dda3ce9cdc5a6ff17e95b374d0c0a6d1e006bedce20dbd5c6d",
+  "bytes": 76415,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > svg.meter-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > span.menu-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#meter-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "d3dd9595a1fc8ba48791cc2caa8a7dab8863770a430eac1a7a0e7089a99622b5",
+  "bytes": 54979,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > svg.meter-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#meter-menu > div.visualizer-favorite-row > button > span.menu-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#meter-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "e2b6829f3f7c14e4dbc1fabdfdc769c31656eb48ba114f60dca02810c1ecce3c",
+  "bytes": 298,
+  "where": "#main-menu > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "de47073fb5b2172c11ccb22b16515d0dd73d269dd1deb5e1cbecfbedd0bb3bfb",
+  "bytes": 236,
+  "where": "#main-menu > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "f2c2145e1287d29d18fc2cb0c7d54e78be24771c8dfd41d63a6df9b501515d21",
+  "bytes": 201,
+  "where": "#main-menu > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be8d9d0e57235a4fd67f8aef527bdc445590db81662881e89c549e77c29ff9c8",
+  "bytes": 273,
+  "where": "#main-menu > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be8d9d0e57235a4fd67f8aef527bdc445590db81662881e89c549e77c29ff9c8",
+  "bytes": 273,
+  "where": "#main-menu > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "00b0278f1347df2b2dacced4280292edd8837e7528bb9e43b4e4969de046446a",
+  "bytes": 289,
+  "where": "#main-menu > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "fb4d941d447d9770f1b23000adee92108e73f1d118dd512040a35a6e4319cc77",
+  "bytes": 175,
+  "where": "#main-menu > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "c988c5fab8c086dc296a40eaf650506b31fadd8b51fd6610f512127fc23294c9",
+  "bytes": 241,
+  "where": "#main-menu > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "44cd7156a4c1e65fa136be95f2cc8561add325891c5e9d4655343c3454d519ad",
+  "bytes": 185,
+  "where": "#main-menu > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "19d9c0cfdcd3ff6e2ee1b8a56d569810bbf6d8a946e992c572faf2a75b7bd79c",
+  "bytes": 286,
+  "where": "#main-menu > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "f4fcd41ee805d3a762c486c2434bcd47dde55dca17b8150fb4684ed678399204",
+  "bytes": 245,
+  "where": "#main-menu > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "2d1bf6dfd18b380858aa6e1db0950aae03e55ab5725aa8296bdc0d70b25413d4",
+  "bytes": 276,
+  "where": "#main-menu > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "349e0022489d82bb36b43ed9e472a096820bd7f01d0055f815410c581803e9e7",
+  "bytes": 168,
+  "where": "#close-preferences > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "b5f016bde20a92aab00b09650865991570d3b3278503e9e3bb5fd97ffdbaf765",
+  "bytes": 265,
+  "where": "#preferences-nav > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "4f0be53383469cb500c5075b9fb44649943154036715ab8ad6ebe00b70232996",
+  "bytes": 347,
+  "where": "#preferences-nav > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "a7a5eb0c1bd95c540ad452986c86e2880c39b92e16ac5c6e0da1e57d9af1fe60",
+  "bytes": 332,
+  "where": "#preferences-nav > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "c587cfd5b956e13fc3fe286904b038885e78ade60d4b52788e78c3ca4c75be3e",
+  "bytes": 216,
+  "where": "#preferences-nav > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "e04dbddb0e461387b5c379768c4d842e491c1065e1d9a02986857122145344fe",
+  "bytes": 263,
+  "where": "#preferences-nav > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "63c1fd2427cf925246d068a42b205a6b6ad52988ca14a384c1585be1def9de7a",
+  "bytes": 554,
+  "where": "#preferences-nav > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "2d1bf6dfd18b380858aa6e1db0950aae03e55ab5725aa8296bdc0d70b25413d4",
+  "bytes": 276,
+  "where": "#preferences-nav > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "8e6f6141a46f9eb6303e2865f44607329401353cb98cee042c33a80ac45cf63e",
+  "bytes": 817,
+  "where": "#preferences-nav > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "e611064b91d90c3854940305ec1200e56628a91ba27c8dd715a65258d4c315a5",
+  "bytes": 293,
+  "where": "#preferences-nav > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "75323645be26f8c5e21ff783a6425fd72d5467972e6cc5a2cb88a00906acc599",
+  "bytes": 296,
+  "where": "#preferences-nav > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be1648718f2e57ac5f91492cb3fa0d2599cc8198eacd7ba53cfe7792c0bd6484",
+  "bytes": 580,
+  "where": "#preferences-nav > button.has-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "61d3c4f60e816ce2fc7ff5f016ed2353f770d5894d4bee8e5dfa613eb9c20361",
+  "bytes": 242,
+  "where": "fieldset > div.neon-swatches > button.neon-swatch > span.neon-dot > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "61d3c4f60e816ce2fc7ff5f016ed2353f770d5894d4bee8e5dfa613eb9c20361",
+  "bytes": 242,
+  "where": "fieldset > div.neon-swatches > button.neon-swatch > span.neon-dot > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "61d3c4f60e816ce2fc7ff5f016ed2353f770d5894d4bee8e5dfa613eb9c20361",
+  "bytes": 242,
+  "where": "fieldset > div.neon-swatches > button.neon-swatch > span.neon-dot > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "61d3c4f60e816ce2fc7ff5f016ed2353f770d5894d4bee8e5dfa613eb9c20361",
+  "bytes": 242,
+  "where": "fieldset > div.neon-swatches > button.neon-swatch > span.neon-dot > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "61d3c4f60e816ce2fc7ff5f016ed2353f770d5894d4bee8e5dfa613eb9c20361",
+  "bytes": 242,
+  "where": "fieldset > div.neon-swatches > button.neon-swatch > span.neon-dot > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "8d99f764b16b9336d05b9a2160801df7a4894630791a10b0a8355784ddcbe8dc",
+  "bytes": 320,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "40600d2e42f44944bd01cfd73762f3e820b91739d89cbaa8e252cc350ce2d6c0",
+  "bytes": 360,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "39385bb0f80f8439d85f022b7fb3671825e711c92562e349a55862a6cc911f70",
+  "bytes": 258,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "4745715532108f7b6c42334a7fc8beb7084fd254e4445cdebf5c9de049bc0fca",
+  "bytes": 263,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "b66cccec8549007c661c864465840344e78616596862d361e9f1a560995f3de6",
+  "bytes": 349,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "16d0be13bef4a87e0e58257689fcc14879bb76ec9e4df450b063266f29447e89",
+  "bytes": 283,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "0c453e30b3123da90b66ed19b3fa884fb09d1b98c8e168f0e03727683c803d79",
+  "bytes": 433,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "6730ceb71b2a592fe15c18586b0f11e59f1a3c53342457486b4e8e31ad077fc9",
+  "bytes": 573,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "daa360743c832887bd887633b27a1e94a8205aec762f55e12b40918de6271e8d",
+  "bytes": 634,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "6632f32d1c339612cacaececbcd99a61dda0c7481f4503ed57327c641ab268a4",
+  "bytes": 607,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "718dca6b9448c408aabd64ffe813db877fab69854b9c65358f27a9665ac1778e",
+  "bytes": 698,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "e87dfc7df15ffe6a3e9ff4a361e5e3192e5df3c4a21019d1a720a7157c5d7f17",
+  "bytes": 537,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "591b4093517675cce83ee63046de8ab1b35d3479f29c80a388ea1a94f33f1cc1",
+  "bytes": 1123,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "e406627fc4d147a0f10de1430bdc763b773f7bacbf9f65b004a3e711ba2bc90e",
+  "bytes": 604,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "825113997a6ab29ca19e8f1ae16eb44ed2e5bf135a8526d755d409b801c9acae",
+  "bytes": 705,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "e9e921c7f35f257e61bbfd3330cd994836d9057d675317ef93c3e3759e6dbde5",
+  "bytes": 1860,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "2aba072767ca4cb0b9a6cb36bf9adaf658352f34b9abd7b369701867f48c3c8a",
+  "bytes": 1147,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-settings > div.wave-style-choices > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "dc434906faa12420e6bcb5a2e2ebb9f27e3553d8713650466a265be978571eca",
+  "bytes": 294,
+  "where": "#brand-settings > div.brand-setting-heading > span.brand-setting-preview > svg",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#brand-families > button > span.brand-family-selected > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#brand-families > button > span.brand-family-selected > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#brand-families > button > span.brand-family-selected > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "61d3c4f60e816ce2fc7ff5f016ed2353f770d5894d4bee8e5dfa613eb9c20361",
+  "bytes": 242,
+  "where": "#brand-color-options > button > span > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "349e0022489d82bb36b43ed9e472a096820bd7f01d0055f815410c581803e9e7",
+  "bytes": 168,
+  "where": "#close-eq > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "3628aa25fea25e409e45e0069f992d61abf3cab8d0992b195f4e36a6078e0b1b",
+  "bytes": 228,
+  "where": "#eq-curve",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "349e0022489d82bb36b43ed9e472a096820bd7f01d0055f815410c581803e9e7",
+  "bytes": 168,
+  "where": "#advanced-eq-close > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "b957d39f8e60ef714ea0bf5ceafa4fc92e83db8f96b7c7fc8ab28a2a8fb88b35",
+  "bytes": 9273,
+  "where": "#advanced-eq-graph",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "de0b373bcd8c680eb565576308ccccfacf6b30d74ea50664e42fa5feca2b00d9",
+  "bytes": 292,
+  "where": "#graph-open > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "349e0022489d82bb36b43ed9e472a096820bd7f01d0055f815410c581803e9e7",
+  "bytes": 168,
+  "where": "#dsp-close > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "349e0022489d82bb36b43ed9e472a096820bd7f01d0055f815410c581803e9e7",
+  "bytes": 168,
+  "where": "#lyrics-full-close > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "fb4d941d447d9770f1b23000adee92108e73f1d118dd512040a35a6e4319cc77",
+  "bytes": 175,
+  "where": "#graph-enabled > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "349e0022489d82bb36b43ed9e472a096820bd7f01d0055f815410c581803e9e7",
+  "bytes": 168,
+  "where": "#graph-close > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-processors > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "bc228171b3514ef7dd49a0a8f5564602e4b74d68ae5dec8060e74046132da2d3",
+  "bytes": 182,
+  "where": "#graph-undo > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "d425e0baa74a9e954cafd30900b2e206d2e2da3fd4dce2b198250d876616833b",
+  "bytes": 183,
+  "where": "#graph-redo > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "2de07fdbbfe8c3bec7e333b2af56784759e185209e99fe0dd33a32bf88f91cb1",
+  "bytes": 193,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "2de07fdbbfe8c3bec7e333b2af56784759e185209e99fe0dd33a32bf88f91cb1",
+  "bytes": 193,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "2d1bf6dfd18b380858aa6e1db0950aae03e55ab5725aa8296bdc0d70b25413d4",
+  "bytes": 276,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "2de07fdbbfe8c3bec7e333b2af56784759e185209e99fe0dd33a32bf88f91cb1",
+  "bytes": 193,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "2d1bf6dfd18b380858aa6e1db0950aae03e55ab5725aa8296bdc0d70b25413d4",
+  "bytes": 276,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "2de07fdbbfe8c3bec7e333b2af56784759e185209e99fe0dd33a32bf88f91cb1",
+  "bytes": 193,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "2d1bf6dfd18b380858aa6e1db0950aae03e55ab5725aa8296bdc0d70b25413d4",
+  "bytes": 276,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "2d1bf6dfd18b380858aa6e1db0950aae03e55ab5725aa8296bdc0d70b25413d4",
+  "bytes": 276,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "081ac9fb3355d2fcb3bef4236feeb50256fceb68df2a62fa1674079e39d5b9d8",
+  "bytes": 191,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "081ac9fb3355d2fcb3bef4236feeb50256fceb68df2a62fa1674079e39d5b9d8",
+  "bytes": 191,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "081ac9fb3355d2fcb3bef4236feeb50256fceb68df2a62fa1674079e39d5b9d8",
+  "bytes": 191,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "081ac9fb3355d2fcb3bef4236feeb50256fceb68df2a62fa1674079e39d5b9d8",
+  "bytes": 191,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "081ac9fb3355d2fcb3bef4236feeb50256fceb68df2a62fa1674079e39d5b9d8",
+  "bytes": 191,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "081ac9fb3355d2fcb3bef4236feeb50256fceb68df2a62fa1674079e39d5b9d8",
+  "bytes": 191,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "081ac9fb3355d2fcb3bef4236feeb50256fceb68df2a62fa1674079e39d5b9d8",
+  "bytes": 191,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "081ac9fb3355d2fcb3bef4236feeb50256fceb68df2a62fa1674079e39d5b9d8",
+  "bytes": 191,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "56a03f6b4022aba20aa27c60e9d4255b99101508871e5c84baa0f17c7b5bf0af",
+  "bytes": 183,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be8d9d0e57235a4fd67f8aef527bdc445590db81662881e89c549e77c29ff9c8",
+  "bytes": 273,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "e0cfaf51e80ba0d12d6b1c5d7d70012956431e9adb9822cd503f3481a1e4166c",
+  "bytes": 294,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "56a03f6b4022aba20aa27c60e9d4255b99101508871e5c84baa0f17c7b5bf0af",
+  "bytes": 183,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be8d9d0e57235a4fd67f8aef527bdc445590db81662881e89c549e77c29ff9c8",
+  "bytes": 273,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "c4c676c2efc344383de70c7f00c8b1af5f98dc455749f64e4f6038aa1b5aedff",
+  "bytes": 216,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be8d9d0e57235a4fd67f8aef527bdc445590db81662881e89c549e77c29ff9c8",
+  "bytes": 273,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "09792b9d7c40ce9076c1751dc8030bce1c48b16e2d486a6e5e6bfe6e2fd09663",
+  "bytes": 187,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "09792b9d7c40ce9076c1751dc8030bce1c48b16e2d486a6e5e6bfe6e2fd09663",
+  "bytes": 187,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "07454cd223692248ef9528f49a34000a6221394a29d616434fbb8e6639e80c66",
+  "bytes": 224,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "07454cd223692248ef9528f49a34000a6221394a29d616434fbb8e6639e80c66",
+  "bytes": 224,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "ea57b5f4eef8c7cfb3a73e3119c6f00a19cf66cfb7e87599ce9cc9fabb27f3a8",
+  "bytes": 204,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "e0cfaf51e80ba0d12d6b1c5d7d70012956431e9adb9822cd503f3481a1e4166c",
+  "bytes": 294,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "62a27392b71fa306ed90e56b493c6edb5878d13a9a0c9e051eaca13d1ec6f26f",
+  "bytes": 159,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "e0cfaf51e80ba0d12d6b1c5d7d70012956431e9adb9822cd503f3481a1e4166c",
+  "bytes": 294,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "e0cfaf51e80ba0d12d6b1c5d7d70012956431e9adb9822cd503f3481a1e4166c",
+  "bytes": 294,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "07454cd223692248ef9528f49a34000a6221394a29d616434fbb8e6639e80c66",
+  "bytes": 224,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be8d9d0e57235a4fd67f8aef527bdc445590db81662881e89c549e77c29ff9c8",
+  "bytes": 273,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be8d9d0e57235a4fd67f8aef527bdc445590db81662881e89c549e77c29ff9c8",
+  "bytes": 273,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be8d9d0e57235a4fd67f8aef527bdc445590db81662881e89c549e77c29ff9c8",
+  "bytes": 273,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be8d9d0e57235a4fd67f8aef527bdc445590db81662881e89c549e77c29ff9c8",
+  "bytes": 273,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "56a03f6b4022aba20aa27c60e9d4255b99101508871e5c84baa0f17c7b5bf0af",
+  "bytes": 183,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be8d9d0e57235a4fd67f8aef527bdc445590db81662881e89c549e77c29ff9c8",
+  "bytes": 273,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "56a03f6b4022aba20aa27c60e9d4255b99101508871e5c84baa0f17c7b5bf0af",
+  "bytes": 183,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "cc04e26f6ac7dd98019794e74f82c4b4d0432889face6e15db60992bed935952",
+  "bytes": 204,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "56a03f6b4022aba20aa27c60e9d4255b99101508871e5c84baa0f17c7b5bf0af",
+  "bytes": 183,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "fe5ad2851117f71946d557494c88d650b90f47d6cf95a34992fea9b8112a18b6",
+  "bytes": 175,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "07454cd223692248ef9528f49a34000a6221394a29d616434fbb8e6639e80c66",
+  "bytes": 224,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "56a03f6b4022aba20aa27c60e9d4255b99101508871e5c84baa0f17c7b5bf0af",
+  "bytes": 183,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "ba961895f17a9bbbc96110d72d66fd41d077d5988b39e222ca9b9586f5da453b",
+  "bytes": 259,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "56a03f6b4022aba20aa27c60e9d4255b99101508871e5c84baa0f17c7b5bf0af",
+  "bytes": 183,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "56a03f6b4022aba20aa27c60e9d4255b99101508871e5c84baa0f17c7b5bf0af",
+  "bytes": 183,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "e0cfaf51e80ba0d12d6b1c5d7d70012956431e9adb9822cd503f3481a1e4166c",
+  "bytes": 294,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "cc04e26f6ac7dd98019794e74f82c4b4d0432889face6e15db60992bed935952",
+  "bytes": 204,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "e0cfaf51e80ba0d12d6b1c5d7d70012956431e9adb9822cd503f3481a1e4166c",
+  "bytes": 294,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "da0c4e114dc4c8c0109081130b3a946636075beb11b51c0453c74bd19ec895ba",
+  "bytes": 173,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "24db2af222a6505cb899eb22de023adda8dbc6bb9199481a08f1846be1c42f55",
+  "bytes": 185,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "24db2af222a6505cb899eb22de023adda8dbc6bb9199481a08f1846be1c42f55",
+  "bytes": 185,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "24db2af222a6505cb899eb22de023adda8dbc6bb9199481a08f1846be1c42f55",
+  "bytes": 185,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "24db2af222a6505cb899eb22de023adda8dbc6bb9199481a08f1846be1c42f55",
+  "bytes": 185,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "24db2af222a6505cb899eb22de023adda8dbc6bb9199481a08f1846be1c42f55",
+  "bytes": 185,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "24db2af222a6505cb899eb22de023adda8dbc6bb9199481a08f1846be1c42f55",
+  "bytes": 185,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "6e40552c6ce0f982f1fc38626c44b6e63de8e93adff953412e48418ab0ba9fd3",
+  "bytes": 183,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "40f804b2a0cecf387969eb60d69eee0abab376fae8ff460e5bf93b555f8004b5",
+  "bytes": 293,
+  "where": "#graph-catalog > div.processor-row > button > span.graph-palette-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-catalog > div.processor-row > button.graph-add-instance > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "01c2046e25a5855f86210fa354bbc2853df7e5e9e0d42ea93a1e1778fedcf931",
+  "bytes": 146,
+  "where": "#graph-zoom-out > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "040242bc40cab73510fc7f4d307cd19a9e2dea7eb8c1a1755dd01e480d31dfae",
+  "bytes": 154,
+  "where": "#graph-zoom-in > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "9f674a73c0974cc06bbd3c22edd0626ed481931085c0ba051e9da9ed888e03b3",
+  "bytes": 1234,
+  "where": "#graph-wires",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "c451430308715a9aaef22c1cfa8184a556470bb76ab305defd07ea7a3ea42f4a",
+  "bytes": 185,
+  "where": "#graph-node-source > div.graph-node-header > span.graph-node-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be8d9d0e57235a4fd67f8aef527bdc445590db81662881e89c549e77c29ff9c8",
+  "bytes": 273,
+  "where": "#graph-node-main-eq > div.graph-node-header > span.graph-node-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "fb4d941d447d9770f1b23000adee92108e73f1d118dd512040a35a6e4319cc77",
+  "bytes": 175,
+  "where": "#graph-node-main-eq > div.graph-node-header > button.node-toggle > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "da0c4e114dc4c8c0109081130b3a946636075beb11b51c0453c74bd19ec895ba",
+  "bytes": 173,
+  "where": "#graph-node-sink > div.graph-node-header > span.graph-node-icon > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "4cdee9ef8722b99a7a08ef24e9672193bce08086bb0d3ad55be03a18648260b0",
+  "bytes": 532,
+  "where": "#graph-minimap",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "f4fcd41ee805d3a762c486c2434bcd47dde55dca17b8150fb4684ed678399204",
+  "bytes": 245,
+  "where": "#properties-float > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "c587cfd5b956e13fc3fe286904b038885e78ade60d4b52788e78c3ca4c75be3e",
+  "bytes": 216,
+  "where": "nav.mobile-navigation > button > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "de47073fb5b2172c11ccb22b16515d0dd73d269dd1deb5e1cbecfbedd0bb3bfb",
+  "bytes": 236,
+  "where": "nav.mobile-navigation > button > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "63ad9530ca51459819c8e6c94e378b4cae19032ce125616f01603f8574562c98",
+  "bytes": 225,
+  "where": "nav.mobile-navigation > button > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be8d9d0e57235a4fd67f8aef527bdc445590db81662881e89c549e77c29ff9c8",
+  "bytes": 273,
+  "where": "nav.mobile-navigation > button > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "c988c5fab8c086dc296a40eaf650506b31fadd8b51fd6610f512127fc23294c9",
+  "bytes": 241,
+  "where": "nav.mobile-navigation > button > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "349e0022489d82bb36b43ed9e472a096820bd7f01d0055f815410c581803e9e7",
+  "bytes": 168,
+  "where": "div.faithful-notice > button > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "8d99f764b16b9336d05b9a2160801df7a4894630791a10b0a8355784ddcbe8dc",
+  "bytes": 320,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be1648718f2e57ac5f91492cb3fa0d2599cc8198eacd7ba53cfe7792c0bd6484",
+  "bytes": 580,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-gear > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "40600d2e42f44944bd01cfd73762f3e820b91739d89cbaa8e252cc350ce2d6c0",
+  "bytes": 360,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be1648718f2e57ac5f91492cb3fa0d2599cc8198eacd7ba53cfe7792c0bd6484",
+  "bytes": 580,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-gear > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "39385bb0f80f8439d85f022b7fb3671825e711c92562e349a55862a6cc911f70",
+  "bytes": 258,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be1648718f2e57ac5f91492cb3fa0d2599cc8198eacd7ba53cfe7792c0bd6484",
+  "bytes": 580,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-gear > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "4745715532108f7b6c42334a7fc8beb7084fd254e4445cdebf5c9de049bc0fca",
+  "bytes": 263,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be1648718f2e57ac5f91492cb3fa0d2599cc8198eacd7ba53cfe7792c0bd6484",
+  "bytes": 580,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-gear > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "b66cccec8549007c661c864465840344e78616596862d361e9f1a560995f3de6",
+  "bytes": 349,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be1648718f2e57ac5f91492cb3fa0d2599cc8198eacd7ba53cfe7792c0bd6484",
+  "bytes": 580,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-gear > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "16d0be13bef4a87e0e58257689fcc14879bb76ec9e4df450b063266f29447e89",
+  "bytes": 283,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be1648718f2e57ac5f91492cb3fa0d2599cc8198eacd7ba53cfe7792c0bd6484",
+  "bytes": 580,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-gear > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "0c453e30b3123da90b66ed19b3fa884fb09d1b98c8e168f0e03727683c803d79",
+  "bytes": 433,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be1648718f2e57ac5f91492cb3fa0d2599cc8198eacd7ba53cfe7792c0bd6484",
+  "bytes": 580,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-gear > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "233a001fef86dd59d50c7134e35b07905ca62dee06a7385ce5be344b911d6830",
+  "bytes": 573,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be1648718f2e57ac5f91492cb3fa0d2599cc8198eacd7ba53cfe7792c0bd6484",
+  "bytes": 580,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-gear > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "72760e817c4a9ef6d5e4e2e18874ba8bb7d7103a71c6842ceed1ac676d876233",
+  "bytes": 637,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be1648718f2e57ac5f91492cb3fa0d2599cc8198eacd7ba53cfe7792c0bd6484",
+  "bytes": 580,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-gear > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "185ace0e729b9f70ebca8a9c741d0ac6e95100f4b4155dfd4b3adbf5c3042726",
+  "bytes": 609,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be1648718f2e57ac5f91492cb3fa0d2599cc8198eacd7ba53cfe7792c0bd6484",
+  "bytes": 580,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-gear > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "d80f85a47e3a5550ae63ec6edcd35e3b8d804b4deb394ebed9eb48d4f134c535",
+  "bytes": 701,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be1648718f2e57ac5f91492cb3fa0d2599cc8198eacd7ba53cfe7792c0bd6484",
+  "bytes": 580,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-gear > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "e87dfc7df15ffe6a3e9ff4a361e5e3192e5df3c4a21019d1a720a7157c5d7f17",
+  "bytes": 537,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be1648718f2e57ac5f91492cb3fa0d2599cc8198eacd7ba53cfe7792c0bd6484",
+  "bytes": 580,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-gear > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "591b4093517675cce83ee63046de8ab1b35d3479f29c80a388ea1a94f33f1cc1",
+  "bytes": 1123,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be1648718f2e57ac5f91492cb3fa0d2599cc8198eacd7ba53cfe7792c0bd6484",
+  "bytes": 580,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-gear > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "f715e120192b9029e9b98b9d0401173adbd48b4bb4bbda90ea5e4fd37c265577",
+  "bytes": 606,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be1648718f2e57ac5f91492cb3fa0d2599cc8198eacd7ba53cfe7792c0bd6484",
+  "bytes": 580,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-gear > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "8cbadc802b668be7be000aed1967b5450fc1b8422a1578ec305b979e79d8455f",
+  "bytes": 710,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be1648718f2e57ac5f91492cb3fa0d2599cc8198eacd7ba53cfe7792c0bd6484",
+  "bytes": 580,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-gear > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "90851d6d14df647e890e9d5110c348157d66e74c3b75cc8dabff5f40dc67e1e0",
+  "bytes": 1874,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be1648718f2e57ac5f91492cb3fa0d2599cc8198eacd7ba53cfe7792c0bd6484",
+  "bytes": 580,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-gear > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "17458bc6adf06883afc295ee62959cc26ac03d2fc5c94d29ca16db1fe62b7957",
+  "bytes": 1154,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button > svg.wave-preview-icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "be1648718f2e57ac5f91492cb3fa0d2599cc8198eacd7ba53cfe7792c0bd6484",
+  "bytes": 580,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-gear > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "46e9681a80a01ea873877f57316aa5ef78c1408649ddb5471015f9896ed77280",
+  "bytes": 232,
+  "where": "#waveform-style-menu > div.visualizer-favorite-row > button.visualizer-star > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "349e0022489d82bb36b43ed9e472a096820bd7f01d0055f815410c581803e9e7",
+  "bytes": 168,
+  "where": "#wave-config-panel > div.wave-config-head > button.wave-config-close > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#skin-picker-menu > div.skin-options > button > span.skin-option-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#skin-picker-menu > div.skin-options > button > span.skin-option-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#skin-picker-menu > div.skin-options > button > span.skin-option-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#skin-picker-menu > div.skin-options > button > span.skin-option-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#skin-picker-menu > div.skin-options > button > span.skin-option-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#skin-picker-menu > div.skin-options > button > span.skin-option-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#skin-picker-menu > div.skin-options > button > span.skin-option-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#skin-picker-menu > div.skin-options > button > span.skin-option-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#skin-picker-menu > div.skin-options > button > span.skin-option-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#skin-picker-menu > div.skin-options > button > span.skin-option-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#skin-picker-menu > div.skin-options > button > span.skin-option-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "df2ae201078977a83f1a93e8393a01bf64b7a83911693e7ac09646c2a20026af",
+  "bytes": 160,
+  "where": "#skin-picker-menu > div.skin-options > button > span.skin-option-check > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "349e0022489d82bb36b43ed9e472a096820bd7f01d0055f815410c581803e9e7",
+  "bytes": 168,
+  "where": "#playlists-close > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ },
+ {
+  "hash": "349e0022489d82bb36b43ed9e472a096820bd7f01d0055f815410c581803e9e7",
+  "bytes": 168,
+  "where": "#dsp-tools-close > svg.icon",
+  "box": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "visible": false
+ }
+]
